@@ -40,9 +40,6 @@
     <Reference Include="cms">
       <HintPath>..\Solution Items\cms.dll</HintPath>
     </Reference>
-    <Reference Include="FergusonMoriyama.Umbraco4.Workflow">
-      <HintPath>..\Solution Items\FergusonMoriyama.Umbraco4.Workflow.dll</HintPath>
-    </Reference>
     <Reference Include="FergusonMoriyama.Workflow">
       <HintPath>..\packages\Moriyama.Workflow.2.1.0.0\lib\FergusonMoriyama.Workflow.dll</HintPath>
     </Reference>

@@ -52,8 +52,9 @@
     <Reference Include="cms">
       <HintPath>..\Solution Items\cms.dll</HintPath>
     </Reference>
-    <Reference Include="FergusonMoriyama.Umbraco4.Workflow">
-      <HintPath>..\Solution Items\FergusonMoriyama.Umbraco4.Workflow.dll</HintPath>
+    <Reference Include="FergusonMoriyama.Umbraco4.Workflow, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Moriyama.Workflow.Umbraco4.Core.2.1.0.0\lib\FergusonMoriyama.Umbraco4.Workflow.dll</HintPath>
     </Reference>
     <Reference Include="FergusonMoriyama.Workflow">
       <HintPath>..\packages\Moriyama.Workflow.2.1.0.0\lib\FergusonMoriyama.Workflow.dll</HintPath>
@@ -142,7 +143,7 @@
   </ProjectExtensions>
   <PropertyGroup>
     <PostBuildEvent>
-</PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
