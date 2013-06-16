@@ -1,0 +1,25 @@
+﻿@using Workflow.MVC3.WebUi.Helpers
+@model IList<Control>
+@{
+    ViewBag.Title = "EditProperties";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>EditProperties</h2>
+
+<form action="/WorkflowConfiguration/SaveProperties" method="post">
+
+
+    <input type="hidden" name="id" id="id" value="@ViewBag.Id" />
+
+    @foreach(var control in @Model)
+    {
+        <p>
+            @Html.Raw(Html.RenderControl(control))
+        </p>
+   
+    }
+
+    <input type="submit" name="submit" value="Save properties" />
+
+</form>

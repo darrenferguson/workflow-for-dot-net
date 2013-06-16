@@ -1,0 +1,16 @@
+﻿@using Workflow.MVC3.WebUi.Helpers
+@model IList<Control>
+@{
+    ViewBag.Title = "Edit";
+}
+<h2>
+    Edit Criteria</h2>
+<form action="/WorkflowCriteria/Save/@ViewBag.Id" method="post">
+@foreach (var control in @Model)
+{
+    <p>
+        @Html.Raw(Html.RenderControl(control))
+    </p>         
+}
+<input type="submit" name="submit" value="Save properties" />
+</form>

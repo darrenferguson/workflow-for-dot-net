@@ -1,0 +1,28 @@
+﻿@using Workflow.MVC3.WebUi.Models
+@model WorkflowTransitionViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Transition </h2>
+
+@if(Model.CanTransition)
+{
+    <form action="/WorkflowTransition/Transition/@Model.InstanceId" method="post">
+        
+        <select name="transition" id="transition">
+            @foreach(var transition in @Model.Transitions)
+            {
+                <option value="@transition.Key">@transition.Value</option>
+            }
+        </select>
+
+        <input type="submit" name="submit" id="submit" value="Transition" />
+    
+    </form>
+    
+} else
+{
+    
+    <p>This workflow cannot be transitioned.</p>
+}

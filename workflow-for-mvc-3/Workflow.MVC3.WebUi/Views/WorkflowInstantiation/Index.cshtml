@@ -1,0 +1,77 @@
+﻿@using FergusonMoriyam.Workflow.Interfaces.Domain
+@using Workflow.MVC3.WebUi.Helpers
+@model IList<IWorkflowInstance>
+@{
+    ViewBag.Title = "Index";
+}
+<h2>
+    Workflow Instances</h2>
+<table>
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Instantiation Time
+            </th>
+            <th>
+                Running?
+            </th>
+            <th>
+                Current Task
+            </th>
+            <th>
+                Transition
+            </th>
+            <th>
+                Delete
+            </th>
+            <th>
+                Start
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var instance in @Model)
+        {
+            <tr>
+            <td>
+                @instance.Id
+            </td>
+            <td>
+                @instance.Name
+            </td>
+            <td>
+                @instance.StartTime
+            </td>
+            <td>
+                @instance.Started
+            </td>
+            <td>
+                @(instance.CurrentTask == null ? "N/A" : instance.CurrentTask.Name)
+            </td>
+            <td>
+                @Html.Raw(Html.TransitionInfo(instance))
+            </td>
+            <td>
+                <a href="/WorkflowInstantiation/Delete/@instance.Id">
+                    Delete
+                </a>
+            </td>
+            
+            <td>
+                <a href="/WorkflowInstantiation/Start/@instance.Id">
+                    Start
+                </a>
+            </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<form method="post" action="/WorkflowInstantiation/Run">
+<input type="submit" name="submit" id="submit" value="Run workflow" />
+</form>

@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Umbraco.Web.UI</name>
+    </assembly>
+    <members>
+        <member name="F:Umbraco.Web.UI.Install.Steps.Skinning.LoadStarterKits.JsInclude1">
+            <summary>
+            JsInclude1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Umbraco.Web.UI.Install.Steps.Skinning.LoadStarterKits.LinkButton2">
+            <summary>
+            LinkButton2 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="P:Umbraco.Web.UI.Install.Steps.Skinning.LoadStarterKits.PackageInstallServiceBaseUrl">
+            <summary>
+            Returns the string for the package installer web service base url
+            </summary>
+        </member>
+        <member name="M:Umbraco.Web.UI.Umbraco.Developer.Macros.EditMacro.PopulateFieldsOnLoad(umbraco.cms.businesslogic.macro.Macro,System.String,System.String)">
+            <summary>
+            This ensures that the SelectedPartialView txt box value is set correctly when the m_macro object's 
+            ScriptingFile property contains a full virtual path beginning with the MacroPartials path
+            </summary>
+            <param name="macro"> </param>
+            <param name="macroAssemblyValue"></param>
+            <param name="macroTypeValue"></param>
+        </member>
+        <member name="M:Umbraco.Web.UI.Umbraco.Developer.Macros.EditMacro.SetMacroValuesFromPostBack(umbraco.cms.businesslogic.macro.Macro,System.Int32,System.String,System.String)">
+            <summary>
+            This changes the macro type to a PartialViewMacro if the SelectedPartialView txt box has a value.
+            This then also updates the file path saved for the partial view to be the full virtual path, not just the file name.
+            </summary>
+            <param name="macro"> </param>
+            <param name="macroCachePeriod"></param>
+            <param name="macroAssemblyValue"></param>
+            <param name="macroTypeValue"></param>
+        </member>
+        <member name="M:Umbraco.Web.UI.Umbraco.Developer.Macros.EditMacro.PopulatePartialViewFiles">
+            <summary>
+            Populate the drop down list for partial view files
+            </summary>
+        </member>
+        <member name="M:Umbraco.Web.UI.Umbraco.Developer.Macros.EditMacro.GetPartialViewFiles(System.String,System.String,System.String)">
+            <summary>
+            Get the list of partial view files in the ~/Views/MacroPartials folder and in all 
+            folders of ~/App_Plugins/[PackageName]/Views/MacroPartials
+            </summary>
+            <param name="orgPath"></param>
+            <param name="path"></param>
+            <param name="prefixVirtualPath"> </param>
+            <returns></returns>
+        </member>
+        <member name="F:Umbraco.Web.UI.Umbraco.Developer.Macros.EditMacro.SelectedPartialView">
+            <summary>
+            SelectedPartialView control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Umbraco.Web.UI.Umbraco.Developer.Macros.EditMacro.PartialViewList">
+            <summary>
+            PartialViewList control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Umbraco.Web.UI.Umbraco.Masterpages.UmbracoPage.JsInclude10">
+            <summary>
+            JsInclude10 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="M:Umbraco.Web.UI.Umbraco.Settings.Views.EditView.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Umbraco.Web.UI.Umbraco.Settings.Views.EditView.JsInclude1">
+            <summary>
+            JsInclude1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Umbraco.Web.UI.Umbraco.Umbraco.JSON2">
+            <summary>
+            JSON2 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+    </members>
+</doc>
