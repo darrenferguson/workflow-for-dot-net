@@ -7,7 +7,7 @@ using FergusonMoriyam.Workflow.Interfaces.Application;
 using FergusonMoriyam.Workflow.Interfaces.Domain;
 using FergusonMoriyam.Workflow.Interfaces.Ui;
 using FergusonMoriyam.Workflow.Umbraco.Web.Ui.Extensions;
-using log4net;
+using Common.Logging;
 using umbraco.BasePages;
 
 [assembly: WebResource("FergusonMoriyam.Workflow.Umbraco.Web.Ui.Js.Util.js", "text/javascript")]

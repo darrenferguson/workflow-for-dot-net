@@ -7,7 +7,7 @@ using FergusonMoriyam.Workflow.Application.Reflection;
 using FergusonMoriyam.Workflow.Interfaces.Application;
 using FergusonMoriyam.Workflow.Interfaces.Application.Runtime;
 using FergusonMoriyam.Workflow.Umbraco.Web.Ui.Extensions;
-using log4net;
+using Common.Logging;
 
 [assembly: WebResource("FergusonMoriyam.Workflow.Umbraco.Web.Ui.Css.Grid.css", "text/css")]
 [assembly: WebResource("FergusonMoriyam.Workflow.Umbraco.Web.Ui.Js.Util.js", "text/javascript")]

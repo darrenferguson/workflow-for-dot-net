@@ -4,8 +4,6 @@ using FergusonMoriyam.Workflow.Interfaces.Application.Event;
 using FergusonMoriyam.Workflow.Umbraco.Application.Modules;
 using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 using Spring.Context.Support;
-using Umbraco.Core;
-using Umbraco.Web;
 using umbraco.BusinessLogic;
 using umbraco.cms.presentation.Trees;
 
@@ -32,8 +30,6 @@ namespace FergusonMoriyam.Workflow.Umbraco.Application
             BaseContentTree.BeforeNodeRender += BaseContentTreeBeforeNodeRender;
         }
 
-
-        
         void BaseContentTreeBeforeNodeRender(ref XmlTree sender, ref XmlTreeNode node, System.EventArgs e)
         {
             Log.Debug(string.Format("Rendering Tree " + sender.GetType()));
@@ -47,7 +43,5 @@ namespace FergusonMoriyam.Workflow.Umbraco.Application
             DynamicModuleUtility.RegisterModule(typeof(RegisterClientResourcesHttpModule));
             _modulesRegistered = true;
         }
-
-       
     }
 }

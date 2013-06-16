@@ -137,12 +137,11 @@
     </copy>
 	
 	<copy todir="${package.dir}\bin" includeemptydirs="true" flatten="false" failonerror="false" overwrite="true">
-      <fileset basedir="${root.dir}\..\Solution Items">
+      <fileset basedir="${root.dir}\dll">
         <include name="Common.Logging.dll" />
 		    <include name="Spring*.dll" />
 		    <include name="PackageActionsContrib.dll" />
-        <include name="log4net.dll" />
-        <include name="Umbraco.Licensing.dll"/>
+        <!-- <include name="log4net.dll" /> -->
       </fileset>
     </copy>
 	
@@ -152,11 +151,11 @@
       </fileset>
     </copy>
 
-    <echo>Looking for: ${root.dir}\..\..\workflow\FergusonMoriyama.Workflow\build\out</echo>
+    <echo>Looking for: ${root.dir}\..\..\workflow\build\out</echo>
 
     <copy todir="${package.dir}\bin" includeemptydirs="true" flatten="false" failonerror="false" overwrite="true">
       
-    <fileset basedir="${root.dir}\..\..\workflow\FergusonMoriyama.Workflow\build\out">
+    <fileset basedir="${root.dir}\..\..\workflow\build\out">
         <include name="FergusonMoriyama.Workflow.dll" />
       </fileset>
     </copy>

@@ -3,7 +3,7 @@ using System.Reflection;
 using FergusonMoriyam.Workflow.Domain.Designer;
 using FergusonMoriyam.Workflow.Interfaces.Domain.Designer;
 using FergusonMoriyam.Workflow.Interfaces.Infrastructure;
-using log4net;
+using Common.Logging;
 
 namespace FergusonMoriyam.Workflow.Infrastructure
 {

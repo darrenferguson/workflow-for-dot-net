@@ -3,7 +3,7 @@ using System.Reflection;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using FergusonMoriyam.Workflow.Interfaces.Application;
-using log4net;
+using Common.Logging;
 
 namespace Web.Ui
 {

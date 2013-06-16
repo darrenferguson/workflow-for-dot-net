@@ -7,7 +7,7 @@ using FergusonMoriyam.Workflow.Application;
 using FergusonMoriyam.Workflow.Application.Reflection;
 using FergusonMoriyam.Workflow.Domain;
 using FergusonMoriyam.Workflow.Interfaces.Application;
-using log4net;
+using Common.Logging;
 
 namespace Web.Ui
 {

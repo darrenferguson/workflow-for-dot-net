@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using FergusonMoriyam.Workflow.Interfaces.Domain.Event;
 using FergusonMoriyam.Workflow.Interfaces.Domain.Event.Factory;
-using log4net;
+using Common.Logging;
 
 namespace FergusonMoriyam.Workflow.Domain.Event.Factory
 {

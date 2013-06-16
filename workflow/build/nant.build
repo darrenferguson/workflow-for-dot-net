@@ -94,12 +94,6 @@
 			<arg value="${core.dir}\Interfaces\bin\Release\FergusonMoriyam.Workflow.Interfaces.dll"/>
 			<arg value="${core.dir}\Ui\bin\Release\FergusonMoriyam.Workflow.Ui.dll"/>
 		</exec>
-	
-		<copy todir="${core.dir}\..\..\workflow-for-umbraco-4\Solution Items" overwrite="true">
-          <fileset basedir="${root.dir}\out">
-              <include name="*.dll" />
-          </fileset>
-		</copy>
 
     <copy todir="${core.dir}\..\..\workflow-for-umbraco-4\build\out" overwrite="true">
       <fileset basedir="${root.dir}\out">
@@ -107,17 +101,6 @@
       </fileset>
     </copy>
 
-    <copy todir="${core.dir}\..\..\workflow-for-webforms\Solution Items" overwrite="true">
-          <fileset basedir="${root.dir}\out">
-              <include name="FergusonMoriyama.Workflow.dll" />
-          </fileset>
-		</copy>	
-		
-		<copy todir="${core.dir}\..\..\workflow-for-mvc-3\Solution Items" overwrite="true">
-          <fileset basedir="${root.dir}\out">
-              <include name="FergusonMoriyama.Workflow.dll" />
-          </fileset>
-		</copy>	
   </target>
  
   <target name="debug" depends="debugcompile,debugmerge"/>

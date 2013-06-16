@@ -43,6 +43,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\cms.dll</HintPath>
     </Reference>
+    <Reference Include="Common.Logging, Version=1.2.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Umbraco.Solution\packages\Common.Logging.1.2.0\lib\1.0\Common.Logging.dll</HintPath>
+    </Reference>
     <Reference Include="controls">
       <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\controls.dll</HintPath>
     </Reference>
@@ -64,10 +68,6 @@
     <Reference Include="interfaces, Version=1.0.4898.17344, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\interfaces.dll</HintPath>
-    </Reference>
-    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Lucene.Net">
       <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\Lucene.Net.dll</HintPath>

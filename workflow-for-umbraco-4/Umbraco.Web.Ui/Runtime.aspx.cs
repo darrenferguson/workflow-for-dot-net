@@ -2,7 +2,7 @@
 using System.Reflection;
 using System.Web.UI;
 using FergusonMoriyam.Workflow.Interfaces.Application.Runtime;
-using log4net;
+using Common.Logging;
 
 namespace FergusonMoriyam.Workflow.Umbraco.Web.Ui
 {

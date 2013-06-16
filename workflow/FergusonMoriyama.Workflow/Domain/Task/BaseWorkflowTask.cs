@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 using FergusonMoriyam.Workflow.Interfaces.Domain;
-using log4net;
+using Common.Logging;
 
 namespace FergusonMoriyam.Workflow.Domain.Task
 {

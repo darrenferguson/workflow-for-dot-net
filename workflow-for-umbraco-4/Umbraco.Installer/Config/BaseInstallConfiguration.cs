@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 using System.Xml;
-using log4net;
+using Common.Logging;
 
 namespace FergusonMoriyam.Workflow.Umbraco.Installer.Config
 {

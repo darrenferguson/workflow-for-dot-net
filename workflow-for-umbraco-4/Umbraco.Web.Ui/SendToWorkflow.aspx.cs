@@ -9,7 +9,7 @@ using FergusonMoriyam.Workflow.Interfaces.Domain;
 using FergusonMoriyam.Workflow.Umbraco.Application.Interfaces;
 using FergusonMoriyam.Workflow.Umbraco.Domain;
 using FergusonMoriyam.Workflow.Umbraco.Web.Ui.Extensions;
-using log4net;
+using Common.Logging;
 using umbraco.BasePages;
 using System.Linq;
 

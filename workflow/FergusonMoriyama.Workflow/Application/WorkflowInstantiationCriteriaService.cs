@@ -5,7 +5,7 @@ using FergusonMoriyam.Workflow.Interfaces.Application;
 using FergusonMoriyam.Workflow.Interfaces.Domain;
 using FergusonMoriyam.Workflow.Interfaces.Domain.Factory;
 using FergusonMoriyam.Workflow.Interfaces.Infrastructure;
-using log4net;
+using Common.Logging;
 
 namespace FergusonMoriyam.Workflow.Application
 {

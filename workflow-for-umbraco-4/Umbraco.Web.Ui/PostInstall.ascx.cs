@@ -5,8 +5,8 @@ using System.Reflection;
 using FergusonMoriyam.Workflow.Umbraco.Installer;
 using FergusonMoriyam.Workflow.Umbraco.Installer.Config;
 using FergusonMoriyam.Workflow.Umbraco.Installer.Database;
-using log4net;
-using log4net.Config;
+using Common.Logging;
+
 using umbraco.IO;
 
 namespace FergusonMoriyam.Workflow.Umbraco.Web.Ui
@@ -16,7 +16,7 @@ namespace FergusonMoriyam.Workflow.Umbraco.Web.Ui
         protected static readonly ILog Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
         protected const string MinimumRequiredUmbracoVersion = "4.7.1";
-        protected const string MaximumRequiredUmbracoVersion = "4.8.1";
+        protected const string MaximumRequiredUmbracoVersion = "4.12.0";
 
         public Version UmbracoVersion;
         public bool UmbracoVersionCompatible;
@@ -28,7 +28,7 @@ namespace FergusonMoriyam.Workflow.Umbraco.Web.Ui
         {
  	        base.OnInit(e);
 
-            XmlConfigurator.Configure(Helper.Instance.GetAssemblyResourceStream("Resources.Config.Log4Net.config").BaseStream);
+            //XmlConfigurator.Configure(Helper.Instance.GetAssemblyResourceStream("Resources.Config.Log4Net.config").BaseStream);
             Log.Debug("Running installer");
             
             var version = Helper.Instance.GetWorkflowVersion();
@@ -75,7 +75,7 @@ namespace FergusonMoriyam.Workflow.Umbraco.Web.Ui
 
             Log.Debug("Re-configuring log4net to use workflow config");
             var logConfig = IOHelper.MapPath("~/config/fmworkflow/Log4Net.config");
-            XmlConfigurator.Configure(new FileInfo(logConfig));
+            // XmlConfigurator.Configure(new FileInfo(logConfig));
         }
 
         protected void ManualInstallButtonClick(object sender, EventArgs e)

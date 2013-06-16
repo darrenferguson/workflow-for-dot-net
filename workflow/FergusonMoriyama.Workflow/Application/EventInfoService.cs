@@ -1,8 +1,8 @@
 ﻿using System.Reflection;
+using Common.Logging;
 using FergusonMoriyam.Workflow.Interfaces.Application.Event;
 using FergusonMoriyam.Workflow.Interfaces.Domain.Event;
 using System.Linq;
-using log4net;
 
 namespace FergusonMoriyam.Workflow.Application
 {

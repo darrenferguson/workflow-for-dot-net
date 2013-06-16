@@ -2,7 +2,7 @@
 using System.Configuration;
 using System.IO;
 using System.Reflection;
-using log4net;
+using Common.Logging;
 using umbraco.DataLayer;
 
 namespace FergusonMoriyam.Workflow.Umbraco.Installer.Database

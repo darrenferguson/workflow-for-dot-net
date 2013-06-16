@@ -5,7 +5,7 @@ using System.Reflection;
 using FergusonMoriyam.Workflow.Domain;
 using System.Web.Script.Serialization;
 using FergusonMoriyam.Workflow.Interfaces.Application;
-using log4net;
+using Common.Logging;
 
 namespace FergusonMoriyam.Workflow.Application.Reflection
 {

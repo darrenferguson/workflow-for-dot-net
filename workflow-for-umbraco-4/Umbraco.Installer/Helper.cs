@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using log4net;
+using Common.Logging;
 using umbraco;
 
 namespace FergusonMoriyam.Workflow.Umbraco.Installer

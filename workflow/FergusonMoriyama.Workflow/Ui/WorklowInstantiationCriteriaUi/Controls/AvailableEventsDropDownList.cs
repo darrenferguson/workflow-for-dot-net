@@ -6,7 +6,7 @@ using System.Web.Script.Serialization;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using FergusonMoriyam.Workflow.Application;
-using log4net;
+using Common.Logging;
 
 namespace FergusonMoriyam.Workflow.Ui.WorklowInstantiationCriteriaUi.Controls
 {
