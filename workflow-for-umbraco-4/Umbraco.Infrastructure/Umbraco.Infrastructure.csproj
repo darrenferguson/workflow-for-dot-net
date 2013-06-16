@@ -34,13 +34,9 @@
     <Reference Include="FergusonMoriyama.Workflow">
       <HintPath>..\Umbraco.Solution\packages\Moriyama.Workflow.2.1.0.0\lib\FergusonMoriyama.Workflow.dll</HintPath>
     </Reference>
-    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+    <Reference Include="SQLCE4Umbraco, Version=1.0.4869.23220, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Solution Items\log4net.dll</HintPath>
-    </Reference>
-    <Reference Include="SQLCE4Umbraco, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Solution Items\SQLCE4Umbraco.dll</HintPath>
+      <HintPath>..\Docs and supporting files\SQLCE4Umbraco.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
