@@ -47,7 +47,7 @@
       <HintPath>..\Solution Items\FergusonMoriyama.Umbraco4.Workflow.dll</HintPath>
     </Reference>
     <Reference Include="FergusonMoriyama.Workflow">
-      <HintPath>..\Solution Items\FergusonMoriyama.Workflow.dll</HintPath>
+      <HintPath>..\packages\Moriyama.Workflow.2.1.0.0\lib\FergusonMoriyama.Workflow.dll</HintPath>
     </Reference>
     <Reference Include="interfaces, Version=1.0.4266.19106, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -77,10 +77,13 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>XCOPY "$(TargetPath)" "c:\www\muse\bin" /Y /R
-XCOPY "$(TargetDir)BitLy.dll" "c:\www\muse\bin" /Y /R</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

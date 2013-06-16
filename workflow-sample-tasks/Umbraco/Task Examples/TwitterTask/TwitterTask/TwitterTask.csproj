@@ -41,7 +41,7 @@
       <HintPath>..\Solution Items\FergusonMoriyama.Umbraco4.Workflow.dll</HintPath>
     </Reference>
     <Reference Include="FergusonMoriyama.Workflow">
-      <HintPath>..\Solution Items\FergusonMoriyama.Workflow.dll</HintPath>
+      <HintPath>..\packages\Moriyama.Workflow.2.1.0.0\lib\FergusonMoriyama.Workflow.dll</HintPath>
     </Reference>
     <Reference Include="interfaces">
       <HintPath>..\Solution Items\interfaces.dll</HintPath>
@@ -79,12 +79,13 @@
     <Compile Include="UiProperty\TweetTextPropertyUi.cs" />
     <Compile Include="Ui\TweetWorkflowTaskEntityUi.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>XCOPY "$(TargetPath)" "c:\www\installer8\bin" /Y /R
-XCOPY "$(TargetDir)Twitterizer2.dll" "c:\www\installer8\bin" /Y /R
-XCOPY "$(TargetDir)Newtonsoft.Json.dll" "c:\www\installer8\bin" /Y /R</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
