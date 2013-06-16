@@ -16,14 +16,16 @@ namespace FergusonMoriyam.Workflow.Umbraco.Web.Ui
         protected static readonly ILog Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
         protected const string MinimumRequiredUmbracoVersion = "4.7.1";
-        protected const string MaximumRequiredUmbracoVersion = "4.12.0";
+        protected const string MaximumRequiredUmbracoVersion = "6.0.12";
 
         public Version UmbracoVersion;
         public bool UmbracoVersionCompatible;
 
         public DatabaseType DbType;
         public bool DatabaseCompatible;
-        
+
+        private string _umbracoConnectionString;
+
         protected override void  OnInit(EventArgs e)
         {
  	        base.OnInit(e);
@@ -45,7 +47,11 @@ namespace FergusonMoriyam.Workflow.Umbraco.Web.Ui
             Log.Debug(string.Format("Umbraco {0} is required", minVersion));
             Log.Debug(string.Format("Umbraco compatibility check: Umbraco version - '{0}'. Compatible {1}.",UmbracoVersion, UmbracoVersionCompatible));
 
-            DbType = Helper.Instance.GetDatbaseType(ConfigurationManager.AppSettings["umbracoDbDSN"]);
+            _umbracoConnectionString = UmbracoVersion.Major > 4
+                ? ConfigurationManager.ConnectionStrings["umbracoDbDSN"].ConnectionString
+                : ConfigurationManager.AppSettings["umbracoDbDSN"];
+
+            DbType = Helper.Instance.GetDatbaseType(_umbracoConnectionString);
             DatabaseCompatible = (DbType == DatabaseType.SqlServer || DbType == DatabaseType.MySql || DbType == DatabaseType.SqlCe);
             Log.Debug(string.Format("Database compatibility check: current version - '{0}'. Compatible {1}.", DbType, DatabaseCompatible));
             
@@ -65,10 +71,11 @@ namespace FergusonMoriyam.Workflow.Umbraco.Web.Ui
         {
 
             Log.Debug("Running SQL");
+
             var infrastructureConfig = IOHelper.MapPath("~/config/fmworkflow/workflow.infrastructure.spring.config");
-            if (DbType == DatabaseType.SqlServer) InstallSqlServer.Instance.Run(infrastructureConfig);
-            if (DbType == DatabaseType.MySql) InstallMySql.Instance.Run(infrastructureConfig);
-            if (DbType == DatabaseType.SqlCe) InstallSqlCe.Instance.Run(infrastructureConfig);
+            if (DbType == DatabaseType.SqlServer) InstallSqlServer.Instance.Run(infrastructureConfig, _umbracoConnectionString);
+            if (DbType == DatabaseType.MySql) InstallMySql.Instance.Run(infrastructureConfig, _umbracoConnectionString);
+            if (DbType == DatabaseType.SqlCe) InstallSqlCe.Instance.Run(infrastructureConfig, _umbracoConnectionString);
             
             Log.Debug("Running web.config install");
             InstallConfiguration.Instance.Run();

@@ -10,7 +10,7 @@ namespace FergusonMoriyam.Workflow.Umbraco.Installer.Database
     {
         protected static readonly ILog Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
-        public void Run(string configFile)
+        public void Run(string configFile, string connectionString)
         {
             Log.Debug("Running SQL Server install");
 
@@ -19,7 +19,7 @@ namespace FergusonMoriyam.Workflow.Umbraco.Installer.Database
             Log.Debug(sql);
 
             Log.Debug("Executing SQL");
-            var helper = DataLayerHelper.CreateSqlHelper(ConfigurationManager.AppSettings["umbracoDbDSN"]);
+            var helper = DataLayerHelper.CreateSqlHelper(connectionString);
 
             try
             {

@@ -1,6 +1,8 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Configuration;
 using System.Data.Common;
 using FergusonMoriyam.Workflow.Interfaces.Infrastructure;
+using umbraco;
 
 namespace FergusonMoriyam.Workflow.Umbraco.Application.Infrastructure
 {
@@ -27,8 +29,13 @@ namespace FergusonMoriyam.Workflow.Umbraco.Application.Infrastructure
 
             if(connectionStringBuilder == null)
             {
-                connectionStringBuilder = new DbConnectionStringBuilder
-                                              {ConnectionString = ConfigurationManager.AppSettings["umbracoDbDSN"]};
+                var umbracoVersion = new Version(GlobalSettings.CurrentVersion);
+
+                var umbracoConnectionString = umbracoVersion.Major > 4
+                ? ConfigurationManager.ConnectionStrings["umbracoDbDSN"].ConnectionString
+                : ConfigurationManager.AppSettings["umbracoDbDSN"];
+
+                connectionStringBuilder = new DbConnectionStringBuilder { ConnectionString = umbracoConnectionString };
 
                 connectionStringBuilder.Remove("datalayer");
             }

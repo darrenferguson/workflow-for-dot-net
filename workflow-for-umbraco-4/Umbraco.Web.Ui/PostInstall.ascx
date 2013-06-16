@@ -40,7 +40,7 @@
             </a>
         </li>
         <li>
-            <a href="https://bitbucket.org/darrenjferguson/workflow-samples" target="_blank">
+            <a href="https://github.com/darrenferguson/workflow-for-dot-net" target="_blank">
                 Get example source code
             </a>
         </li>
