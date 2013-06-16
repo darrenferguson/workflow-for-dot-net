@@ -20,6 +20,10 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,7 +51,7 @@
       <HintPath>..\..\..\..\..\..\www\muse\bin\cms.dll</HintPath>
     </Reference>
     <Reference Include="FergusonMoriyama.Workflow">
-      <HintPath>..\Solution Items\FergusonMoriyama.Workflow.dll</HintPath>
+      <HintPath>..\Umbraco.Solution\packages\Moriyama.Workflow.2.1.0.0\lib\FergusonMoriyama.Workflow.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

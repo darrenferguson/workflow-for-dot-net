@@ -6,22 +6,24 @@ using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 using Spring.Context.Support;
 using Umbraco.Core;
 using Umbraco.Web;
+using umbraco.BusinessLogic;
 using umbraco.cms.presentation.Trees;
 
 namespace FergusonMoriyam.Workflow.Umbraco.Application
 {
-    public class UmbracoWorkflowApplicationBase : IApplicationEventHandler
+    public class UmbracoWorkflowApplicationBase : ApplicationBase
     {
         private static readonly ILog Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
         private static bool _modulesRegistered;
 
-        public void OnApplicationStarted(UmbracoApplication httpApplication, ApplicationContext applicationContext)
+        public UmbracoWorkflowApplicationBase()
         {
             Log.Info(string.Format("Starting workflow for Umbraco {0}", Assembly.GetExecutingAssembly().GetName().Version));
 
             var ctx = ContextRegistry.GetContext();
             var eventService = (IEventService)ctx.GetObject("EventService");
+            
 
             Log.Debug("Registering events");
             eventService.RegisterEvents();
@@ -29,6 +31,8 @@ namespace FergusonMoriyam.Workflow.Umbraco.Application
             Log.Debug("Registering custom menu items");
             BaseContentTree.BeforeNodeRender += BaseContentTreeBeforeNodeRender;
         }
+
+
         
         void BaseContentTreeBeforeNodeRender(ref XmlTree sender, ref XmlTreeNode node, System.EventArgs e)
         {
@@ -44,12 +48,6 @@ namespace FergusonMoriyam.Workflow.Umbraco.Application
             _modulesRegistered = true;
         }
 
-        public void OnApplicationInitialized(UmbracoApplication httpApplication, ApplicationContext applicationContext)
-        {   
-        }
-
-        public void OnApplicationStarting(UmbracoApplication httpApplication, ApplicationContext applicationContext)
-        {
-        }
+       
     }
 }
