@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{EB40991A-8E48-45CB-99B7-70BC4E521EA8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{EBF5E5D0-3C79-4E07-8D6F-0B3A3EF980C6}"
@@ -9,7 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		FergusonMoriyama.Workflow.vsmdi = FergusonMoriyama.Workflow.vsmdi
 		Local.testsettings = Local.testsettings
-		..\..\..\Downloads\log4net.dll = ..\..\..\Downloads\log4net.dll
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
@@ -20,8 +19,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{67B97F9A-03E6-499D-9A03-447C0859D785}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ui", "Ui\Ui.csproj", "{A97910EF-75F8-4658-BF36-F1D76232E329}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "License", "License\License.csproj", "{94D0CCB8-5383-4BFD-ADB5-002AED1D11A3}"
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
@@ -56,10 +53,6 @@ Global
 		{A97910EF-75F8-4658-BF36-F1D76232E329}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A97910EF-75F8-4658-BF36-F1D76232E329}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A97910EF-75F8-4658-BF36-F1D76232E329}.Release|Any CPU.Build.0 = Release|Any CPU
-		{94D0CCB8-5383-4BFD-ADB5-002AED1D11A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{94D0CCB8-5383-4BFD-ADB5-002AED1D11A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{94D0CCB8-5383-4BFD-ADB5-002AED1D11A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{94D0CCB8-5383-4BFD-ADB5-002AED1D11A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

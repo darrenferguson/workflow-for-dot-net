@@ -59,7 +59,6 @@ namespace FergusonMoriyam.Workflow.Application
 
         public IWorkflowInstance Instantiate(int workflowConfigurationId)
         {
-            License.Validator.Instance.ValidateRuntimeRestriction();
 
             var workflowInstance = CreateInstance(workflowConfigurationId);
             TheWorkflowInstanceRepository.Create(workflowInstance);
@@ -78,7 +77,6 @@ namespace FergusonMoriyam.Workflow.Application
 
         public IWorkflowInstance Instantiate(int workflowConfigurationId, IDictionary<string, object> properties)
         {
-            License.Validator.Instance.ValidateRuntimeRestriction();
 
             var workflowInstance = CreateInstance(workflowConfigurationId);
             TheWorkflowInstanceRepository.Create(workflowInstance);
@@ -98,7 +96,6 @@ namespace FergusonMoriyam.Workflow.Application
 
         public void Start(int workflowInstanceId)
         {
-            License.Validator.Instance.ValidateRuntimeRestriction();
 
             var workflowInstance = TheWorkflowInstanceRepository.GetById(workflowInstanceId);
             var hydratedInstance = TheWorkflowInstanceRepository.RestoreState(workflowInstance);

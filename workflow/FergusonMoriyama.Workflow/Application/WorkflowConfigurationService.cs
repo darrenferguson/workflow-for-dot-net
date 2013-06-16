@@ -34,21 +34,17 @@ namespace FergusonMoriyam.Workflow.Application
 
         public IWorkflowConfiguration GetConfiguration(int workflowConfigurationId)
         {
-            License.Validator.Instance.ValidateRuntimeRestriction();
-
             var workflowConfiguration = ConfigurationRepository.GetById(workflowConfigurationId);
             return ConfigurationRepository.RestoreState(workflowConfiguration);  
         }
 
         public IList<IWorkflowConfiguration> ListConfigurations()
         {
-            License.Validator.Instance.ValidateRuntimeRestriction();
             return ConfigurationRepository.List();
         }
 
         public void CreateWorkflowConfiguration(string name, string typeName)
         {
-            License.Validator.Instance.ValidateRuntimeRestriction();
             var workflowConfiguration = WorkflowConfigurationFactory.Create(typeName, name);
             ConfigurationRepository.Create(workflowConfiguration);
         }

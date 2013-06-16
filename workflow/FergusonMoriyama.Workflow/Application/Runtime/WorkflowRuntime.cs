@@ -42,9 +42,6 @@ namespace FergusonMoriyam.Workflow.Application.Runtime
 
         public void Start(IWorkflowInstance workflowInstance)
         {
-            License.Validator.Instance.ValidateRuntimeRestriction();
-
-
             if (workflowInstance.Started)
             {
                 LogAndThrow(new WorkflowInstanceAlreadyStartedException(string.Format("Workflow instance '{0}' has already been started", workflowInstance.Id)));
@@ -91,7 +88,6 @@ namespace FergusonMoriyam.Workflow.Application.Runtime
 
         public void Transition(IWorkflowInstance workflowInstance, IWorkflowTask workflowTask, string transitionName, string comment)
         {
-            License.Validator.Instance.ValidateRuntimeRestriction();
             if (workflowTask.Transitions.Values.Count == 0)
             {
                 Log.Warn(string.Format("Ending workflow '{0}' as it has no transitions.", workflowInstance.Id));
@@ -129,7 +125,6 @@ namespace FergusonMoriyam.Workflow.Application.Runtime
 
         public void RunWorkflows()
         {
-            License.Validator.Instance.ValidateRuntimeRestriction();
             Log.Info("Runtime is processing workflows");
 
             var actionsHappened = true;

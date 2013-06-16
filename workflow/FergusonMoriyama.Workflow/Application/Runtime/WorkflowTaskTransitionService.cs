@@ -56,7 +56,6 @@ namespace FergusonMoriyam.Workflow.Application.Runtime
 
         public void Transition(IWorkflowInstance workflowInstance, string transiton, string comment)
         {
-            License.Validator.Instance.ValidateRuntimeRestriction();
             var task = workflowInstance.CurrentTask;
 
             if (!task.Transitions.ContainsKey(transiton))

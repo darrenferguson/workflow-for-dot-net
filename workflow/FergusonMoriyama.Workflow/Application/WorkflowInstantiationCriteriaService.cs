@@ -31,20 +31,17 @@ namespace FergusonMoriyam.Workflow.Application
 
         public void CreateWorkflowInstantiationCriteria(string name)
         {
-            License.Validator.Instance.ValidateRuntimeRestriction();
             var criteria = TheWorkflowInstantiationCriteriaFactory.Create(name);
             TheWorkflowInstantiationCriteriaRepository.Create(criteria);
         }
 
         public IList<IWorkflowInstantiationCriteria> List()
         {
-            License.Validator.Instance.ValidateRuntimeRestriction();
             return TheWorkflowInstantiationCriteriaRepository.List();
         }
 
         public IWorkflowInstantiationCriteria GetCriteria(int id)
         {
-            License.Validator.Instance.ValidateRuntimeRestriction();
             var criteria = TheWorkflowInstantiationCriteriaRepository.GetById(id);
             return TheWorkflowInstantiationCriteriaRepository.RestoreState(criteria);
         }
@@ -71,7 +68,6 @@ namespace FergusonMoriyam.Workflow.Application
 
         public IEnumerable<IWorkflowInstantiationCriteria> GetCriteriaForEvents(string eventName)
         {
-            License.Validator.Instance.ValidateRuntimeRestriction();
             var criterias = new List<IWorkflowInstantiationCriteria>();
             foreach(var criteria in List())
             {

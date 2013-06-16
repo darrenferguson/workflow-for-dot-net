@@ -31,15 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="businesslogic">
-      <HintPath>..\..\..\..\..\..\www\muse\bin\businesslogic.dll</HintPath>
-    </Reference>
-    <Reference Include="cms">
-      <HintPath>..\..\..\..\..\..\www\muse\bin\cms.dll</HintPath>
-    </Reference>
-    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Solution Items\log4net.dll</HintPath>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -82,10 +75,6 @@
     <ProjectReference Include="..\Interfaces\Interfaces.csproj">
       <Project>{63F5AE2E-50EA-4C5F-99AB-647C6972C261}</Project>
       <Name>Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\License\License.csproj">
-      <Project>{94D0CCB8-5383-4BFD-ADB5-002AED1D11A3}</Project>
-      <Name>License</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

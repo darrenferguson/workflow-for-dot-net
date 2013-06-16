@@ -44,7 +44,6 @@ namespace FergusonMoriyam.Workflow.Application
 
         public void OnEvent(object sender, string eventName, object[] args)
         {
-            License.Validator.Instance.ValidateRuntimeRestriction();
             var name = ((Type)sender).FullName + "." + eventName;
 
             Log.Debug(string.Format("Got event {0}", name));
@@ -99,7 +98,6 @@ namespace FergusonMoriyam.Workflow.Application
 
         public void RegisterEvents()
         {
-            License.Validator.Instance.ValidateRuntimeRestriction();
             Init();
 
             foreach(var criteria in TheWorkflowInstantiationCriteriaService.List())

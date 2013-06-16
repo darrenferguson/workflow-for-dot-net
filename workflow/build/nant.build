@@ -64,7 +64,6 @@
 			<arg value="${core.dir}\Domain\bin\Debug\FergusonMoriyam.Workflow.Domain.dll"/>
 			<arg value="${core.dir}\Infrastructure\bin\Debug\FergusonMoriyam.Workflow.Infrastructure.dll"/>
 			<arg value="${core.dir}\Interfaces\bin\Debug\FergusonMoriyam.Workflow.Interfaces.dll"/>
-			<arg value="${core.dir}\License\bin\Debug\FergusonMoriyam.Workflow.License.dll"/>
 			<arg value="${core.dir}\Ui\bin\Debug\FergusonMoriyam.Workflow.Ui.dll"/>
 		</exec>
 
@@ -93,7 +92,6 @@
 			<arg value="${core.dir}\Domain\bin\Release\FergusonMoriyam.Workflow.Domain.dll"/>
 			<arg value="${core.dir}\Infrastructure\bin\Release\FergusonMoriyam.Workflow.Infrastructure.dll"/>
 			<arg value="${core.dir}\Interfaces\bin\Release\FergusonMoriyam.Workflow.Interfaces.dll"/>
-			<arg value="${core.dir}\License\bin\Release\FergusonMoriyam.Workflow.License.dll"/>
 			<arg value="${core.dir}\Ui\bin\Release\FergusonMoriyam.Workflow.Ui.dll"/>
 		</exec>
 	
