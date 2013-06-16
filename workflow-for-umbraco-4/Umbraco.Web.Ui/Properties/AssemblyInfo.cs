@@ -6,12 +6,12 @@ using FergusonMoriyam.Workflow.Umbraco.Application;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Ferguson Moriyama Workflow for Umbraco")]
+[assembly: AssemblyTitle("Moriyama Workflow for Umbraco 4")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Ferguson Moriyama")]
-[assembly: AssemblyProduct("Ferguson Moriyama Workflow for Umbraco")]
-[assembly: AssemblyCopyright("Copyright © Ferguson Moriyama 2012")]
+[assembly: AssemblyCompany("Moriyama")]
+[assembly: AssemblyProduct("Moriyama Workflow for Umbraco 4")]
+[assembly: AssemblyCopyright("Copyright © Moriyama 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,7 +32,7 @@ using FergusonMoriyam.Workflow.Umbraco.Application;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("2.0.0.0")]
-[assembly: AssemblyFileVersion("2.0.0.0")]
+[assembly: AssemblyVersion("2.1.0.0")]
+[assembly: AssemblyFileVersion("2.1.0.0")]
 [assembly: System.Web.UI.WebResource("css/grid.css", "text/css")]
 [assembly: PreApplicationStartMethod(typeof(UmbracoWorkflowApplicationBase), "RegisterModules")]

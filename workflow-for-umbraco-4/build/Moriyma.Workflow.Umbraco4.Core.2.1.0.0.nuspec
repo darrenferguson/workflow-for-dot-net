@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Moriyma.Workflow.Umbraco4.Core</id>
+        <version>2.1.0.0</version>
+        <title>Moriyama Workflow For Umbraco 4 Core DLLs</title>
+        <authors>Darren Ferguson</authors>
+        <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+        <projectUrl>https://github.com/darrenferguson/workflow-for-dot-net</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>DLLs for creating custom tasks in a Workflow for Umbraco application</description>
+        <dependencies>
+            <dependency id="Moriyama.Workflow" version="2.1.0.0" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="out\FergusonMoriyama.Umbraco4.Workflow.dll" target="lib\FergusonMoriyama.Umbraco4.Workflow.dll" />
+    </files>
+</package>

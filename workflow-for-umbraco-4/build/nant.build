@@ -7,7 +7,7 @@
   <!-- global properties, generally won't change -->
   <property name="nant.settings.currentframework" value="net-3.5" />
   <property name="dist.name" value="fmworkflow" />
-  <property name="dist.version" value="2.0" />
+  <property name="dist.version" value="2.1" />
 
   <property name="package.name" value="${dist.name}_${dist.version}_${datetime::get-ticks(datetime::now())}" />
 
