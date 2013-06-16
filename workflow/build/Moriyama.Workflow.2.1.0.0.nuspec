@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Moriyama.Workflow</id>
+        <version>2.1.0.0</version>
+        <title>Moriyama Workflow</title>
+        <authors>Darren Ferguson</authors>
+        <owners>Moriyama</owners>
+        <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+        <projectUrl>https://github.com/darrenferguson/workflow-for-dot-net</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Workflow implementation</description>
+        <summary />
+    </metadata>
+    <files>
+        <file src="out\FergusonMoriyama.Workflow.dll" target="lib\FergusonMoriyama.Workflow.dll" />
+    </files>
+</package>
