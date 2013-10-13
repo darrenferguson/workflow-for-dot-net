@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umbPackage>
+  <files>
+    <file>
+      <guid>b10c209b-db3f-4995-839f-2b7ffade0eb2.dll</guid>
+      <orgPath>/bin</orgPath>
+      <orgName>Common.Logging.dll</orgName>
+    </file>
+    <file>
+      <guid>39fb0ba9-1b8c-4efa-b32d-e4b279966e5b.dll</guid>
+      <orgPath>/bin</orgPath>
+      <orgName>FergusonMoriyama.Umbraco4.Workflow.dll</orgName>
+    </file>
+    <file>
+      <guid>26f4c104-7ff3-496f-aca5-ab9a77c827a4.dll</guid>
+      <orgPath>/bin</orgPath>
+      <orgName>FergusonMoriyama.Workflow.dll</orgName>
+    </file>
+    <file>
+      <guid>a411fe42-9e03-46c1-9b4a-62eb941a7265.dll</guid>
+      <orgPath>/bin</orgPath>
+      <orgName>PackageActionsContrib.dll</orgName>
+    </file>
+    <file>
+      <guid>e13d4993-127b-497c-a338-4d41d0bb114e.dll</guid>
+      <orgPath>/bin</orgPath>
+      <orgName>Spring.Core.dll</orgName>
+    </file>
+    <file>
+      <guid>e8460b32-820c-487e-8273-7e9e8d8edc80.dll</guid>
+      <orgPath>/bin</orgPath>
+      <orgName>Spring.Web.dll</orgName>
+    </file>
+    <file>
+      <guid>e886a3c5-559f-4642-bcb1-de819b98d493.config</guid>
+      <orgPath>/config/fmworkflow</orgPath>
+      <orgName>Log4Net.config</orgName>
+    </file>
+    <file>
+      <guid>5dcae063-8556-4077-b74a-65510a0eebde.config</guid>
+      <orgPath>/config/fmworkflow</orgPath>
+      <orgName>workflow.application.spring.config</orgName>
+    </file>
+    <file>
+      <guid>13183b5f-2949-4a2a-ad0d-0341fa0fe656.config</guid>
+      <orgPath>/config/fmworkflow</orgPath>
+      <orgName>workflow.core.spring.config</orgName>
+    </file>
+    <file>
+      <guid>a35687e0-6337-4f3a-bab5-41ff80573f64.config</guid>
+      <orgPath>/config/fmworkflow</orgPath>
+      <orgName>workflow.domain.spring.config</orgName>
+    </file>
+    <file>
+      <guid>f4c5c25e-463e-4c8c-bae0-ee3690ced16c.config</guid>
+      <orgPath>/config/fmworkflow</orgPath>
+      <orgName>workflow.en-GB.spring.config</orgName>
+    </file>
+    <file>
+      <guid>da27c792-fd1f-48fd-808c-1273610350c1.config</guid>
+      <orgPath>/config/fmworkflow</orgPath>
+      <orgName>workflow.globalisation.spring.config</orgName>
+    </file>
+    <file>
+      <guid>262052f3-d2b4-4abb-a89a-4ef8ca5a0939.config</guid>
+      <orgPath>/config/fmworkflow</orgPath>
+      <orgName>workflow.infrastructure.spring.config</orgName>
+    </file>
+    <file>
+      <guid>449b2abe-6a1a-482e-b99b-112d3b5f1cb3.config</guid>
+      <orgPath>/config/fmworkflow</orgPath>
+      <orgName>workflow.spring.config</orgName>
+    </file>
+    <file>
+      <guid>c895dc77-bfa6-4454-b5c2-99b8f69ae179.config</guid>
+      <orgPath>/config/fmworkflow</orgPath>
+      <orgName>workflow.ui.spring.config</orgName>
+    </file>
+    <file>
+      <guid>2780ef7d-7e56-4669-8c27-0a5bcddd1e59.css</guid>
+      <orgPath>/umbraco/plugins/fmworkflow/css</orgPath>
+      <orgName>baseTasks.css</orgName>
+    </file>
+    <file>
+      <guid>d4a372d8-2cb5-408a-aa0f-28fdc3407bad.png</guid>
+      <orgPath>/umbraco/plugins/fmworkflow/images</orgPath>
+      <orgName>arrow_join.png</orgName>
+    </file>
+    <file>
+      <guid>079cafc9-f898-42aa-b433-3154ce2e7fbf.png</guid>
+      <orgPath>/umbraco/plugins/fmworkflow/images</orgPath>
+      <orgName>arrow_switch.png</orgName>
+    </file>
+    <file>
+      <guid>dea5915f-7436-4f39-8fad-ee0943e8dca5.png</guid>
+      <orgPath>/umbraco/plugins/fmworkflow/images</orgPath>
+      <orgName>cog.png</orgName>
+    </file>
+    <file>
+      <guid>598f663b-2477-4275-9b50-0c2560979c69.png</guid>
+      <orgPath>/umbraco/plugins/fmworkflow/images</orgPath>
+      <orgName>email.png</orgName>
+    </file>
+    <file>
+      <guid>815e77b7-f589-4ece-a778-d5ea72102549.png</guid>
+      <orgPath>/umbraco/plugins/fmworkflow/images</orgPath>
+      <orgName>group_go.png</orgName>
+    </file>
+    <file>
+      <guid>2913bc68-bf5d-4717-9cc5-c13feab9f4ab.png</guid>
+      <orgPath>/umbraco/plugins/fmworkflow/images</orgPath>
+      <orgName>images.png</orgName>
+    </file>
+    <file>
+      <guid>976d4e8a-aa38-4343-8647-a9bfa992e48b.png</guid>
+      <orgPath>/umbraco/plugins/fmworkflow/images</orgPath>
+      <orgName>page_world.png</orgName>
+    </file>
+    <file>
+      <guid>fb651a56-6230-428d-b7d8-7bd16f133ad0.png</guid>
+      <orgPath>/umbraco/plugins/fmworkflow/images</orgPath>
+      <orgName>stop.png</orgName>
+    </file>
+    <file>
+      <guid>d79cec01-dd8d-45a1-8ed7-062306013217.png</guid>
+      <orgPath>/umbraco/plugins/fmworkflow/images</orgPath>
+      <orgName>time.png</orgName>
+    </file>
+    <file>
+      <guid>5c07ef3d-eadb-47de-8783-89ab397697d9.png</guid>
+      <orgPath>/umbraco/plugins/fmworkflow/images</orgPath>
+      <orgName>user_go.png</orgName>
+    </file>
+    <file>
+      <guid>08202776-49d5-478f-8fdc-3a7f31f7143b.js</guid>
+      <orgPath>/umbraco/plugins/fmworkflow/js</orgPath>
+      <orgName>speechbubble.js</orgName>
+    </file>
+    <file>
+      <guid>6b49d48b-f244-4680-90a2-06df10eea8a0.aspx</guid>
+      <orgPath>/umbraco/plugins/fmworkflow</orgPath>
+      <orgName>EditConfigurationProperties.aspx</orgName>
+    </file>
+    <file>
+      <guid>9f7602d7-de11-4664-b517-8982ea1e29cd.aspx</guid>
+      <orgPath>/umbraco/plugins/fmworkflow</orgPath>
+      <orgName>EditDesign.aspx</orgName>
+    </file>
+    <file>
+      <guid>387fdec8-5cee-4e71-a661-94fdfc2226d2.aspx</guid>
+      <orgPath>/umbraco/plugins/fmworkflow</orgPath>
+      <orgName>EditInstantiationCriteria.aspx</orgName>
+    </file>
+    <file>
+      <guid>be1683b8-840a-497e-9f71-26b5e9a7c7a1.aspx</guid>
+      <orgPath>/umbraco/plugins/fmworkflow</orgPath>
+      <orgName>EditTaskProperties.aspx</orgName>
+    </file>
+    <file>
+      <guid>18876981-7497-4060-8c1b-a74fc5f73117.aspx</guid>
+      <orgPath>/umbraco/plugins/fmworkflow</orgPath>
+      <orgName>Runtime.aspx</orgName>
+    </file>
+    <file>
+      <guid>8f63ab9d-0d36-4e85-ba33-e94bf138aa1f.aspx</guid>
+      <orgPath>/umbraco/plugins/fmworkflow</orgPath>
+      <orgName>SendToWorkflow.aspx</orgName>
+    </file>
+    <file>
+      <guid>bca4dbd3-0435-498d-a41b-c7b27e84232f.aspx</guid>
+      <orgPath>/umbraco/plugins/fmworkflow</orgPath>
+      <orgName>Transition.aspx</orgName>
+    </file>
+    <file>
+      <guid>fd119614-d7b7-4dac-b603-01fba81144b7.ascx</guid>
+      <orgPath>/usercontrols/fmworkflow</orgPath>
+      <orgName>Configuration.ascx</orgName>
+    </file>
+    <file>
+      <guid>636552d2-a0b8-4bdf-8107-70d56432d19f.ascx</guid>
+      <orgPath>/usercontrols/fmworkflow</orgPath>
+      <orgName>Instances.ascx</orgName>
+    </file>
+    <file>
+      <guid>962a3382-df97-4173-91bf-45b4de4952c2.ascx</guid>
+      <orgPath>/usercontrols/fmworkflow</orgPath>
+      <orgName>InstantiationCriteria.ascx</orgName>
+    </file>
+    <file>
+      <guid>2a202bac-dfd9-486d-842a-0b8a1f453aea.ascx</guid>
+      <orgPath>/usercontrols/fmworkflow</orgPath>
+      <orgName>PostInstall.ascx</orgName>
+    </file>
+    <file>
+      <guid>0d1ee481-b5d9-44d4-aade-a433822d60a3.ascx</guid>
+      <orgPath>/usercontrols/fmworkflow</orgPath>
+      <orgName>RecentContent.ascx</orgName>
+    </file>
+    <file>
+      <guid>9e130739-43dc-4ad3-a53f-744b17b5484e.ascx</guid>
+      <orgPath>/usercontrols/fmworkflow</orgPath>
+      <orgName>TabRefresh.ascx</orgName>
+    </file>
+  </files>
+  <info>
+    <package>
+      <name>Workflow for Umbraco</name>
+      <version>2.2</version>
+      <license url="http://opensource.org/licenses/MIT">MIT</license>
+      <url>http://www.moriyama.co.uk/</url>
+      <requirements>
+        <major>6</major>
+        <minor>0</minor>
+        <patch>0</patch>
+      </requirements>
+    </package>
+    <author>
+      <name>Moriyama</name>
+      <website>http://www.moriyama.co.uk/</website>
+    </author>
+    <readme><![CDATA[Copyright (c) 2013 Moriyama
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.]]></readme>
+  </info>
+  <DocumentTypes />
+  <Templates />
+  <Stylesheets />
+  <Macros />
+  <DictionaryItems />
+  <Languages />
+  <DataTypes />
+  <control>/usercontrols/fmworkflow/PostInstall.ascx</control>
+  <Actions>
+    <Action runat="install" undo="true" alias="AddAppConfigKey" key="log4net.Config" value="config\\fmworkflow\\Log4Net.config" />
+    <Action runat="install" undo="true" alias="AddScheduledTask" scheduledTaskAlias="workflowScheduledTask" log="true" interval="15" url="/umbraco/plugins/fmworkflow/Runtime.aspx" />
+    <Action runat="uninstall" undo="false" alias="WorkflowUninstall" />
+  </Actions>
+</umbPackage>

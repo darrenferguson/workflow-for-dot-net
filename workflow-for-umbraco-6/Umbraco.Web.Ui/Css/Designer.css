@@ -1,0 +1,77 @@
+﻿body {
+    background: #b6b7bc;
+    font-size: .80em;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    color: #696969;
+}
+
+div.designer 
+{
+    border: 1px solid black;
+    float: left;
+    width: 62%;
+    padding: 8px;
+    height: 800px;
+    margin: 0 0 8px 8px;
+    min-height: 150%;
+    background-color: White;
+}
+
+div.properties 
+{
+    width: 18%;
+    float: left;
+    margin: 0;
+    padding: 0;
+    min-height: 90%;
+    padding: 8px;
+    height: 800px;
+}
+
+div.tasks 
+{
+    padding-left: 10px;
+    width: 14%;
+    list-style: none;
+    overflow: auto;
+    float: left;
+    height: 600px;
+}
+
+.task 
+{
+    border: 1px solid black;
+    width:125px;
+    height: 55px;
+    font-size: 8pt;
+    text-align: center;
+    padding: 15px 5px 5px 5px;
+    margin-bottom: 5px;
+    vertical-align: middle;
+    background-repeat:no-repeat;
+    background-color: #cccccc;
+}
+
+
+
+div.selected 
+{
+    border: 2px solid red;
+}     
+
+p.dropInfo { text-align: center;width: 100%; margin-top: 150px;}
+div.design { padding: 0 5px 20px 5px; }
+div.close { float: right; padding-bottom: 5px; cursor: pointer; }
+
+div.displayEntityName { clear: both; padding-bottom: 15px;  }
+
+iframe 
+{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.dragActive { border: 4px dotted #ffee00; }
+
+.eventsListBox { height: 200px; width: 600px;margin-bottom: 8px; }

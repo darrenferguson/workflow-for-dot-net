@@ -6,9 +6,9 @@
   <!-- global properties, generally won't change -->
   <property name="nant.settings.currentframework" value="net-3.5" />
   <property name="dist.name" value="Workflow" />
-  <property name="dist.version" value="2.0" />
+  <property name="dist.version" value="2.2" />
 
-  <property name="umbraco.dir" value="C:\Users\DarrenF\Documents\My Web Sites\Umbraco CMS18" />
+  <property name="umbraco.dir" value="C:\Users\Darren\Documents\My Web Sites\Umbraco CMS2" />
 
   <!-- windows folder reference -->
   <property name="win.dir" value="c:\WINDOWS" />

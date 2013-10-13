@@ -31,52 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="businesslogic, Version=1.0.4898.17345, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\businesslogic.dll</HintPath>
-    </Reference>
-    <Reference Include="ClientDependency.Core, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\ClientDependency.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="cms, Version=1.0.4898.17345, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\cms.dll</HintPath>
-    </Reference>
-    <Reference Include="Common.Logging, Version=1.2.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Umbraco.Solution\packages\Common.Logging.1.2.0\lib\1.0\Common.Logging.dll</HintPath>
-    </Reference>
-    <Reference Include="controls">
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\controls.dll</HintPath>
-    </Reference>
-    <Reference Include="CookComputing.XmlRpcV2">
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\CookComputing.XmlRpcV2.dll</HintPath>
-    </Reference>
-    <Reference Include="Examine">
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\Examine.dll</HintPath>
-    </Reference>
-    <Reference Include="FergusonMoriyama.Workflow">
-      <HintPath>..\Umbraco.Solution\packages\Moriyama.Workflow.2.1.0.0\lib\FergusonMoriyama.Workflow.dll</HintPath>
-    </Reference>
-    <Reference Include="HtmlAgilityPack">
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\HtmlAgilityPack.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\ICSharpCode.SharpZipLib.dll</HintPath>
-    </Reference>
-    <Reference Include="interfaces">
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\interfaces.dll</HintPath>
-    </Reference>
-    <Reference Include="Lucene.Net">
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\Lucene.Net.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ApplicationBlocks.Data">
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\Microsoft.ApplicationBlocks.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Web.Helpers">
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\Microsoft.Web.Helpers.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -84,18 +38,6 @@
     <Reference Include="MySql.Data, Version=5.1.2.2, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\MySql.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Our.Umbraco.uGoLive">
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\Our.Umbraco.uGoLive.dll</HintPath>
-    </Reference>
-    <Reference Include="Our.Umbraco.uGoLive.47x">
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\Our.Umbraco.uGoLive.47x.dll</HintPath>
-    </Reference>
-    <Reference Include="Our.Umbraco.uGoLive.Checks">
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\Our.Umbraco.uGoLive.Checks.dll</HintPath>
-    </Reference>
-    <Reference Include="SQLCE4Umbraco">
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\SQLCE4Umbraco.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -133,44 +75,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="TidyNet">
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\TidyNet.dll</HintPath>
-    </Reference>
-    <Reference Include="umbraco, Version=1.0.4898.17346, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\umbraco.dll</HintPath>
-    </Reference>
-    <Reference Include="Umbraco.Core">
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\Umbraco.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="umbraco.DataLayer, Version=1.0.4898.17344, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\umbraco.DataLayer.dll</HintPath>
-    </Reference>
-    <Reference Include="umbraco.editorControls">
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\umbraco.editorControls.dll</HintPath>
-    </Reference>
-    <Reference Include="umbraco.MacroEngines">
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\umbraco.MacroEngines.dll</HintPath>
-    </Reference>
-    <Reference Include="umbraco.macroRenderings">
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\umbraco.macroRenderings.dll</HintPath>
-    </Reference>
-    <Reference Include="umbraco.providers">
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\umbraco.providers.dll</HintPath>
-    </Reference>
-    <Reference Include="Umbraco.Web.UI">
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\Umbraco.Web.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="umbraco.XmlSerializers">
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\umbraco.XmlSerializers.dll</HintPath>
-    </Reference>
-    <Reference Include="UmbracoExamine">
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\UmbracoExamine.dll</HintPath>
-    </Reference>
-    <Reference Include="UrlRewritingNet.UrlRewriter">
-      <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.4.11.9\lib\UrlRewritingNet.UrlRewriter.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extension.cs" />
