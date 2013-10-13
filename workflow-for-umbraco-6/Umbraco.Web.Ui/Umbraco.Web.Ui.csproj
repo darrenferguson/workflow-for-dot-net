@@ -55,10 +55,6 @@
     <Reference Include="cms">
       <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.6.1.6\lib\cms.dll</HintPath>
     </Reference>
-    <Reference Include="Common.Logging, Version=2.1.2.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Umbraco.Solution\packages\Common.Logging.2.1.2\lib\net40\Common.Logging.dll</HintPath>
-    </Reference>
     <Reference Include="controls">
       <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.6.1.6\lib\controls.dll</HintPath>
     </Reference>

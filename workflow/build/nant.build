@@ -101,6 +101,12 @@
       </fileset>
     </copy>
 
+<copy todir="${core.dir}\..\..\workflow-for-umbraco-6\build\out" overwrite="true">
+      <fileset basedir="${root.dir}\out">
+        <include name="*.dll" />
+      </fileset>
+    </copy>
+
   </target>
  
   <target name="debug" depends="debugcompile,debugmerge"/>
