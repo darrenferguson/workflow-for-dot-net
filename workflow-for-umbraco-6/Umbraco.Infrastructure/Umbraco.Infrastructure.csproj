@@ -52,9 +52,8 @@
     <Reference Include="Examine">
       <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.6.1.6\lib\Examine.dll</HintPath>
     </Reference>
-    <Reference Include="FergusonMoriyama.Workflow, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Umbraco.Solution\packages\Moriyama.Workflow.2.2.0.0\lib\FergusonMoriyama.Workflow.dll</HintPath>
+    <Reference Include="FergusonMoriyama.Workflow">
+      <HintPath>..\build\out\FergusonMoriyama.Workflow.dll</HintPath>
     </Reference>
     <Reference Include="HtmlAgilityPack">
       <HintPath>..\Umbraco.Solution\packages\HtmlAgilityPack.1.4.6\lib\Net40\HtmlAgilityPack.dll</HintPath>
