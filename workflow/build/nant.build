@@ -8,7 +8,7 @@
   <property name="dist.name" value="Workflow" />
   <property name="dist.version" value="2.2" />
 
-  <property name="umbraco.dir" value="C:\Users\Darren\Documents\My Web Sites\Umbraco CMS3" />
+  <property name="umbraco.dir" value="C:\Users\darren\Documents\My Web Sites\Umbraco CMS5" />
 
   <!-- windows folder reference -->
   <property name="win.dir" value="c:\WINDOWS" />
