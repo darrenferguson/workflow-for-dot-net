@@ -214,6 +214,7 @@
     <Compile Include="Infrastructure\UmbracoConnectionStringProvider.cs" />
     <Compile Include="Interfaces\IUmbracoWorkflowInstantiationCriteriaValidationService.cs" />
     <Compile Include="Modules\RegisterClientResourcesHttpModule.cs" />
+    <Compile Include="SpringApplicationEventListener.cs" />
     <Compile Include="UmbracoEventService.cs" />
     <Compile Include="UmbracoWorkflowApplicationBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

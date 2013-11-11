@@ -2,7 +2,7 @@
 <project name="umbraco" default="package" basedir=".">
   <description>Workflow for Umbraco</description>
 
-  <property name="umbraco.dir" value="C:\Users\darren\Documents\My Web Sites\Umbraco CMS5" />
+  <property name="umbraco.dir" value="C:\Users\Darren\Documents\My Web Sites\Umbraco CMS3" />
   
   <!-- global properties, generally won't change -->
   <property name="nant.settings.currentframework" value="net-3.5" />

@@ -120,6 +120,10 @@
     <Reference Include="Our.Umbraco.uGoLive.Checks">
       <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.6.1.6\lib\Our.Umbraco.uGoLive.Checks.dll</HintPath>
     </Reference>
+    <Reference Include="Spring.Core, Version=1.3.2.40943, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Umbraco.Solution\packages\Spring.Core.1.3.2\lib\net40\Spring.Core.dll</HintPath>
+    </Reference>
     <Reference Include="SQLCE4Umbraco">
       <HintPath>..\Umbraco.Solution\packages\UmbracoCms.Core.6.1.6\lib\SQLCE4Umbraco.dll</HintPath>
     </Reference>

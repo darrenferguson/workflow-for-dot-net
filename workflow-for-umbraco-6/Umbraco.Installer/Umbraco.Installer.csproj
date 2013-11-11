@@ -218,7 +218,9 @@
   <ItemGroup>
     <None Include="bin\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
     <None Include="bin\x86\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Sql\SqlServer\Install.sql" />
