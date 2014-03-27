@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using ClientDependency.Core;
@@ -7,6 +8,7 @@ using FergusonMoriyam.Workflow.Interfaces.Application;
 using FergusonMoriyam.Workflow.Umbraco.Web.Ui.Extensions;
 using umbraco.BusinessLogic;
 using umbraco.cms.businesslogic.web;
+using Umbraco.Core;
 
 [assembly: WebResource("FergusonMoriyam.Workflow.Umbraco.Web.Ui.Css.Grid.css", "text/css")]
 [assembly: WebResource("FergusonMoriyam.Workflow.Umbraco.Web.Ui.Js.Util.js", "text/javascript")]
@@ -27,24 +29,32 @@ namespace FergusonMoriyam.Workflow.Umbraco.Web.Ui
             SendToWorkflowButton.Text = TheGlobalisationService.GetString("send_selected_content_to_workflow");
 
             var user = User.GetCurrent();
-            var sevenDaysAgo = DateTime.Now.Subtract(new TimeSpan(7, 0, 0, 0, 0));
+            var sevenDaysAgo = DateTime.Now.AddDays(-7);
 
-            var logReader = user.UserType.Alias == AdminUserTypeAlias ? Log.GetLogReader(LogTypes.Save, sevenDaysAgo) : Log.GetLogReader(user, LogTypes.Save, sevenDaysAgo);
+            var logItems = user.UserType.Alias == AdminUserTypeAlias 
+                ? Log.Instance.GetLogItems(LogTypes.Save, sevenDaysAgo)
+                : Log.Instance.GetLogItems(user, LogTypes.Save, sevenDaysAgo);
 
-            var recentContentItems = new Dictionary<int, Document>();
-            // if (!logReader.HasRecords) return;
+            var recentContent = logItems
+                .Select(item => item.NodeId).Distinct()
+                .Select(id =>
+                {
+                    try
+                    {
+                        return new Document(id);
+                    }
+                    catch (ArgumentException)
+                    {
+                        return null;
+                    }
+                })
+                .Where(d => d != null)
+                .OrderByDescending(d => d.UpdateDate)
+                .ToList();
 
-            while (logReader.Read())
-            {
-                var id = logReader.GetInt("NodeId");
-                if (recentContentItems.ContainsKey(id)) continue;
+            if (!recentContent.Any()) return;
 
-                recentContentItems.Add(id, new Document(id));
-            }
-
-            if (recentContentItems.Count == 0) return;
-
-            MyRecentContentGridView.DataSource = recentContentItems.Values;
+            MyRecentContentGridView.DataSource = recentContent;
             MyRecentContentGridView.DataBind();
         }
 
