@@ -8,8 +8,8 @@
     <ProjectGuid>{A97910EF-75F8-4658-BF36-F1D76232E329}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FergusonMoriyam.Workflow.Ui</RootNamespace>
-    <AssemblyName>FergusonMoriyam.Workflow.Ui</AssemblyName>
+    <RootNamespace>Moriyama.Workflow.Ui</RootNamespace>
+    <AssemblyName>Moriyama.Workflow.Ui</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

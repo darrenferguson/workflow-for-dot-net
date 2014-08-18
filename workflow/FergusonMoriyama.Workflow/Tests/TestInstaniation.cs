@@ -1,9 +1,9 @@
-﻿using FergusonMoriyam.Workflow.Domain;
-using FergusonMoriyam.Workflow.Interfaces.Domain;
+﻿using Moriyama.Workflow.Domain;
+using Moriyama.Workflow.Interfaces.Domain;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using EndWorkflowTask = FergusonMoriyam.Workflow.Domain.Task.EndWorkflowTask;
+using EndWorkflowTask = Moriyama.Workflow.Domain.Task.EndWorkflowTask;
 
-namespace FergusonMoriyam.Workflow.Test
+namespace Moriyama.Workflow.Tests
 {
     [TestClass]
     public class TestInstaniation

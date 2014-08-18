@@ -1,9 +1,9 @@
-﻿using FergusonMoriyam.Workflow.Infrastructure;
-using FergusonMoriyam.Workflow.Interfaces;
-using FergusonMoriyam.Workflow.Interfaces.Infrastructure;
+﻿using Moriyama.Workflow.Infrastructure;
+using Moriyama.Workflow.Interfaces;
+using Moriyama.Workflow.Interfaces.Infrastructure;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace FergusonMoriyam.Workflow.Test
+namespace Moriyama.Workflow.Tests
 {
     [TestClass]
     public class TestStorage

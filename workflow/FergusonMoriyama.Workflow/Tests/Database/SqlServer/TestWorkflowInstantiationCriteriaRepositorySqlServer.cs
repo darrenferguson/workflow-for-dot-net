@@ -1,12 +1,12 @@
 ﻿using System;
-using FergusonMoriyam.Workflow.Domain;
-using FergusonMoriyam.Workflow.Infrastructure;
-using FergusonMoriyam.Workflow.Infrastructure.DatabaseHelper;
-using FergusonMoriyam.Workflow.Infrastructure.DatabaseHelper.Factory;
-using FergusonMoriyam.Workflow.Interfaces.Domain;
+using Moriyama.Workflow.Domain;
+using Moriyama.Workflow.Infrastructure;
+using Moriyama.Workflow.Infrastructure.DatabaseHelper;
+using Moriyama.Workflow.Infrastructure.DatabaseHelper.Factory;
+using Moriyama.Workflow.Interfaces.Domain;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace FergusonMoriyam.Workflow.Test.Database.SqlServer
+namespace Moriyama.Workflow.Tests.Database.SqlServer
 {
     [TestClass]
     public class TestWorkflowInstantiationCriteriaRepositorySqlServer
@@ -16,7 +16,7 @@ namespace FergusonMoriyam.Workflow.Test.Database.SqlServer
             WorkflowConfigurationRepository.Instance.Storage = TempFileStorage.Instance;
             WorkflowConfigurationRepository.Instance.DatabaseHelper =
                 DatabaseHelperFactory.Instance.CreateDatabaseHelper(
-                    "FergusonMoriyam.Workflow.Infrastructure.DatabaseHelper.SqlServerDatabaseHelper, FergusonMoriyam.Workflow.Infrastructure");
+                    "Moriyama.Workflow.Infrastructure.DatabaseHelper.SqlServerDatabaseHelper, Moriyama.Workflow.Infrastructure");
 
             ((SqlServerDatabaseHelper)WorkflowConfigurationRepository.Instance.DatabaseHelper).ConnectionStringProvider
                 = new SqlServerConnectionStringProvider();

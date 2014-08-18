@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Json;
 using System.Web.Script.Serialization;
-using FergusonMoriyam.Workflow.Domain.Task;
-using FergusonMoriyam.Workflow.Interfaces.Domain;
-using FergusonMoriyam.Workflow.Ui.Adapter;
-using FergusonMoriyam.Workflow.Ui.Factory;
+using Moriyama.Workflow.Domain.Task;
+using Moriyama.Workflow.Interfaces.Domain;
+using Moriyama.Workflow.Ui.Adapter;
+using Moriyama.Workflow.Ui.Factory;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace FergusonMoriyam.Workflow.Test
+namespace Moriyama.Workflow.Tests
 {
     [TestClass]
     public class TestWorkflowTaskJsonAdapter

@@ -1,8 +1,8 @@
-﻿using FergusonMoriyam.Workflow.Domain;
-using FergusonMoriyam.Workflow.Interfaces.Domain;
+﻿using Moriyama.Workflow.Domain;
+using Moriyama.Workflow.Interfaces.Domain;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace FergusonMoriyam.Workflow.Test
+namespace Moriyama.Workflow.Tests
 {
     [TestClass]
     public class TestWorkflowConfiguration

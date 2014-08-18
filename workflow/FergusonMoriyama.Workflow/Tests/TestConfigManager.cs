@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Script.Serialization;
-using FergusonMoriyam.Workflow.Application;
-using FergusonMoriyam.Workflow.Infrastructure;
-using FergusonMoriyam.Workflow.Interfaces;
-using FergusonMoriyam.Workflow.Interfaces.Domain;
-using FergusonMoriyam.Workflow.Test.Classes;
+using Moriyama.Workflow.Application;
+using Moriyama.Workflow.Infrastructure;
+using Moriyama.Workflow.Interfaces.Domain;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moriyama.Workflow.Tests.Classes;
 
-namespace FergusonMoriyam.Workflow.Test
+namespace Moriyama.Workflow.Tests
 {
     [TestClass]
     public class TestConfigManager
@@ -24,8 +23,8 @@ namespace FergusonMoriyam.Workflow.Test
         public void TestCreateConfig()
         {
 
-            WorkflowConfigurationService.Instance.CreateWorkflowConfiguration("This is a workflow", "FergusonMoriyam.Workflow.Domain.WorkflowConfiguration, FergusonMoriyam.Workflow.Domain");
-            WorkflowConfigurationService.Instance.CreateWorkflowConfiguration("This is a workflow too.", "FergusonMoriyam.Workflow.Umbraco.Domain.UmbracoWorkflowConfiguration, FergusonMoriyam.Workflow.Umbraco.Domain");
+            WorkflowConfigurationService.Instance.CreateWorkflowConfiguration("This is a workflow", "Moriyama.Workflow.Domain.WorkflowConfiguration, Moriyama.Workflow.Domain");
+            WorkflowConfigurationService.Instance.CreateWorkflowConfiguration("This is a workflow too.", "Moriyama.Workflow.Umbraco.Domain.UmbracoWorkflowConfiguration, Moriyama.Workflow.Umbraco.Domain");
 
 
            
@@ -53,7 +52,7 @@ namespace FergusonMoriyam.Workflow.Test
         public void TestAddTask()
         {
             var configName = "TEST - " + DateTime.Now.ToString();
-            WorkflowConfigurationService.Instance.CreateWorkflowConfiguration(configName, "FergusonMoriyam.Workflow.Domain.WorkflowConfiguration, FergusonMoriyam.Workflow.Domain");
+            WorkflowConfigurationService.Instance.CreateWorkflowConfiguration(configName, "Moriyama.Workflow.Domain.WorkflowConfiguration, Moriyama.Workflow.Domain");
 
             foreach (var config in WorkflowConfigurationService.Instance.ConfigurationRepository.List())
             {
@@ -82,7 +81,7 @@ namespace FergusonMoriyam.Workflow.Test
         public void TestAddTaskTransition()
         {
             var configName = "TEST - " + DateTime.Now.ToString();
-            WorkflowConfigurationService.Instance.CreateWorkflowConfiguration(configName, "FergusonMoriyam.Workflow.Domain.WorkflowConfiguration, FergusonMoriyam.Workflow.Domain");
+            WorkflowConfigurationService.Instance.CreateWorkflowConfiguration(configName, "Moriyama.Workflow.Domain.WorkflowConfiguration, Moriyama.Workflow.Domain");
 
             foreach (var config in WorkflowConfigurationService.Instance.ConfigurationRepository.List())
             {
@@ -111,7 +110,7 @@ namespace FergusonMoriyam.Workflow.Test
         public void TestRemoveTaskTransition()
         {
             var configName = "TEST - " + DateTime.Now.ToString();
-            WorkflowConfigurationService.Instance.CreateWorkflowConfiguration(configName, "FergusonMoriyam.Workflow.Domain.WorkflowConfiguration, FergusonMoriyam.Workflow.Domain");
+            WorkflowConfigurationService.Instance.CreateWorkflowConfiguration(configName, "Moriyama.Workflow.Domain.WorkflowConfiguration, Moriyama.Workflow.Domain");
 
             foreach (var config in WorkflowConfigurationService.Instance.ConfigurationRepository.List())
             {
@@ -150,7 +149,7 @@ namespace FergusonMoriyam.Workflow.Test
         public void TestRemoveTask()
         {
             var configName = "TEST - " + DateTime.Now.ToString();
-            WorkflowConfigurationService.Instance.CreateWorkflowConfiguration(configName, "FergusonMoriyam.Workflow.Domain.WorkflowConfiguration, FergusonMoriyam.Workflow.Domain");
+            WorkflowConfigurationService.Instance.CreateWorkflowConfiguration(configName, "Moriyama.Workflow.Domain.WorkflowConfiguration, Moriyama.Workflow.Domain");
 
             foreach (var config in WorkflowConfigurationService.Instance.ConfigurationRepository.List())
             {
@@ -191,7 +190,7 @@ namespace FergusonMoriyam.Workflow.Test
         public void TestSetTaskProperties()
         {
             var configName = "TEST - " + DateTime.Now.ToString();
-            WorkflowConfigurationService.Instance.CreateWorkflowConfiguration(configName, "FergusonMoriyam.Workflow.Domain.WorkflowConfiguration, FergusonMoriyam.Workflow.Domain");
+            WorkflowConfigurationService.Instance.CreateWorkflowConfiguration(configName, "Moriyama.Workflow.Domain.WorkflowConfiguration, Moriyama.Workflow.Domain");
 
             foreach (var config in WorkflowConfigurationService.Instance.ConfigurationRepository.List())
             {

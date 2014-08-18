@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Linq;
-using FergusonMoriyam.Workflow.Domain;
-using FergusonMoriyam.Workflow.Domain.Task;
-using FergusonMoriyam.Workflow.Interfaces.Ui;
-using FergusonMoriyam.Workflow.Ui;
-using FergusonMoriyam.Workflow.Ui.Generic;
-using FergusonMoriyam.Workflow.Ui.WorkflowConfigurationUi;
+using Moriyama.Workflow.Domain;
+using Moriyama.Workflow.Domain.Task;
+using Moriyama.Workflow.Interfaces.Ui;
+using Moriyama.Workflow.Ui;
+using Moriyama.Workflow.Ui.Generic;
+using Moriyama.Workflow.Ui.WorkflowConfigurationUi;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace FergusonMoriyam.Workflow.Test
+namespace Moriyama.Workflow.Tests
 {
     [TestClass]
     public class TestEntityUi

@@ -2,10 +2,10 @@
 using System.Text;
 using System.Collections.Generic;
 using System.Linq;
-using FergusonMoriyam.Workflow.Domain.Factory;
+using Moriyama.Workflow.Domain.Factory;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace FergusonMoriyam.Workflow.Test
+namespace Moriyama.Workflow.Tests
 {
     [TestClass]
     public class TestWorkflowTaskFactory
@@ -13,7 +13,7 @@ namespace FergusonMoriyam.Workflow.Test
         [TestMethod]
         public void TestConstruction()
         {
-            var task = WorkflowTaskFactory.Instance.CreateTask("FergusonMoriyam.Workflow.Domain.Task.DummyWorkflowTask");
+            var task = WorkflowTaskFactory.Instance.CreateTask("Moriyama.Workflow.Domain.Task.DummyWorkflowTask");
 
         }
     }

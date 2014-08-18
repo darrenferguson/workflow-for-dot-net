@@ -8,8 +8,8 @@
     <ProjectGuid>{00F36DC4-690C-4712-9B30-C397AC03A2A3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FergusonMoriyam.Workflow.Infrastructure</RootNamespace>
-    <AssemblyName>FergusonMoriyam.Workflow.Infrastructure</AssemblyName>
+    <RootNamespace>Moriyama.Workflow.Infrastructure</RootNamespace>
+    <AssemblyName>Moriyama.Workflow.Infrastructure</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -52,27 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseHelper\Factory\DatabaseHelperFactory.cs" />
-    <Compile Include="DatabaseHelper\MySqlDatabaseHelper.cs" />
-    <Compile Include="DatabaseHelper\SqlCeDatbaseHelper.cs" />
-    <Compile Include="DatabaseHelper\SqlServerDatabaseHelper.cs" />
-    <Compile Include="Repository.cs" />
-    <Compile Include="TempFileStorage.cs" />
-    <Compile Include="WorkflowConfigurationRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WorkflowDesignerPointRespository.cs" />
-    <Compile Include="WorkflowInstanceRepository.cs" />
-    <Compile Include="WorkflowInstantiationCriteriaRepository.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Domain\Domain.csproj">
-      <Project>{EB40991A-8E48-45CB-99B7-70BC4E521EA8}</Project>
-      <Name>Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
-      <Project>{63F5AE2E-50EA-4C5F-99AB-647C6972C261}</Project>
-      <Name>Interfaces</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

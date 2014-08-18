@@ -8,8 +8,8 @@
     <ProjectGuid>{63F5AE2E-50EA-4C5F-99AB-647C6972C261}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FergusonMoriyam.Workflow.Interfaces</RootNamespace>
-    <AssemblyName>FergusonMoriyam.Workflow.Interfaces</AssemblyName>
+    <RootNamespace>Moriyama.Workflow.Interfaces</RootNamespace>
+    <AssemblyName>Moriyama.Workflow.Interfaces</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

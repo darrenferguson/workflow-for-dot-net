@@ -1,8 +1,8 @@
 ﻿using System;
-using FergusonMoriyam.Workflow.Domain.Task;
-using FergusonMoriyam.Workflow.Interfaces.Domain;
+using Moriyama.Workflow.Domain.Task;
+using Moriyama.Workflow.Interfaces.Domain;
 
-namespace FergusonMoriyam.Workflow.Test.Classes
+namespace Moriyama.Workflow.Tests.Classes
 {
     [Serializable]
     class DummyWorkflowTask : BaseWorkflowTask, IWorkflowTask

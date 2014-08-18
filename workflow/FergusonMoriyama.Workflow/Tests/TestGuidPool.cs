@@ -1,9 +1,9 @@
 ﻿using System;
-using FergusonMoriyam.Workflow.Application;
-using FergusonMoriyam.Workflow.Interfaces.Application;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moriyama.Workflow.Application;
+using Moriyama.Workflow.Interfaces.Application;
 
-namespace FergusonMoriyam.Workflow.Test
+namespace Moriyama.Workflow.Tests
 {
     [TestClass]
     public class TestGuidPool

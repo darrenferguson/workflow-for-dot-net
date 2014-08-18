@@ -3,10 +3,10 @@ using System.Reflection;
 using System.Text;
 using System.Collections.Generic;
 using System.Linq;
-using FergusonMoriyam.Workflow.Domain.Event.Factory;
+using Moriyama.Workflow.Domain.Event.Factory;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace FergusonMoriyam.Workflow.Test
+namespace Moriyama.Workflow.Tests
 {
     [TestClass]
     public class TestEventInfo

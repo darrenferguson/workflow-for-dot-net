@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using FergusonMoriyam.Workflow.Domain;
+using Moriyama.Workflow.Domain;
 
-namespace FergusonMoriyam.Workflow.Test.Classes
+namespace Moriyama.Workflow.Tests.Classes
 {
     class ExtendedWorkflowConfiguration : WorkflowConfiguration
     {
