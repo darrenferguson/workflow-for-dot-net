@@ -9,9 +9,9 @@ using Moriyama.Workflow.Interfaces.Application;
 using Moriyama.Workflow.Interfaces.Application.Runtime;
 using Moriyama.Workflow.Umbraco6.Web.Extensions;
 
-[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Css.Grid.css", "text/css")]
-[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Util.js", "text/javascript")]
-[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Config.js", "text/javascript")]
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Css.Grid.css", "text/css")]
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Util.js", "text/javascript")]
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Config.js", "text/javascript")]
 namespace Moriyama.Workflow.Umbraco6.Web.Workflow
 {
 
@@ -37,9 +37,9 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
 
             TheWorkflowRuntime.RunWorkflows();
 
-            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Ui.Css.Grid.css", ClientDependencyType.Css);
-            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Util.js", ClientDependencyType.Javascript);
-            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Config.js", ClientDependencyType.Javascript);
+            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Css.Grid.css", ClientDependencyType.Css);
+            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Util.js", ClientDependencyType.Javascript);
+            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Config.js", ClientDependencyType.Javascript);
 
             
             CreateButton.Text = TheGlobalisationService.GetString("create_workflow_configuration");

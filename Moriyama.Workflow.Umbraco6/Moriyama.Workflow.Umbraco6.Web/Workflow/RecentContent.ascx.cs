@@ -8,8 +8,8 @@ using Moriyama.Workflow.Umbraco6.Web.Extensions;
 using umbraco.BusinessLogic;
 using umbraco.cms.businesslogic.web;
 
-[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Css.Grid.css", "text/css")]
-[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Util.js", "text/javascript")]
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Css.Grid.css", "text/css")]
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Util.js", "text/javascript")]
 namespace Moriyama.Workflow.Umbraco6.Web.Workflow
 {
     public partial class RecentContent : UserControl
@@ -22,7 +22,7 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
         {
             base.OnInit(e);
 
-            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Ui.Css.Grid.css", ClientDependencyType.Css);
+            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Css.Grid.css", ClientDependencyType.Css);
 
             SendToWorkflowButton.Text = TheGlobalisationService.GetString("send_selected_content_to_workflow");
 

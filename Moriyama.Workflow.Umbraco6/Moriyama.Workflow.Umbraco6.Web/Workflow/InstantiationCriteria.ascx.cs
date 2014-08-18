@@ -7,8 +7,8 @@ using Common.Logging;
 using Moriyama.Workflow.Interfaces.Application;
 using Moriyama.Workflow.Umbraco6.Web.Extensions;
 
-[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Css.Grid.css", "text/css")]
-[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Util.js", "text/javascript")]
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Css.Grid.css", "text/css")]
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Util.js", "text/javascript")]
 namespace Moriyama.Workflow.Umbraco6.Web.Workflow
 {
     public partial class InstantiationCriteria : UserControl
@@ -28,8 +28,8 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
                 TrialLiteral.Text = string.Format("<p class='trialMode'>{0}</p>", TheGlobalisationService.GetString("trial_mode"));
             } */
 
-            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Ui.Css.Grid.css", ClientDependencyType.Css);
-            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Util.js", ClientDependencyType.Javascript);
+            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Css.Grid.css", ClientDependencyType.Css);
+            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Util.js", ClientDependencyType.Javascript);
 
             CreateCriteriaButton.Text = TheGlobalisationService.GetString("create_new_criteria");
             ((ButtonField)CriteriaGridView.Columns[1]).Text = TheGlobalisationService.GetString("delete");

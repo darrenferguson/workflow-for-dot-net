@@ -13,8 +13,8 @@ using umbraco.BasePages;
 using Moriyama.Workflow.Umbraco6.Application.Interfaces;
 using Moriyama.Workflow.Umbraco6.Domain;
 
-[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Util.js", "text/javascript")]
-[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Config.js", "text/javascript")]
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Util.js", "text/javascript")]
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Config.js", "text/javascript")]
 namespace Moriyama.Workflow.Umbraco6.Web.Workflow
 {
     public partial class SendToWorkflow : UmbracoEnsuredPage
@@ -36,9 +36,9 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
 
             StartWorkflowButton.Text = TheGlobalisationService.GetString("send_to_workflow");
 
-            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Util.js",
+            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Util.js",
                                                ClientDependencyType.Javascript);
-            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Config.js",
+            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Config.js",
                                                ClientDependencyType.Javascript);
 
         }
