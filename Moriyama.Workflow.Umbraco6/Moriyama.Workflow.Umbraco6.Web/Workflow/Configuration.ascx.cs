@@ -29,12 +29,6 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
         {
             base.OnInit(e);
 
-            //if (Validator.IsTrial() || Validator.IsInvalid())
-            //{
-            //    TrialLiteral.Visible = true;
-            //    TrialLiteral.Text = string.Format("<p class='trialMode'>{0}</p>", TheGlobalisationService.GetString("trial_mode"));
-            //}
-
             TheWorkflowRuntime.RunWorkflows();
 
             this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Css.Grid.css", ClientDependencyType.Css);
@@ -94,15 +88,6 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
 
         protected void CreateButtonClick(object sender, EventArgs e)
         {
-
-            //if (Validator.IsTrial() || Validator.IsInvalid())
-            //{
-            //    var numConfigs = TheWorkflowConfigurationService.ListConfigurations().Count;
-            //    if(numConfigs > 0)
-            //    {
-            //        throw new Exception(TheGlobalisationService.GetString("only_one_config_in_trial"));
-            //    }
-            //}
 
             var workflowName = string.Format("{0} - {1}", TheGlobalisationService.GetString("new_workflow"), DateTime.Now);
             Log.Info(string.Format("Creating new workflow '{0}' of type '{1}'", workflowName, WorkflowConfigsDropDownList.SelectedValue));
