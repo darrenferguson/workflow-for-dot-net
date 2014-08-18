@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Configuration;
 using System.Reflection;
 using Common.Logging;
 using umbraco.DataLayer;

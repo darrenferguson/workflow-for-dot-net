@@ -11,8 +11,8 @@ using Moriyama.Workflow.Interfaces.Domain;
 using Moriyama.Workflow.Interfaces.Domain.Factory;
 using Moriyama.Workflow.Interfaces.Ui.Factory;
 using Moriyama.Workflow.Ui.Adapter;
-using Moriyama.Workflow.Umbraco6.Web.Ui.Extensions;
 using Common.Logging;
+using Moriyama.Workflow.Umbraco6.Web.Extensions;
 using umbraco.BasePages;
 using umbraco.IO;
 

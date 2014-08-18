@@ -2,7 +2,7 @@
 using System.Web.UI;
 using ClientDependency.Core;
 
-namespace Moriyama.Workflow.Umbraco6.Web.Ui.Extensions
+namespace Moriyama.Workflow.Umbraco6.Web.Extensions
 {
     /// <summary>
     /// Extension methods for embedded resources

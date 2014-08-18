@@ -4,7 +4,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using ClientDependency.Core;
 using Moriyama.Workflow.Interfaces.Application;
-using Moriyama.Workflow.Umbraco6.Web.Ui.Extensions;
+using Moriyama.Workflow.Umbraco6.Web.Extensions;
 using umbraco.BusinessLogic;
 using umbraco.cms.businesslogic.web;
 

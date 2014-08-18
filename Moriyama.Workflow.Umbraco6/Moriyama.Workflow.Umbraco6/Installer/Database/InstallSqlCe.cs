@@ -17,8 +17,8 @@ namespace Moriyama.Workflow.Umbraco6.Installer.Database
 
             var config = File.ReadAllText(configFile);
             config = config.Replace(
-                "Moriyama.Workflow.Infrastructure.DatabaseHelper.SqlServerDatabaseHelper, FergusonMoriyama.Workflow", 
-                "Moriyama.Workflow.Umbraco6.Infrastructure.UmbracoSqlCeDatabaseHelper, FergusonMoriyama.Umbraco4.Workflow");
+                "Moriyama.Workflow.Infrastructure.DatabaseHelper.SqlServerDatabaseHelper, Moriyama.Workflow",
+                "Moriyama.Workflow.Umbraco6.Infrastructure.UmbracoSqlCeDatabaseHelper, Moriyama.Workflow.Umbraco6");
             
             File.WriteAllText(configFile, config);
 

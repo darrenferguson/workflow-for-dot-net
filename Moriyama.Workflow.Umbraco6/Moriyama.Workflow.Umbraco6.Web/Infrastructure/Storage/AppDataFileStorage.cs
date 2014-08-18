@@ -2,7 +2,7 @@
 using Moriyama.Workflow.Interfaces.Infrastructure;
 using umbraco.IO;
 
-namespace Moriyama.Workflow.Umbraco6.Web.Ui.Infrastructure.Storage
+namespace Moriyama.Workflow.Umbraco6.Web.Infrastructure.Storage
 {
     public class AppDataFileStorage : IStorage
     {

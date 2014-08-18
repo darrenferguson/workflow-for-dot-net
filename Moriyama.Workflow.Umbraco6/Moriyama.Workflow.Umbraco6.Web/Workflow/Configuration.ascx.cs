@@ -7,7 +7,7 @@ using Common.Logging;
 using Moriyama.Workflow.Application.Reflection;
 using Moriyama.Workflow.Interfaces.Application;
 using Moriyama.Workflow.Interfaces.Application.Runtime;
-using Moriyama.Workflow.Umbraco6.Web.Ui.Extensions;
+using Moriyama.Workflow.Umbraco6.Web.Extensions;
 
 [assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Css.Grid.css", "text/css")]
 [assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Util.js", "text/javascript")]

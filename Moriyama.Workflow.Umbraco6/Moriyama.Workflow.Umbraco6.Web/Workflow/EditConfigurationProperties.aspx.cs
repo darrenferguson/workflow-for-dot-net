@@ -7,7 +7,7 @@ using Common.Logging;
 using Moriyama.Workflow.Interfaces.Application;
 using Moriyama.Workflow.Interfaces.Domain;
 using Moriyama.Workflow.Interfaces.Ui;
-using Moriyama.Workflow.Umbraco6.Web.Ui.Extensions;
+using Moriyama.Workflow.Umbraco6.Web.Extensions;
 using umbraco.BasePages;
 
 [assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Util.js", "text/javascript")]
