@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Moriyama.Workflow")]
 [assembly: AssemblyDescription("Moriyama Workflow")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Moriyama")]
 [assembly: AssemblyProduct("Moriyama.Workflow")]
 [assembly: AssemblyCopyright("Copyright © 2014")]
 [assembly: AssemblyTrademark("")]

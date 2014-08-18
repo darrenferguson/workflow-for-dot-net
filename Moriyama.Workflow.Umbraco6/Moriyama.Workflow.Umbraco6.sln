@@ -10,8 +10,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Workflow.Umbraco4.vsmdi = Workflow.Umbraco4.vsmdi
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco.Web.Ui", "..\Umbraco.Web.Ui\Umbraco.Web.Ui.csproj", "{CAD4E524-78A3-47D4-948D-170C359858F0}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{232E0AC0-F940-43D9-9D60-1E08A1F3CCB7}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
@@ -21,20 +19,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{232E0A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moriyama.Workflow.Umbraco6", "Moriyama.Workflow.Umbraco6\Moriyama.Workflow.Umbraco6.csproj", "{3EE4D7D1-FFE3-401E-921D-40358DD217EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moriyama.Workflow.Umbraco6.Web", "Moriyama.Workflow.Umbraco6.Web\Moriyama.Workflow.Umbraco6.Web.csproj", "{65D4DF1B-0702-47F5-9600-09491327565B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CAD4E524-78A3-47D4-948D-170C359858F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CAD4E524-78A3-47D4-948D-170C359858F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CAD4E524-78A3-47D4-948D-170C359858F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CAD4E524-78A3-47D4-948D-170C359858F0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3EE4D7D1-FFE3-401E-921D-40358DD217EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3EE4D7D1-FFE3-401E-921D-40358DD217EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EE4D7D1-FFE3-401E-921D-40358DD217EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EE4D7D1-FFE3-401E-921D-40358DD217EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65D4DF1B-0702-47F5-9600-09491327565B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65D4DF1B-0702-47F5-9600-09491327565B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65D4DF1B-0702-47F5-9600-09491327565B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65D4DF1B-0702-47F5-9600-09491327565B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

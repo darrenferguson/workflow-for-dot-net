@@ -1,0 +1,51 @@
+<%@ Master Language="C#" MasterPageFile="~/umbraco/masterpages/default.master" AutoEventWireup="true" %>
+<asp:content contentplaceholderid="ContentPlaceHolderDefault" runat="server">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"[]> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head id="head" runat="server">
+    
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title><asp:placeholder runat="server"><umbraco:item runat="server" field="pageName"></umbraco:item> - <umbraco:item runat="server" field="siteName" recursive="true"></umbraco:item></asp:placeholder></title>
+  <link rel="stylesheet" type="text/css" href="/css/Designit_Green.css">
+  <umbraco:macro alias="BlogRssFeedLink" runat="server"></umbraco:macro>
+  <asp:contentplaceholder id="cp_head" runat="server"></asp:contentplaceholder>
+</head>
+  <body>    
+    <div id="main">
+      
+      <asp:contentplaceholder id="cp_top" runat="server">
+        <div id="top">
+          <h1 id="siteName"><a href="/"><umbraco:item runat="server" field="siteName" recursive="true"></umbraco:item></a></h1>
+          <umbraco:macro id="Macro1" alias="umbTopNavigation" runat="server"></umbraco:macro>
+          <h2 id="siteDescription"><span><umbraco:item runat="server" field="siteDescription" recursive="true"></umbraco:item></span></h2>
+        </div>
+      </asp:contentplaceholder>
+            
+      <div id="body" class="clearfix">
+          <form id="RunwayMasterForm" runat="server">
+            <asp:contentplaceholder id="cp_content" runat="server"></asp:contentplaceholder>
+          </form>
+      </div> 
+      </div>
+      <asp:contentplaceholder id="cp_footer" runat="server">
+        <div id="footer-wrapper">
+        <div id="footer">
+            <p id="footer_text" class="address"><strong>runway</strong> <span>Runners Blvd. 245</span> <span>Runningville</span></p>
+            <umbraco:macro id="Macro2" alias="umbTopNavigation" runat="server"></umbraco:macro>
+            <a class="credits" href="http://designit.com">Skin by Designit</a>
+        </div>
+        </div>
+      </asp:contentplaceholder>
+  </body>
+</html>
+<script type="text/C#" runat="server">
+protected void Page_Load(object sender, EventArgs e)
+{
+    umbraco.library.AddJquery();
+    umbraco.library.RegisterJavaScriptFile("jquery.placeholder.js", "/scripts/Designit_Green/jquery.placeholder.js");
+    umbraco.library.RegisterJavaScriptFile("Designit_Green.js", "/scripts/Designit_Green/Designit_Green.js");
+}
+</script>
+</asp:content>
