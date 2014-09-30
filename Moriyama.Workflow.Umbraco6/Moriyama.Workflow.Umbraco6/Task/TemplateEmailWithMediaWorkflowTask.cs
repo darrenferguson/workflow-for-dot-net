@@ -5,7 +5,6 @@ using Moriyama.Workflow.Interfaces.Application.Runtime;
 using Moriyama.Workflow.Interfaces.Domain;
 using Moriyama.Workflow.Umbraco6.Application;
 using Moriyama.Workflow.Umbraco6.Domain;
-using Moriyama.Workflow.Umbraco6.Domain;
 using umbraco.BusinessLogic;
 using umbraco.IO;
 using umbraco.cms.businesslogic;
