@@ -53,7 +53,7 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
 
             this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Css.Grid.css", ClientDependencyType.Css);
             this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Util.js", ClientDependencyType.Javascript);
-            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Config.js", ClientDependencyType.Javascript);
+            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Config.js", ClientDependencyType.Javascript);
 
             ((ButtonField)WorkflowInstancesGridView.Columns[7]).Text = TheGlobalisationService.GetString("delete");
         }

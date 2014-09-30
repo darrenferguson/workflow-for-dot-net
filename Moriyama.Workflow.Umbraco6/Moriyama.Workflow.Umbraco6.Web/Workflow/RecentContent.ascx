@@ -51,7 +51,7 @@
         </asp:TemplateField>
         <asp:TemplateField HeaderText="Name">
             <ItemTemplate>
-                <a href="?id=<%# ((Document) Container.DataItem).Id %>">
+                <a href="/umbraco/editContent.aspx?id=<%# ((Document) Container.DataItem).Id %>">
                     <%# ((Document)Container.DataItem).Text %>
                 </a>
             </ItemTemplate>

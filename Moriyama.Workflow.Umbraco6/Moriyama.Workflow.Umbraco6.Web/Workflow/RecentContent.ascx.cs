@@ -10,6 +10,7 @@ using umbraco.cms.businesslogic.web;
 
 [assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Css.Grid.css", "text/css")]
 [assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Util.js", "text/javascript")]
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Config.js", "text/javascript")]
 namespace Moriyama.Workflow.Umbraco6.Web.Workflow
 {
     public partial class RecentContent : UserControl
