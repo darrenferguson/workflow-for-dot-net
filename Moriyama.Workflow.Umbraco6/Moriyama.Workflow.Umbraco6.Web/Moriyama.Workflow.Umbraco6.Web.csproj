@@ -263,7 +263,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css\dummy.txt" />
+    <Content Include="css\Designit_Green.css" />
+    <Content Include="css\Designit_Green\Images\background.jpg" />
+    <Content Include="css\Designit_Green\Images\blog-post-icon.png" />
+    <Content Include="css\Designit_Green\Images\feed-item-icon.png" />
+    <Content Include="css\Designit_Green\Images\footer.png" />
+    <Content Include="css\Designit_Green\Images\header.jpg" />
+    <Content Include="css\Designit_Green\Images\logo.png" />
+    <Content Include="css\Designit_Green\Images\main.png" />
+    <Content Include="css\Designit_Green\Images\nav-item-active.png" />
+    <Content Include="css\Designit_Green\Images\nav-item.png" />
+    <Content Include="css\Designit_Green\Images\nav.png" />
+    <Content Include="css\Designit_Green\Images\news-item-icon.png" />
+    <Content Include="css\Designit_Green\Images\pattern.png" />
+    <Content Include="css\Designit_Green\Images\rgbapng\00000033.png" />
+    <Content Include="css\Designit_Green\Images\rgbapng\00000066.png" />
+    <Content Include="css\Designit_Green\Images\rgbapng\00000099.png" />
+    <Content Include="css\Designit_Green\Images\rgbapng\000000cc.png" />
+    <Content Include="css\Designit_Green\Images\rgbapng\22ea5fcc.png" />
+    <Content Include="css\Designit_Green\Images\rgbapng\33333333.png" />
+    <Content Include="css\Designit_Green\Images\rgbapng\ffffffb3.png" />
+    <Content Include="css\Starterkit.css" />
     <Content Include="default.aspx" />
     <Content Include="macroScripts\dummy.txt" />
     <Content Include="masterpages\dummy.txt" />
