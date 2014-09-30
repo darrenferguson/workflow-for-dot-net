@@ -25,7 +25,6 @@ $().ready(function () {
 
     wf.openWindow = function (url, t) {
         UmbClientMgr.openModalWindow(url, t, true, wutil.modalWidth, $(window).height() - 100, 50);
-        alert('wolf');
         return false;
     };
 
