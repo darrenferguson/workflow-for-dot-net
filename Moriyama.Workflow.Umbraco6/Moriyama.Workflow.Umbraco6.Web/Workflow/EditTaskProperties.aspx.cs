@@ -8,9 +8,10 @@ using Moriyama.Workflow.Interfaces.Application;
 using Moriyama.Workflow.Interfaces.Domain.Factory;
 using Moriyama.Workflow.Interfaces.Ui;
 using Moriyama.Workflow.Umbraco6.Web.Extensions;
-using umbraco.BasePages;
+using Umbraco.Web.UI.Pages;
 
-[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Js.jquery-1.5.1.min.js", "text/javascript")]
+
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.jquery-1.5.1.min.js", "text/javascript")]
 namespace Moriyama.Workflow.Umbraco6.Web.Workflow
 {
     public partial class EditTaskProperties : UmbracoEnsuredPage
@@ -27,7 +28,7 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
         {
             base.OnInit(e);
 
-            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Ui.Js.jquery-1.5.1.min.js", ClientDependencyType.Javascript);
+            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.jquery-1.5.1.min.js", ClientDependencyType.Javascript);
             SaveTaskPropertiesButton.Text = TheGlobalisationService.GetString("save_task_properties");
 
         }

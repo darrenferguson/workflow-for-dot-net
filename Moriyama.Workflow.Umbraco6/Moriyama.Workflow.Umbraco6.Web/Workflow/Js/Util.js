@@ -1,6 +1,6 @@
 ﻿var wutil = {};
 
-wutil.pluginPath = 'plugins/fmworkflow/';
+wutil.pluginPath = '/Workflow/';
 wutil.modalWidth = 640;
 wutil.modalHeight = 500;
 

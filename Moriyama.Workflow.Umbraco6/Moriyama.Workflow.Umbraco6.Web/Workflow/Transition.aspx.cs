@@ -7,10 +7,11 @@ using Moriyama.Workflow.Interfaces.Application;
 using Moriyama.Workflow.Interfaces.Application.Runtime;
 using Moriyama.Workflow.Interfaces.Domain;
 using Moriyama.Workflow.Umbraco6.Web.Extensions;
-using umbraco.BasePages;
+using Umbraco.Web.UI.Pages;
 
-[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Util.js", "text/javascript")]
-[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Config.js", "text/javascript")]
+
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Util.js", "text/javascript")]
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Config.js", "text/javascript")]
 namespace Moriyama.Workflow.Umbraco6.Web.Workflow
 {
     public partial class Transition : UmbracoEnsuredPage
@@ -26,9 +27,9 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
         {
             base.OnInit(e);
 
-            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Util.js",
+            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Util.js",
                                               ClientDependencyType.Javascript);
-            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Config.js",
+            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Config.js",
                                                ClientDependencyType.Javascript);
 
             var id = Convert.ToInt32(Request["id"]);

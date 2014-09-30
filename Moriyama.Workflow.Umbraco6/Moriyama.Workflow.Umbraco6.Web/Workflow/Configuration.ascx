@@ -44,7 +44,7 @@
             </asp:TemplateField>
             <asp:TemplateField>
                 <ItemTemplate>
-                    <a href="plugins/fmworkflow/EditDesign.aspx?id=<%# ((IWorkflowConfiguration) Container.DataItem).Id %>" target="_blank">
+                    <a href="/Workflow/EditDesign.aspx?id=<%# ((IWorkflowConfiguration) Container.DataItem).Id %>" target="_blank">
                         <%# TheGlobalisationService.GetString("edit_design") %>
                     </a>
                 </ItemTemplate>

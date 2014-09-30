@@ -1,54 +1,54 @@
 ﻿.filterDocumentsTask {
-     background-image:url('/umbraco/plugins/fmworkflow/images/arrow_join.png');
+     background-image:url('/Workflow/images/arrow_join.png');
 }
 
 .filterMediaTask {
-     background-image:url('/umbraco/plugins/fmworkflow/images/images.png');
+     background-image:url('/Workflow/images/images.png');
 }
 
 .endTask  
 {
     background-color: #eeeeee;
     border-style: dotted;
-    background-image:url('/umbraco/plugins/fmworkflow/images/stop.png');   
+    background-image:url('/Workflow/images/stop.png');   
 }
 
 .dummyTask  
 {
     border-style: dotted;
-    background-image:url('/umbraco/plugins/fmworkflow/images/cog.png');
+    background-image:url('/Workflow/images/cog.png');
 }     
  
 .runnableTask  
 {
     border-style: dotted;
-    background-image:url('/umbraco/plugins/fmworkflow/images/cog.png');
+    background-image:url('/Workflow/images/cog.png');
 }   
 
 .delayTask {
     border-style: dotted;
-    background-image:url('/umbraco/plugins/fmworkflow/images/time.png');
+    background-image:url('/Workflow/images/time.png');
 }
 
 .decisionTask {
     border-style: dotted;
-    background-image:url('/umbraco/plugins/fmworkflow/images/arrow_switch.png');
+    background-image:url('/Workflow/images/arrow_switch.png');
 }
 
 .groupDecisionTask {
     border-style: dotted;
-    background-image:url('/umbraco/plugins/fmworkflow/images/group_go.png');
+    background-image:url('/Workflow/images/group_go.png');
 }
 
 .userDecisionTask {
     border-style: dotted;
-    background-image:url('/umbraco/plugins/fmworkflow/images/user_go.png');
+    background-image:url('/Workflow/images/user_go.png');
 }
 
 .basicEmailTask {
-    background-image:url('/umbraco/plugins/fmworkflow/images/email.png');
+    background-image:url('/Workflow/images/email.png');
 }
 
 .publishDocumentsTask {
-    background-image:url('/umbraco/plugins/fmworkflow/images/page_world.png');
+    background-image:url('/Workflow/images/page_world.png');
 }

@@ -8,10 +8,11 @@ using Moriyama.Workflow.Interfaces.Application;
 using Moriyama.Workflow.Interfaces.Domain;
 using Moriyama.Workflow.Interfaces.Ui;
 using Moriyama.Workflow.Umbraco6.Web.Extensions;
-using umbraco.BasePages;
+using Umbraco.Web.UI.Pages;
 
-[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Util.js", "text/javascript")]
-[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Config.js", "text/javascript")]
+
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Util.js", "text/javascript")]
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Config.js", "text/javascript")]
 namespace Moriyama.Workflow.Umbraco6.Web.Workflow
 {
 
@@ -34,8 +35,8 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
 
             SavePropertiesButton.Text = TheGlobalisationService.GetString("save_properties");
 
-            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Util.js", ClientDependencyType.Javascript);
-            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Config.js", ClientDependencyType.Javascript);
+            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Util.js", ClientDependencyType.Javascript);
+            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Config.js", ClientDependencyType.Javascript);
 
             var id = Convert.ToInt32(Request["id"]);
 

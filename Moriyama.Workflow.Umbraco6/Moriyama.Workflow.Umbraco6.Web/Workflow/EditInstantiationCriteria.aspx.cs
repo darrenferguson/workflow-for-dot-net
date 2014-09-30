@@ -9,11 +9,12 @@ using Moriyama.Workflow.Interfaces.Application.Event;
 using Moriyama.Workflow.Interfaces.Domain;
 using Moriyama.Workflow.Interfaces.Ui;
 using Moriyama.Workflow.Umbraco6.Web.Extensions;
-using umbraco.BasePages;
+using Umbraco.Web.UI.Pages;
 
-[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Util.js", "text/javascript")]
-[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Autocomplete.js", "text/javascript")]
-[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Css.Controls.css", "text/css")]
+
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Util.js", "text/javascript")]
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Autocomplete.js", "text/javascript")]
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Css.Controls.css", "text/css")]
 namespace Moriyama.Workflow.Umbraco6.Web.Workflow
 {
     public partial class EditInstantiationCriteria : UmbracoEnsuredPage
@@ -33,9 +34,9 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
         {
             base.OnInit(e);
 
-            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Util.js", ClientDependencyType.Javascript);
-            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Autocomplete.js", ClientDependencyType.Javascript);
-            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Ui.Css.Controls.css", ClientDependencyType.Css);
+            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Util.js", ClientDependencyType.Javascript);
+            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Autocomplete.js", ClientDependencyType.Javascript);
+            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Css.Controls.css", ClientDependencyType.Css);
 
 
         }

@@ -16,9 +16,9 @@ using umbraco.cms.businesslogic;
 using umbraco.cms.businesslogic.web;
 using Moriyama.Workflow.Umbraco6.Domain;
 
-[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Css.Grid.css", "text/css")]
-[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Util.js", "text/javascript")]
-[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Config.js", "text/javascript")]
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Css.Grid.css", "text/css")]
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Util.js", "text/javascript")]
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Config.js", "text/javascript")]
 namespace Moriyama.Workflow.Umbraco6.Web.Workflow
 {
 
@@ -51,9 +51,9 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
             _currentUser = User.GetCurrent();
             _isAdmin = _currentUser.UserType.Alias.ToLower() == "admin";
 
-            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Ui.Css.Grid.css", ClientDependencyType.Css);
-            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Util.js", ClientDependencyType.Javascript);
-            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Ui.Js.Config.js", ClientDependencyType.Javascript);
+            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Css.Grid.css", ClientDependencyType.Css);
+            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Util.js", ClientDependencyType.Javascript);
+            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Config.js", ClientDependencyType.Javascript);
 
             ((ButtonField)WorkflowInstancesGridView.Columns[7]).Text = TheGlobalisationService.GetString("delete");
         }

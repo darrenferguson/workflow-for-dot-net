@@ -5,26 +5,24 @@ using System.Linq;
 using System.Reflection;
 using System.Web.UI;
 using ClientDependency.Core;
+using Common.Logging;
 using Moriyama.Workflow.Application.Reflection;
 using Moriyama.Workflow.Interfaces.Application;
 using Moriyama.Workflow.Interfaces.Domain;
 using Moriyama.Workflow.Interfaces.Domain.Factory;
 using Moriyama.Workflow.Interfaces.Ui.Factory;
 using Moriyama.Workflow.Ui.Adapter;
-using Common.Logging;
 using Moriyama.Workflow.Umbraco6.Web.Extensions;
-using umbraco.BasePages;
 using umbraco.IO;
+using Umbraco.Web.UI.Pages;
 
-[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Css.Designer.css", "text/css")]
-[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Js.jquery-1.5.1.min.js", "text/javascript")]
-[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Js.jquery-ui-1.8.12.custom.min.js", "text/javascript")]
-[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Js.jquery.jsPlumb-1.3.2-all-min.js", "text/javascript")]
-[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Js.json2.js", "text/javascript")]
-[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Ui.Js.workflow.js", "text/javascript")]
-
-
-namespace Moriyama.Workflow.Umbraco6.Web.Ui
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Css.Designer.css", "text/css")]
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.jquery-1.5.1.min.js", "text/javascript")]
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.jquery-ui-1.8.12.custom.min.js", "text/javascript")]
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.jquery.jsPlumb-1.3.2-all-min.js", "text/javascript")]
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.json2.js", "text/javascript")]
+[assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.workflow.js", "text/javascript")]
+namespace Moriyama.Workflow.Umbraco6.Web.Workflow
 {
     public partial class EditDesign : UmbracoEnsuredPage
     {
@@ -54,21 +52,21 @@ namespace Moriyama.Workflow.Umbraco6.Web.Ui
         {
             base.OnInit(e);
 
-            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Ui.Css.Designer.css", ClientDependencyType.Css);
-            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Ui.Js.jquery-1.5.1.min.js", ClientDependencyType.Javascript);
-            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Ui.Js.jquery-ui-1.8.12.custom.min.js", ClientDependencyType.Javascript);
-            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Ui.Js.jquery.jsPlumb-1.3.2-all-min.js", ClientDependencyType.Javascript);
-            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Ui.Js.json2.js", ClientDependencyType.Javascript);
-            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Ui.Js.workflow.js", ClientDependencyType.Javascript);
+            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Css.Designer.css", ClientDependencyType.Css);
+            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.jquery-1.5.1.min.js", ClientDependencyType.Javascript);
+            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.jquery-ui-1.8.12.custom.min.js", ClientDependencyType.Javascript);
+            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.jquery.jsPlumb-1.3.2-all-min.js", ClientDependencyType.Javascript);
+            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.json2.js", ClientDependencyType.Javascript);
+            this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.workflow.js", ClientDependencyType.Javascript);
 
-            var userCssPath = IOHelper.MapPath("~/umbraco/plugins/fmworkflow/css");
+            var userCssPath = IOHelper.MapPath("~/Workflow/userCss");
             
 
             foreach(var file in Directory.GetFiles(userCssPath))
             {
                 var name = new FileInfo(file).Name;
                 Header.Controls.Add(
-                            new LiteralControl("<link type='text/css' rel='stylesheet' href='css/" + name + "' />"));
+                            new LiteralControl("<link type='text/css' rel='stylesheet' href='/Workflow/userCss/" + name + "' />"));
                         
             }
                

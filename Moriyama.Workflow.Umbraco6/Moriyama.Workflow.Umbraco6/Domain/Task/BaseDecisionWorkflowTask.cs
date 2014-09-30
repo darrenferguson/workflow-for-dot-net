@@ -9,7 +9,7 @@ namespace Moriyama.Workflow.Umbraco6.Domain.Task
     {
         public virtual string TransitionUrl
         {
-            get { return "/umbraco/plugins/fmworkflow/Transition.aspx?id={0}"; }
+            get { return "/Workflow/Transition.aspx?id={0}"; }
         }
 
         public virtual bool CanTransition()

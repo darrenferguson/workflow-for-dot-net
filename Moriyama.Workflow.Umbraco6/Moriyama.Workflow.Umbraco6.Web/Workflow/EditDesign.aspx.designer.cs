@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Moriyama.Workflow.Umbraco6.Web.Ui {
+namespace Moriyama.Workflow.Umbraco6.Web.Workflow {
     
     
     public partial class EditDesign {
