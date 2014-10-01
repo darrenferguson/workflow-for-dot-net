@@ -44,6 +44,7 @@ namespace Moriyama.Workflow.Umbraco6.Domain.Task
 
         protected string ReplaceTokens(string text)
         {
+            text = text.Replace(Environment.NewLine, "<br/>");
             text = text.Replace("{Comment}", Comment);
             text = text.Replace("{Instantiator}", User.GetUser(Instantiator).Name);
             text = text.Replace("{Transitions}", string.Join(Environment.NewLine + "<br/>", TransitionHistory));
