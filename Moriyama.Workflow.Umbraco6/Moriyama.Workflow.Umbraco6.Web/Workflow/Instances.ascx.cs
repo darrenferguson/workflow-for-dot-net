@@ -10,11 +10,13 @@ using Common.Logging;
 using Moriyama.Workflow.Interfaces.Application;
 using Moriyama.Workflow.Interfaces.Application.Runtime;
 using Moriyama.Workflow.Interfaces.Domain;
+using Moriyama.Workflow.Umbraco6.Task;
 using Moriyama.Workflow.Umbraco6.Web.Extensions;
 using umbraco.BusinessLogic;
 using umbraco.cms.businesslogic;
 using umbraco.cms.businesslogic.web;
 using Moriyama.Workflow.Umbraco6.Domain;
+using umbraco.cms.helpers;
 
 [assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Css.Grid.css", "text/css")]
 [assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Util.js", "text/javascript")]
@@ -135,6 +137,15 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
             {
                 return "";
             }
+
+            if (i.CurrentTask is UrlGroupDecisionWorkflowTask)
+            {
+                var urlTask = (UrlGroupDecisionWorkflowTask)i.CurrentTask;
+                var url = string.IsNullOrEmpty(urlTask.Url) ? "#" : urlTask.Url;
+
+                return "<a href='" + url + "?id=" + HttpUtility.UrlEncode(i.Id.ToString()) + "' target='_blank'>" + TheGlobalisationService.GetString("transtion") + "</a>";
+            }
+
             var decision = (IDecisionWorkflowTask) i.CurrentTask;
             return "<a href='#' class='wfTransition' rel='"+string.Format(decision.TransitionUrl, HttpUtility.UrlEncode(i.Id.ToString())) +"'>"+ TheGlobalisationService.GetString("transtion") + "</a>";
         }

@@ -4,16 +4,16 @@ using Moriyama.Workflow.Interfaces.Domain;
 using Moriyama.Workflow.Umbraco6.Domain.Task;
 using umbraco.BusinessLogic;
 
-namespace Moriyama.Workflow.Umbraco6.Custom.Domain.Task
+namespace Moriyama.Workflow.Umbraco6.Task
 {
-    public class ExtendedGroupDecisionWorkflowTask
-    {
         [Serializable]
-        public class GroupDecisionWorkflowTask : BaseDecisionWorkflowTask, IWorkflowTask, IDecisionWorkflowTask
+        public class UrlGroupDecisionWorkflowTask : BaseDecisionWorkflowTask, IWorkflowTask, IDecisionWorkflowTask
         {
             public IList<int> UserTypes { get; set; }
+            public string Url { get; set; }
 
-            public GroupDecisionWorkflowTask()
+
+            public UrlGroupDecisionWorkflowTask()
                 : base()
             {
                 AvailableTransitions.Add("approve");
@@ -32,5 +32,4 @@ namespace Moriyama.Workflow.Umbraco6.Custom.Domain.Task
                 return false;
             }
         }
-    }
 }

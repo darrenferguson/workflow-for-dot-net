@@ -291,6 +291,7 @@
     <Content Include="scripts\dummy.txt" />
     <Content Include="usercontrols\dummy.txt" />
     <Content Include="Workflow\Configuration.ascx" />
+    <Content Include="Workflow\Custom\UrlTask.aspx" />
     <Content Include="Workflow\EditConfigurationProperties.aspx" />
     <Content Include="Workflow\EditDesign.aspx" />
     <Content Include="Workflow\EditInstantiationCriteria.aspx" />
@@ -398,6 +399,13 @@
     </Compile>
     <Compile Include="Workflow\Configuration.ascx.designer.cs">
       <DependentUpon>Configuration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Custom\UrlTask.aspx.cs">
+      <DependentUpon>UrlTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\Custom\UrlTask.aspx.designer.cs">
+      <DependentUpon>UrlTask.aspx</DependentUpon>
     </Compile>
     <Compile Include="Workflow\EditConfigurationProperties.aspx.cs">
       <DependentUpon>EditConfigurationProperties.aspx</DependentUpon>
