@@ -89,6 +89,8 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
             var workflowConfigId = Convert.ToInt32(AvailableCriteriaDropDownList.SelectedValue);
             var comment = string.IsNullOrEmpty(InstantiationCommentTextBox.Text) ? TheGlobalisationService.GetString("no_comment_supplied") : InstantiationCommentTextBox.Text;
 
+            // TODO: custom workflow variables?
+
             Log.Info(string.Format("Instantiating workflow {0}: {1}", workflowConfigId, comment));
 
             var inst = TheWorkflowInstanceService.Instantiate(workflowConfigId, comment);

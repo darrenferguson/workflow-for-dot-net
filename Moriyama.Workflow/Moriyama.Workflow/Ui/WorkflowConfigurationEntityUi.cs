@@ -18,6 +18,7 @@ namespace Moriyama.Workflow.Ui
         {
             UiProperties.Add((IWorkflowUiProperty) CreateGlobalisedObject(typeof(NamePropertyUi)));
             UiProperties.Add((IWorkflowUiProperty) CreateGlobalisedObject(typeof(IsConfigurationActivePropertyUi)));
+            // UiProperties.Add((IWorkflowUiProperty) CreateGlobalisedObject(typeof(FlagPropertyUi)));
         }
 
         public override bool SupportsType(object o)

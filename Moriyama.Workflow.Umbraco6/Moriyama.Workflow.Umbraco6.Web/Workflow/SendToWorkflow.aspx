@@ -39,6 +39,8 @@
 
             <asp:TextBox ID="InstantiationCommentTextBox" runat="server" TextMode="MultiLine" CssClass="workflowTextBox"></asp:TextBox>
             
+            
+
             <div style="clear: both;">
                 <asp:Button ID="StartWorkflowButton" runat="server" Text="Button" OnClick="StartWorkflowButtonClick" />
             </div>

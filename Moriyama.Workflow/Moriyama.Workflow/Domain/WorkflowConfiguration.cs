@@ -14,7 +14,10 @@ namespace Moriyama.Workflow.Domain
 
         public int Id { get; set; }
         public string Name { get; set; }
+
         public bool IsConfigurationActive { get; set; }
+        // public string Flags { get; set; }
+
         public bool IsLocked { get; set; }
 
         public IWorkflowTask StartTask { get; set; }

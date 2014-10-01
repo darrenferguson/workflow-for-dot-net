@@ -18,6 +18,7 @@ namespace Moriyama.Workflow.Umbraco6.Ui
         {
             UiProperties.Add((IWorkflowUiProperty) CreateGlobalisedObject(typeof(NamePropertyUi)));
             UiProperties.Add((IWorkflowUiProperty) CreateGlobalisedObject(typeof(IsConfigurationActivePropertyUi)));
+
         }
 
         public override bool SupportsType(object o)

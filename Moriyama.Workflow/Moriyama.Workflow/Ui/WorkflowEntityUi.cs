@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
-using System.Resources;
 using System.Runtime.Serialization;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -15,12 +14,8 @@ namespace Moriyama.Workflow.Ui
     {
         private static readonly ILog Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
-        //protected ResourceManager ResourceManager;
-        
         protected WorkflowEntityUi()
         {
-            // ResourceManager = new ResourceManager("Moriyama.Workflow.Ui.Properties.Resources", GetType().Assembly);
-            
             UiAttributes = new Dictionary<string, string>();
             UiProperties = new List<IWorkflowUiProperty>();
             TransitionDescriptions = new Dictionary<string, string>();
@@ -45,14 +40,7 @@ namespace Moriyama.Workflow.Ui
                 
                 if (currentValue != null)
                 {
-                    //var property = uiProperty.RenderControl.GetType().GetProperty(uiProperty.RenderControlValueProperty);
-                    //var propertyType = property.PropertyType;
-
                     uiProperty.Value = currentValue;
-
-                    //property.SetValue(uiProperty.RenderControl,
-                    //    currentValue.GetType() == propertyType ? currentValue : Convert.ChangeType(currentValue, propertyType), 
-                    //    null);
                 }
 
                 controls.Add(uiProperty.RenderControl);
