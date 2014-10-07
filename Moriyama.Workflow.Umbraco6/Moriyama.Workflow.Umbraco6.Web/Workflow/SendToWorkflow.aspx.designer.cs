@@ -49,6 +49,15 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow {
         protected global::System.Web.UI.WebControls.TextBox InstantiationCommentTextBox;
         
         /// <summary>
+        /// FlagsCheckBoxList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBoxList FlagsCheckBoxList;
+        
+        /// <summary>
         /// StartWorkflowButton control.
         /// </summary>
         /// <remarks>

@@ -1,5 +1,3 @@
-
-
 $(document).ready(function(){   
 
     //height of dom
@@ -8,7 +6,10 @@ $(document).ready(function(){
 
     // on click of side nav item 
     $("ul.side-nav li").click(function() {
-        
+
+        wf.activeItem = $(this).attr('data-id');
+        wf.setArea(wf.activeItem);
+
         //count side nav this will be used with :nth-child to go through the  correct tabs
         var tabNum = $(this).index("ul.side-nav li");
 
@@ -27,9 +28,7 @@ $(document).ready(function(){
         var iframeWidth = $(".approval-section").width();
         
         console.log(iframeHeight);
-        $("#pages-for-approval div.page iframe").css({"width": iframeWidth-10 +"px", "height": iframeHeight-100+"px"})
-
+        $("#pages-for-approval div.page iframe").css({ "width": iframeWidth - 10 + "px", "height": iframeHeight - 100 + "px" });
         $('.approval-pane input[type="radio"]').attr('checked',false);
-
     });
 });

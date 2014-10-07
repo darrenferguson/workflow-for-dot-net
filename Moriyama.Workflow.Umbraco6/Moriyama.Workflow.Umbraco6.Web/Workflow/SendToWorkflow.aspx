@@ -40,6 +40,14 @@
             <asp:TextBox ID="InstantiationCommentTextBox" runat="server" TextMode="MultiLine" CssClass="workflowTextBox"></asp:TextBox>
             
             
+             <span>
+                <%= TheGlobalisationService.GetString("flags") %>
+            </span>
+
+            <asp:CheckBoxList ID="FlagsCheckBoxList" runat="server">
+                <asp:ListItem Text="Trivial" Value="trivial"></asp:ListItem>
+                <asp:ListItem Text="Urgent" Value="urgent"></asp:ListItem>
+            </asp:CheckBoxList>
 
             <div style="clear: both;">
                 <asp:Button ID="StartWorkflowButton" runat="server" Text="Button" OnClick="StartWorkflowButtonClick" />

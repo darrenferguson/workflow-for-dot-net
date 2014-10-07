@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Reflection;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 using ClientDependency.Core;
 using Common.Logging;
 using Moriyama.Workflow.Interfaces.Application;
@@ -88,12 +90,22 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
 
             var workflowConfigId = Convert.ToInt32(AvailableCriteriaDropDownList.SelectedValue);
             var comment = string.IsNullOrEmpty(InstantiationCommentTextBox.Text) ? TheGlobalisationService.GetString("no_comment_supplied") : InstantiationCommentTextBox.Text;
-
+            
             // TODO: custom workflow variables?
 
             Log.Info(string.Format("Instantiating workflow {0}: {1}", workflowConfigId, comment));
 
             var inst = TheWorkflowInstanceService.Instantiate(workflowConfigId, comment);
+
+            var flags = new CommaDelimitedStringCollection();
+
+            foreach (ListItem item in FlagsCheckBoxList.Items)
+            {
+                if (item.Selected)
+                    flags.Add(TheGlobalisationService.GetString(item.Text));
+            }
+            
+            inst.Flags = flags.ToString();
 
             foreach(var id in ids)
             {

@@ -11,5 +11,23 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow.Approval {
     
     
     public partial class UrlTask {
+        
+        /// <summary>
+        /// JsonLiteral control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal JsonLiteral;
+        
+        /// <summary>
+        /// NodeRepeater control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater NodeRepeater;
     }
 }

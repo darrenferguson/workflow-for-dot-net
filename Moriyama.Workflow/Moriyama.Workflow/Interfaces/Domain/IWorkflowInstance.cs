@@ -6,6 +6,7 @@ namespace Moriyama.Workflow.Interfaces.Domain
     public interface IWorkflowInstance : IWorkflow
     {
         string Comment { get; set; }
+        string Flags { get; set; }
 
         DateTime InstantiationTime { get; set; }
 

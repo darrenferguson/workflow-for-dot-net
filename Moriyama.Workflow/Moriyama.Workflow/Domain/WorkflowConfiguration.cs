@@ -16,7 +16,7 @@ namespace Moriyama.Workflow.Domain
         public string Name { get; set; }
 
         public bool IsConfigurationActive { get; set; }
-        // public string Flags { get; set; }
+        
 
         public bool IsLocked { get; set; }
 

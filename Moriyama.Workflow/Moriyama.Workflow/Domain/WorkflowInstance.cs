@@ -15,6 +15,7 @@ namespace Moriyama.Workflow.Domain
         public string Name { get; set; }
 
         public string Comment { get; set; }
+        public string Flags { get; set; }
 
         public DateTime InstantiationTime { get; set; }
         public DateTime StartTime { get; set; }

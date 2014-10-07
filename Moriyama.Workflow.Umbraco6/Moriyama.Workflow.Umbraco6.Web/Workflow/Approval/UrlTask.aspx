@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/foundation-icons.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <script type="text/javascript">
+        var wf = {};
+        wf.activeItem = null;
+        wf.nodeDetails = <asp:Literal runat="server" ID="JsonLiteral"></asp:Literal> ;
+
+
+    </script>
     <script src="js/vendor/modernizr.js"></script>
   </head>
   <body>
@@ -18,15 +25,19 @@
           <p>To approve a page, choose one of the pages from below and then choose either accept or reject. </p>
 
         <ul class="side-nav">
-          <!--li items rendered in JS-->
+        
         </ul>
+          
+          
+
         <div class="radio hide">
          <input type="radio" name="decision" value="Accept" id="acceptWorkflow"><label for="Accept">Accept</label>
          <input type="radio" name="decision" value="Reject" id="rejectWorkflow"><label for="Reject">Reject</label>
        </div>
+
         <form id="rejectionReason" class="decisions hide">
          <label>Reason for rejection</label><br />
-         <textarea placeholder="Reason for rejection"></textarea>
+         <textarea placeholder="Reason for rejection" class="rejectArea"></textarea>
         <div class="decision-btn">
           <a href="#" class="small success button">OK</a>
           <a href="#" class="small alert button">Cancel</a>
@@ -37,33 +48,19 @@
         </div>
       </div>
 
-
-
-
       <div class="large-9 medium-9 columns approval-section">
-        <h5>Title</h5>
-        <!-- Grid Example -->
-     
-        <hr />
-        
+      
         <div id="pages-for-approval">
-          <div class="page">
-            <iframe src="example/workflow-one.html"></iframe>
-          </div>
-          <div class="page">
-            <iframe src="example/workflow-two.html"></iframe>
-          </div>
-          <div class="page">
-            <iframe src="example/workflow-three.html"></iframe>
-          </div>
-          <div class="page">
-            <iframe src="example/workflow-four.html"></iframe>
-          </div>
-          <div class="page">
-            <iframe src="example/workflow-five.html"></iframe>
-          </div>
-        </div>
+            
+          <asp:Repeater id="NodeRepeater" runat="server">
+            <ItemTemplate>
+                <div class="page" data-name="<%# Eval("Name")%>" data-id="<%# Eval("Id")%>">
+                    <iframe src="/umbraco/dialogs/preview.aspx?id=<%# Eval("Id")%>"></iframe>
+                </div>
+            </ItemTemplate>
+          </asp:Repeater>
 
+        </div>
 
         </div>        
         
@@ -75,7 +72,7 @@
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
     <script>
-      $(document).foundation();
+        $(document).foundation();
     </script>
     <script src="js/approvalFrames.js"></script>
     <script src="js/sideBar.js"></script>

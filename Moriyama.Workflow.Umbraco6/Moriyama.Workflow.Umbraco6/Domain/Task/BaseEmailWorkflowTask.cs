@@ -5,10 +5,8 @@ using System.Text;
 using System.Web;
 using Moriyama.Workflow.Application.Globalisation;
 using Moriyama.Workflow.Domain.Task;
-using Moriyama.Workflow.Interfaces.Application;
 using Moriyama.Workflow.Interfaces.Application.Runtime;
 using Moriyama.Workflow.Interfaces.Domain;
-using Moriyama.Workflow.Umbraco6.Domain;
 using umbraco.BusinessLogic;
 using umbraco.cms.businesslogic;
 
@@ -31,6 +29,8 @@ namespace Moriyama.Workflow.Umbraco6.Domain.Task
         protected IList<int> CmsNodes { get; set; }
 
         protected string Comment { get; set; }
+        protected string Flags { get; set; }
+
         protected IList<string> TransitionHistory { get; set; }
         
         public virtual void Run(IWorkflowInstance workflowInstance, IWorkflowRuntime runtime)
@@ -39,6 +39,7 @@ namespace Moriyama.Workflow.Umbraco6.Domain.Task
             CmsNodes = ((UmbracoWorkflowInstance)workflowInstance).CmsNodes;
 
             Comment = workflowInstance.Comment;
+            Flags = workflowInstance.Flags;
             TransitionHistory = workflowInstance.TransitionHistory;
         }
 
@@ -48,7 +49,8 @@ namespace Moriyama.Workflow.Umbraco6.Domain.Task
             text = text.Replace("{Comment}", Comment);
             text = text.Replace("{Instantiator}", User.GetUser(Instantiator).Name);
             text = text.Replace("{Transitions}", string.Join(Environment.NewLine + "<br/>", TransitionHistory));
-
+            text = text.Replace("{Flags}", Flags);
+            text = text.Replace("{Host}", HttpContext.Current.Request.Url.Host);
             return text;
         }
 
