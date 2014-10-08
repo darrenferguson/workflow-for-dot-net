@@ -36,11 +36,13 @@
        </div>
 
         <form id="rejectionReason" class="decisions hide">
+         <div class="rejectUi">
          <label>Reason for rejection</label><br />
          <textarea placeholder="Reason for rejection" class="rejectArea"></textarea>
-        <div class="decision-btn">
+       <%-- <div class="decision-btn">
           <a href="#" class="small success button">OK</a>
           <a href="#" class="small alert button">Cancel</a>
+        </div>--%>
         </div>
         </form>
         <div class="accept-btn">

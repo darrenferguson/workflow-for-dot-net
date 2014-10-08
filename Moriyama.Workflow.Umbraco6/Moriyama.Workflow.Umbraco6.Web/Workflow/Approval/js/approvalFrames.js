@@ -29,6 +29,9 @@ $(document).ready(function(){
         
         console.log(iframeHeight);
         $("#pages-for-approval div.page iframe").css({ "width": iframeWidth - 10 + "px", "height": iframeHeight - 100 + "px" });
-        $('.approval-pane input[type="radio"]').attr('checked',false);
+        // $('.approval-pane input[type="radio"]').attr('checked',false);
     });
+
+    $("ul.side-nav li").first().trigger('click');
+
 });
