@@ -35,7 +35,7 @@
          <input type="radio" name="decision" value="Reject" id="rejectWorkflow"><label for="Reject">Reject</label>
        </div>
 
-        <form id="rejectionReason" class="decisions hide">
+       <form id="rejectionReason" class="decisions hide">
          <div class="rejectUi">
          <label>Reason for rejection</label><br />
          <textarea placeholder="Reason for rejection" class="rejectArea"></textarea>
@@ -65,12 +65,21 @@
         </div>
 
         </div>        
-        
-				</form>
-      </div>     
 
     </div>
     
+    <form runat="server" class="hiddenForm" style="display: none;">
+        <asp:HiddenField ID="JsonField" runat="server" />
+        <asp:Button ID="JsonButton" runat="server" Text="Button" OnClick="BtnClick"/>
+    </form>
+    
+    <script type="text/javascript">
+        <!-- 
+        wf.buttonId = '#<%= JsonButton.ClientID %>'; 
+        wf.fieldId = '#<%= JsonField.ClientID %>'; 
+        // -->
+    </script>
+
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
     <script>

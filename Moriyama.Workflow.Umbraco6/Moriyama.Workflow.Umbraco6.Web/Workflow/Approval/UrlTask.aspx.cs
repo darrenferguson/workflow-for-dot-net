@@ -39,6 +39,16 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow.Approval
            
         }
 
+        public void BtnClick(Object sender,EventArgs e)
+        {
+            var json = JsonField.Value;
+            var deserialised = JsonConvert.DeserializeObject<IEnumerable<NodeInfo>>(json);
+
+
+
+
+        }
+
         public class NodeInfo
         {
             public int Id { get; set; }

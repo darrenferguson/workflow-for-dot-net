@@ -27,8 +27,9 @@ $("#acceptWorkflow").click(function () {
 });
 
 $('.accept-btn a').click(function() {
-    
 
+    $(wf.fieldId).val(JSON.stringify(wf.nodeDetails));
+    $(wf.buttonId).trigger('click');
 });
 
 wf.setArea = function (id) {
