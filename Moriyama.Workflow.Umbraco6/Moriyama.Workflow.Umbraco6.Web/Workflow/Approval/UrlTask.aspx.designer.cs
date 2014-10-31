@@ -13,6 +13,15 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow.Approval {
     public partial class UrlTask {
         
         /// <summary>
+        /// ClosePanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel ClosePanel;
+        
+        /// <summary>
         /// JsonLiteral control.
         /// </summary>
         /// <remarks>

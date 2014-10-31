@@ -6,7 +6,7 @@ $(document).ready(function(){
 
     // on click of side nav item 
     $("ul.side-nav li").click(function() {
-
+        
         wf.activeItem = $(this).attr('data-id');
         wf.setArea(wf.activeItem);
 
@@ -23,15 +23,16 @@ $(document).ready(function(){
         $(this).addClass("active");
 
         $("#pages-for-approval div.page").removeClass("active");
-        $("#pages-for-approval div.page:nth-child("+nthChild+")").addClass("active");
+        $("#pages-for-approval div.page:nth-child(" + nthChild + ")").addClass("active");
+
+        var a = $("#pages-for-approval div.page:nth-child(" + nthChild + ") iframe");
+        $(a).attr('src', $(a).attr('src'));
 
         var iframeWidth = $(".approval-section").width();
         
-        console.log(iframeHeight);
         $("#pages-for-approval div.page iframe").css({ "width": iframeWidth - 10 + "px", "height": iframeHeight - 100 + "px" });
-        // $('.approval-pane input[type="radio"]').attr('checked',false);
+        
     });
 
     $("ul.side-nav li").first().trigger('click');
-
 });

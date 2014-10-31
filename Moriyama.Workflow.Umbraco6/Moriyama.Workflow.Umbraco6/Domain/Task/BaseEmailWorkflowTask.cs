@@ -48,7 +48,7 @@ namespace Moriyama.Workflow.Umbraco6.Domain.Task
             text = text.Replace(Environment.NewLine, "<br/>");
             text = text.Replace("{Comment}", Comment);
             text = text.Replace("{Instantiator}", User.GetUser(Instantiator).Name);
-            text = text.Replace("{Transitions}", string.Join(Environment.NewLine + "<br/>", TransitionHistory));
+            text = text.Replace("{Transitions}", string.Join(Environment.NewLine + "<br/>" + Environment.NewLine + "<br/>", TransitionHistory));
             text = text.Replace("{Flags}", Flags);
             text = text.Replace("{Host}", HttpContext.Current.Request.Url.Host);
             return text;

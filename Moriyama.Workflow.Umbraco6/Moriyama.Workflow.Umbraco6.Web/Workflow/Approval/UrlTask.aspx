@@ -8,13 +8,17 @@
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/foundation-icons.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <script type="text/javascript">
-        var wf = {};
-        wf.activeItem = null;
-        wf.nodeDetails = <asp:Literal runat="server" ID="JsonLiteral"></asp:Literal> ;
-
-
-    </script>
+    <asp:Panel runat="server" ID="ClosePanel" Visible="False">
+        <script type="text/javascript">
+            window.opener.location = window.opener.location;
+            window.close();
+        </script>
+     </asp:Panel>
+     <script type="text/javascript">
+         var wf = {};
+         wf.activeItem = null;
+         wf.nodeDetails = <asp:Literal runat="server" ID="JsonLiteral"></asp:Literal> ;
+     </script>
     <script src="js/vendor/modernizr.js"></script>
   </head>
   <body>
@@ -27,8 +31,6 @@
         <ul class="side-nav">
         
         </ul>
-          
-          
 
         <div class="radio hide">
          <input type="radio" name="decision" value="Accept" id="acceptWorkflow"><label for="Accept">Accept</label>
@@ -56,7 +58,7 @@
             
           <asp:Repeater id="NodeRepeater" runat="server">
             <ItemTemplate>
-                <div class="page" data-name="<%# Eval("Name")%>" data-id="<%# Eval("Id")%>">
+                <div class="page" data-name="<%# Eval("Name")%>" data-id="<%# Eval("Id")%>" data-url="<%# Eval("Url")%>">
                     <iframe src="/umbraco/dialogs/preview.aspx?id=<%# Eval("Id")%>"></iframe>
                 </div>
             </ItemTemplate>

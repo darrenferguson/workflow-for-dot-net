@@ -2,8 +2,7 @@ $("#rejectWorkflow").click(function () {
 
   wf.Approve(wf.activeItem, false);
   $('.rejectUi').show();
-  // wf.setArea(wf.activeItem);
-  
+
   $('ul.side-nav li.active i').removeClass('fi-check');
   $('ul.side-nav li.active i').addClass('fi-x');
 
@@ -64,5 +63,4 @@ wf.Approve = function (id, status) {
             this.Approved = status;
         }
     });
-    // console.log(wf.nodeDetails);
 };
