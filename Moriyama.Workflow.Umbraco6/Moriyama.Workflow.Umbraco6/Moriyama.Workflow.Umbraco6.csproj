@@ -249,7 +249,8 @@
     <Compile Include="Installer\Singleton.cs" />
     <Compile Include="Installer\Uninstall\UnsintallAction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Task\ExtendedGroupDecisionWorkflowTask.cs" />
+    <Compile Include="Task\UrlInstantiatorRestartWorkflowTask.cs" />
+    <Compile Include="Task\UrlGroupDecisionWorkflowTask.cs" />
     <Compile Include="Task\FilterMediaWorkflowTask.cs" />
     <Compile Include="Task\TemplateEmailWithMediaWorkflowTask.cs" />
     <Compile Include="Task\TemplateEmailWorkflowTask.cs" />
@@ -283,6 +284,7 @@
     <Compile Include="Ui\WorkflowTaskUi\GroupDecisionWorkflowTaskEntityUi.cs" />
     <Compile Include="Ui\WorkflowTaskUi\Property\DocumentTypePropertyUi.cs" />
     <Compile Include="Ui\WorkflowTaskUi\PublishDocumentsWorkflowTaskEntityUi.cs" />
+    <Compile Include="Ui\WorkflowTaskUi\UrlInstantiatorRestartWorkflowTaskEntityUi.cs" />
     <Compile Include="Ui\WorkflowTaskUi\UserDecisionWorkflowTaskEntityUi.cs" />
   </ItemGroup>
   <ItemGroup>

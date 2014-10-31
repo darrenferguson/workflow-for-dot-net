@@ -109,8 +109,8 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
                 WorkflowInstancesGridView.DataBind();
             } else
             {
-
-                var filtered = _hydratedInstances.Where(i => i.Instantiator == _currentUser.Id || CanTransition(i.CurrentTask)).ToList();
+                
+                var filtered = _hydratedInstances.Where(i => i.Instantiator == _currentUser.Id || CanTransition(i.CurrentTask, i.Instantiator)).ToList();
                 WorkflowInstancesGridView.DataSource = filtered;
 
                 WorkflowInstancesGridView.DataBind();
@@ -122,18 +122,21 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
             
         }
 
-        protected bool CanTransition(IWorkflowTask t)
+        protected bool CanTransition(IWorkflowTask t, int instantiator)
         {
-            if (!typeof(IDecisionWorkflowTask).IsAssignableFrom(t.GetType())) return false;
-            return ((IDecisionWorkflowTask) t).CanTransition();
+            if (!(t is IDecisionWorkflowTask)) return false;
+
+            return ((IDecisionWorkflowTask) t).CanTransition(instantiator);
         }
 
         public string TransitionInfo(IWorkflowInstance i)
         {
             if (i.CurrentTask == null) return "";
-            if (!typeof(IDecisionWorkflowTask).IsAssignableFrom(i.CurrentTask.GetType())) return "";
+            if (!(i.CurrentTask is IDecisionWorkflowTask)) return "";
 
-            if (!CanTransition(i.CurrentTask) && !_isAdmin)
+            var instantiator = ((UmbracoWorkflowInstance) i).Instantiator;
+
+            if (!CanTransition(i.CurrentTask, instantiator) && !_isAdmin)
             {
                 return "";
             }
@@ -144,6 +147,14 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
                 var url = string.IsNullOrEmpty(urlTask.Url) ? "#" : urlTask.Url;
 
                 return "<a href='" + url + "?id=" + HttpUtility.UrlEncode(i.Id.ToString()) + "' target='_blank'>" + TheGlobalisationService.GetString("transtion") + "</a>";
+            }
+
+            if (i.CurrentTask is UrlInstantiatorRestartWorkflowTask)
+            {
+                var urlTask = (UrlInstantiatorRestartWorkflowTask)i.CurrentTask;
+                var url = string.IsNullOrEmpty(urlTask.Url) ? "#" : urlTask.Url;
+
+                return "<a href='" + url + "?id=" + HttpUtility.UrlEncode(i.Id.ToString()) + "' target='_blank'>" + TheGlobalisationService.GetString("restart_workflow") + "</a>";
             }
 
             var decision = (IDecisionWorkflowTask) i.CurrentTask;

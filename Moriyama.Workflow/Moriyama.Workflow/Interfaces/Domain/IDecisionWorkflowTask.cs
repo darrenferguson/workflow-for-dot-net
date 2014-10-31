@@ -3,6 +3,6 @@
     public interface IDecisionWorkflowTask
     {
         string TransitionUrl { get;  }
-        bool CanTransition();
+        bool CanTransition(int instantiator);
     }
 }

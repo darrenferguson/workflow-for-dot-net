@@ -591,6 +591,7 @@
     <Content Include="Workflow\Approval\svgs\fi-yen.svg" />
     <Content Include="Workflow\Approval\svgs\fi-zoom-in.svg" />
     <Content Include="Workflow\Approval\svgs\fi-zoom-out.svg" />
+    <Content Include="Workflow\Approval\RestartTask.aspx" />
     <Content Include="Workflow\Configuration.ascx" />
     <Content Include="Workflow\Approval\UrlTask.aspx" />
     <Content Include="Workflow\EditConfigurationProperties.aspx" />
@@ -698,6 +699,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Workflow\Approval\RestartTask.aspx.cs">
+      <DependentUpon>RestartTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\Approval\RestartTask.aspx.designer.cs">
+      <DependentUpon>RestartTask.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Workflow\Configuration.ascx.cs">
       <DependentUpon>Configuration.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -17,7 +17,7 @@ namespace Moriyama.Workflow.Umbraco6.Domain.Task
             AvailableTransitions.Add("reject");
         }
 
-        public override bool CanTransition()
+        public override bool CanTransition(int instantiator)
         {
             if (Users != null)
             {

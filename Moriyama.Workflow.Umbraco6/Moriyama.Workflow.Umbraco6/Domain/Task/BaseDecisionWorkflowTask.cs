@@ -12,7 +12,7 @@ namespace Moriyama.Workflow.Umbraco6.Domain.Task
             get { return "/Workflow/Transition.aspx?id={0}"; }
         }
 
-        public virtual bool CanTransition()
+        public virtual bool CanTransition(int instantiator)
         {
             return false; 
         }

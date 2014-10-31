@@ -3,7 +3,6 @@ using Moriyama.Workflow.Interfaces.Ui;
 using Moriyama.Workflow.Ui.WorkflowTaskUi;
 using Moriyama.Workflow.Umbraco6.Task;
 using Moriyama.Workflow.Umbraco6.Ui.Property;
-using Moriyama.Workflow.Umbraco6.Ui.Property.Email;
 
 namespace Moriyama.Workflow.Umbraco6.Ui.WorkflowTaskUi
 {
