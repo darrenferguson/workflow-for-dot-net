@@ -46,8 +46,8 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
             Log.Debug(string.Format("Umbraco compatibility check: Umbraco version - '{0}'. Compatible {1}.",UmbracoVersion, UmbracoVersionCompatible));
 
             _umbracoConnectionString = UmbracoVersion.Major > 4
-                ? ConfigurationManager.ConnectionStrings["umbracoDbDSN"].ConnectionString
-                : ConfigurationManager.AppSettings["umbracoDbDSN"];
+                ? ConfigurationManager.ConnectionStrings["umbracoWorkflow"].ConnectionString
+                : ConfigurationManager.AppSettings["umbracoWorkflow"];
 
             DbType = Helper.Instance.GetDatbaseType(_umbracoConnectionString);
             DatabaseCompatible = (DbType == DatabaseType.SqlServer || DbType == DatabaseType.MySql || DbType == DatabaseType.SqlCe);

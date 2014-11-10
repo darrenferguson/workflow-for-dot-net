@@ -716,6 +716,7 @@
     </Compile>
     <Compile Include="Workflow\EditDesign.aspx.cs">
       <DependentUpon>EditDesign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Workflow\EditDesign.aspx.designer.cs">
       <DependentUpon>EditDesign.aspx</DependentUpon>

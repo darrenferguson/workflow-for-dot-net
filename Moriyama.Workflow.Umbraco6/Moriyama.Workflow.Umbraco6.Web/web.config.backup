@@ -72,6 +72,9 @@
   <connectionStrings>
     <remove name="umbracoDbDSN" />
     <add name="umbracoDbDSN" connectionString="server=sql1;database=workflow;user id=workflow;password=workflow" providerName="System.Data.SqlClient" />
+    <add name="umbracoWorkflow" 
+         connectionString="server=sql1;database=uworkflow;user id=uworkflow;password=uworkflow" 
+         providerName="System.Data.SqlClient" />
     <!-- Important: If you're upgrading Umbraco, do not clear the connection string / provider name during your web.config merge. -->
   </connectionStrings>
   <!--

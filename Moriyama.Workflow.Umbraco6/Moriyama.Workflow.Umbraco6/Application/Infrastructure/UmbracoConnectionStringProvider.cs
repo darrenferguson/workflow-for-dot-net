@@ -32,8 +32,8 @@ namespace Moriyama.Workflow.Umbraco6.Application.Infrastructure
                 var umbracoVersion = new Version(GlobalSettings.CurrentVersion);
 
                 var umbracoConnectionString = umbracoVersion.Major > 4
-                ? ConfigurationManager.ConnectionStrings["umbracoDbDSN"].ConnectionString
-                : ConfigurationManager.AppSettings["umbracoDbDSN"];
+                ? ConfigurationManager.ConnectionStrings["umbracoWorkflow"].ConnectionString
+                : ConfigurationManager.AppSettings["umbracoWorkflow"];
 
                 connectionStringBuilder = new DbConnectionStringBuilder { ConnectionString = umbracoConnectionString };
 
