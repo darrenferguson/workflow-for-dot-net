@@ -8,7 +8,7 @@ using Moriyama.Workflow.Interfaces.Application;
 using Moriyama.Workflow.Interfaces.Domain.Factory;
 using Moriyama.Workflow.Interfaces.Ui;
 using Moriyama.Workflow.Umbraco6.Web.Extensions;
-using Umbraco.Web.UI.Pages;
+using umbraco.BasePages;
 
 
 [assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.jquery-1.5.1.min.js", "text/javascript")]

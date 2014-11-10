@@ -2,12 +2,14 @@
 using Common.Logging;
 using Moriyama.Workflow.Umbraco6.Application.Modules;
 using Microsoft.Web.Infrastructure.DynamicModuleHelper;
+using umbraco.BusinessLogic;
+using umbraco.businesslogic;
 using Umbraco.Core;
-using ApplicationEventHandler = Umbraco.Core.ApplicationEventHandler;
+
 
 namespace Moriyama.Workflow.Umbraco6.Application
 {
-    public class UmbracoWorkflowApplicationBase : ApplicationEventHandler 
+    public class UmbracoWorkflowApplicationBase : IApplicationEventHandler 
     {
         private static readonly ILog Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
         
@@ -22,10 +24,20 @@ namespace Moriyama.Workflow.Umbraco6.Application
             _modulesRegistered = true;
         }
 
-        protected override void ApplicationStarting(UmbracoApplicationBase umbracoApplication, ApplicationContext applicationContext)
+        
+        public void OnApplicationInitialized(UmbracoApplicationBase umbracoApplication, ApplicationContext applicationContext)
+        {
+            
+        }
+
+        public void OnApplicationStarting(UmbracoApplicationBase umbracoApplication, ApplicationContext applicationContext)
         {
             Log.Info(string.Format("Starting workflow for Umbraco {0}", Assembly.GetExecutingAssembly().GetName().Version));
-            base.ApplicationStarting(umbracoApplication, applicationContext);
+        }
+
+        public void OnApplicationStarted(UmbracoApplicationBase umbracoApplication, ApplicationContext applicationContext)
+        {
+            
         }
     }
 }

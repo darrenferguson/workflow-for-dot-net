@@ -1,6 +1,6 @@
-﻿<%@ Control Language="c#" AutoEventWireup="True" CodeBehind="database.ascx.cs" Inherits="Umbraco.Web.UI.Install.Steps.Database" %>
+﻿<%@ Control Language="c#" AutoEventWireup="True" CodeBehind="database.ascx.cs" Inherits="umbraco.presentation.install.steps.detect"
+    TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
 <%@ Import Namespace="Umbraco.Core.Configuration" %>
-
 <asp:PlaceHolder ID="settings" runat="server" Visible="true">
     <!-- database box -->
     <div class="tab main-tabinfo">
@@ -17,6 +17,7 @@
         </div>
         <!-- database -->
         <div class="database-hold">
+            <form action="#">
                 <fieldset>
                     <div class="step">
                         <div class="container">
@@ -55,46 +56,6 @@
 
                         <!-- blank option -->
                         <div id="database-blank" class="database-option">
-                            <script type="text/javascript">
-                                (function($) {
-                                    $(document).ready(function() {
-                                        // Make database username and password dependent on the integrated security option
-                                        var databaseTypeSelect = $("#<%= DatabaseType.ClientID %>");
-                                        var integratedSecurityCheckBox = $("#<%= DatabaseIntegratedSecurity.ClientID %>");
-                                        var databaseUserNamePasswordInputs = $("#<%= DatabaseUsername.ClientID %>, #<%= DatabasePassword.ClientID %>");
-
-                                        toggle();
-
-                                        databaseTypeSelect.change(toggle);
-                                        integratedSecurityCheckBox.change(toggle);
-
-                                        function toggle() {
-                                            var databaseType = databaseTypeSelect.val();
-                                            
-                                            if (databaseType == "SqlServer") {
-                                                // Only show and enable the integrated security option when it's supported
-                                                integratedSecurityCheckBox
-                                                    .removeAttr("disabled")
-                                                    .closest("div").show();
-                                                
-                                            } else {
-                                                integratedSecurityCheckBox
-                                                    .attr("disabled", "disabled")
-                                                    .closest("div").hide();
-                                            }
-
-                                            if (integratedSecurityCheckBox.is(":checked")) {
-                                                // Hide username and password when integrated security is checked
-                                                databaseUserNamePasswordInputs.attr("disabled", "disabled");
-                                                databaseUserNamePasswordInputs.closest("div").hide();
-                                            } else {
-                                                databaseUserNamePasswordInputs.removeAttr("disabled");
-                                                databaseUserNamePasswordInputs.closest("div").show();
-                                            }
-                                        }
-                                    });
-                                })(jQuery);
-                            </script>
 
                             <div class="step">
                                 <div class="container">
@@ -143,12 +104,6 @@
                                             <span>
                                                 <asp:TextBox runat="server" CssClass="text" ID="DatabaseName" /></span>
                                         </div>
-                                        
-                                        <div class="row sql">
-                                            <asp:Label runat="server" AssociatedControlID="DatabaseIntegratedSecurity">Integrated security:</asp:Label>
-                                            <asp:CheckBox runat="server" ID="DatabaseIntegratedSecurity" />
-                                        </div>
-
                                         <div class="row sql" runat="server" id="DatabaseUsernameItem">
                                             <asp:Label runat="server" AssociatedControlID="DatabaseUsername" ID="DatabaseUsernameLabel">Username:</asp:Label>
                                             <span>
@@ -242,7 +197,7 @@
 
                         <footer class="btn-box installbtn">
                             <div class="t">&nbsp;</div>
-                            <asp:LinkButton runat="server" class="single-tab submit btn-install" OnClick="SaveDbConfig"><span>install</span>    </asp:LinkButton>
+                            <asp:LinkButton runat="server" class="single-tab submit btn-install" OnClick="saveDBConfig"><span>install</span>    </asp:LinkButton>
                         </footer>
 
                     </div>
@@ -250,11 +205,12 @@
 
 
                 </fieldset>
+            </form>
         </div>
     </div>
     <script type="text/javascript">
         var hasEmbeddedDlls = <%= HasEmbeddedDatabaseFiles.ToString().ToLower() %>;
-        var currentVersion = '<%=UmbracoVersion.Current.ToString(3)%> <%=UmbracoVersion.CurrentComment%> ';
+        var currentVersion = '<%=UmbracoVersion.Current.ToString(3)%>';
         var configured = <%= IsConfigured.ToString().ToLower() %>;
 
         jQuery(document).ready(function(){
@@ -325,7 +281,7 @@
                     <div class="success">
                         <p>
                             Umbraco
-				            <%=UmbracoVersion.Current.ToString(3)%> <%=UmbracoVersion.CurrentComment%>
+				            <%=UmbracoVersion.Current.ToString(3)%>
 				            has now been copied to your database. Press <b>Continue</b> to proceed.
                         </p>
                     </div>
@@ -361,8 +317,8 @@
         <!-- btn box -->
         <footer class="btn-box" style="display: none;">
             <div class="t">&nbsp;</div>
-            <asp:LinkButton class="btn-step btn btn-continue" runat="server" OnClick="GotoNextStep"><span>Continue</span></asp:LinkButton>
-            <asp:LinkButton class="btn-step btn btn-back" Style="display: none;" runat="server" OnClick="GotoSettings"><span>Back</span></asp:LinkButton>
+            <asp:LinkButton class="btn-step btn btn-continue" runat="server" OnClick="gotoNextStep"><span>Continue</span></asp:LinkButton>
+            <asp:LinkButton class="btn-step btn btn-back" Style="display: none;" runat="server" OnClick="gotoSettings"><span>Back</span></asp:LinkButton>
         </footer>
     </div>
 
@@ -376,7 +332,7 @@
                 contentType: 'application/json; charset=utf-8',
                 data: '{}',
                 dataType: 'json',
-                url: 'InstallerRestService.aspx/InstallOrUpgrade',
+                url: 'utills/p.aspx/installOrUpgrade',
                 success: function(data) {
                     var json = JSON.parse(data.d);
 

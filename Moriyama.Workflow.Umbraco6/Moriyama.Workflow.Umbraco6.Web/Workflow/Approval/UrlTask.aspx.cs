@@ -5,9 +5,9 @@ using Moriyama.Workflow.Interfaces.Application.Runtime;
 using Moriyama.Workflow.Interfaces.Domain;
 using Moriyama.Workflow.Umbraco6.Domain;
 using Newtonsoft.Json;
+using umbraco.BasePages;
 using umbraco.cms.businesslogic;
 using Umbraco.Core.Logging;
-using Umbraco.Web.UI.Pages;
 
 namespace Moriyama.Workflow.Umbraco6.Web.Workflow.Approval
 {

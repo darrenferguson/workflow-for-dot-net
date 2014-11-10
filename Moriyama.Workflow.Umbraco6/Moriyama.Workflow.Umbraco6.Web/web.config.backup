@@ -3,7 +3,6 @@
   <configSections>
     <section name="urlrewritingnet" restartOnExternalChanges="true" requirePermission="false" type="UrlRewritingNet.Configuration.UrlRewriteSection, UrlRewritingNet.UrlRewriter" />
     <section name="microsoft.scripting" type="Microsoft.Scripting.Hosting.Configuration.Section, Microsoft.Scripting, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" requirePermission="false" />
-    
     <section name="Examine" type="Examine.Config.ExamineSettings, Examine" requirePermission="false" />
     <section name="ExamineLuceneIndexSets" type="Examine.LuceneEngine.Config.IndexSets, Examine" requirePermission="false" />
     <section name="FileSystemProviders" type="Umbraco.Core.Configuration.FileSystemProvidersSection, Umbraco.Core" requirePermission="false" />
@@ -13,26 +12,26 @@
       <section name="host" type="System.Web.WebPages.Razor.Configuration.HostSection, System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" />
       <section name="pages" type="System.Web.WebPages.Razor.Configuration.RazorPagesSection, System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" />
     </sectionGroup>
-
     <!-- Workflow: -->
     <sectionGroup name="spring">
       <section name="context" type="Spring.Context.Support.WebContextHandler, Spring.Web" />
     </sectionGroup>
-
-  <section name="clientDependency" type="ClientDependency.Core.Config.ClientDependencySection, ClientDependency.Core" requirePermission="false" /></configSections>
+    <section name="clientDependency" type="ClientDependency.Core.Config.ClientDependencySection, ClientDependency.Core" requirePermission="false" />
+  </configSections>
   <urlrewritingnet configSource="config\UrlRewriting.config" />
   <microsoft.scripting configSource="config\scripting.config" />
-  <clientDependency configSource="config\ClientDependency.config" version="1"><!-- Full config documentation is here: https://github.com/Shandem/ClientDependency/wiki/Configuration --></clientDependency>
+  <clientDependency configSource="config\ClientDependency.config">
+    <!-- Full config documentation is here: https://github.com/Shandem/ClientDependency/wiki/Configuration -->
+  </clientDependency>
   <Examine configSource="config\ExamineSettings.config" />
   <ExamineLuceneIndexSets configSource="config\ExamineIndex.config" />
   <FileSystemProviders configSource="config\FileSystemProviders.config" />
   <log4net configSource="config\log4net.config" />
   <BaseRestExtensions configSource="config\BaseRestExtensions.config" />
   <appSettings>
-    
     <add key="umbracoConfigurationStatus" value="6.1.6" />
     <add key="umbracoReservedUrls" value="~/config/splashes/booting.aspx,~/install/default.aspx,~/config/splashes/noNodes.aspx,~/VSEnterpriseHelper.axd" />
-    <add key="umbracoReservedPaths" value="~/umbraco,~/install/" />
+    <add key="umbracoReservedPaths" value="~/umbraco,~/install/,~/Workflow/" />
     <add key="umbracoContentXML" value="~/App_Data/umbraco.config" />
     <add key="umbracoStorageDirectory" value="~/App_Data" />
     <add key="umbracoPath" value="~/umbraco" />
@@ -65,18 +64,27 @@
   </system.data>
   <system.net>
     <mailSettings>
-      <smtp>
-        <network host="127.0.0.1" userName="username" password="password" />
+      <smtp deliveryMethod="specifiedPickupDirectory">
+        <specifiedPickupDirectory pickupDirectoryLocation="C:\temp" />
       </smtp>
     </mailSettings>
   </system.net>
   <connectionStrings>
     <remove name="umbracoDbDSN" />
-    <add name="umbracoDbDSN" connectionString="server=.;database=workflow;user id=workflow;password=workflow" providerName="System.Data.SqlClient" />
+    <add name="umbracoDbDSN" connectionString="server=sql1;database=workflow;user id=workflow;password=workflow" providerName="System.Data.SqlClient" />
     <!-- Important: If you're upgrading Umbraco, do not clear the connection string / provider name during your web.config merge. -->
   </connectionStrings>
+  <!--
+    For a description of web.config changes see http://go.microsoft.com/fwlink/?LinkId=235367.
+
+    The following attributes can be set on the <httpRuntime> tag.
+      <system.Web>
+        <httpRuntime targetFramework="4.5.1" />
+      </system.Web>
+  -->
   <system.web>
-    <customErrors mode="RemoteOnly" />
+    <trust level="Full" />
+    <customErrors mode="Off" />
     <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true" />
     <sessionState mode="InProc" stateConnectionString="tcpip=127.0.0.1:42424" sqlConnectionString="data source=127.0.0.1;Trusted_Connection=yes" cookieless="false" timeout="20" />
     <globalization requestEncoding="UTF-8" responseEncoding="UTF-8" />
@@ -89,23 +97,24 @@
         <add tagPrefix="umbraco" namespace="umbraco.presentation.templateControls" assembly="umbraco" />
         <add tagPrefix="asp" namespace="System.Web.UI.WebControls" assembly="System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
       </controls>
-    <namespaces>
+      <namespaces>
         <add namespace="ClientDependency.Core" />
-      <add namespace="ClientDependency.Core.Mvc" /></namespaces></pages>
+        <add namespace="ClientDependency.Core.Mvc" />
+      </namespaces>
+    </pages>
     <httpModules>
       <!-- URL REWRTIER -->
-      <!-- ** Need to add the dependency module --><add name="UrlRewriteModule" type="UrlRewritingNet.Web.UrlRewriteModule, UrlRewritingNet.UrlRewriter" />
+      <!-- ** Need to add the dependency module -->
+      <add name="UrlRewriteModule" type="UrlRewritingNet.Web.UrlRewriteModule, UrlRewritingNet.UrlRewriter" />
       <!-- UMBRACO -->
       <add name="UmbracoModule" type="Umbraco.Web.UmbracoModule,umbraco" />
       <!-- ASPNETAJAX -->
       <add name="ScriptModule" type="System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
       <!-- CLIENT DEPENDENCY -->
-      
-
       <!-- Workflow: -->
       <add name="Spring" type="Spring.Context.Support.WebSupportModule, Spring.Web" />
-
-    <add name="ClientDependencyModule" type="ClientDependency.Core.Module.ClientDependencyModule, ClientDependency.Core" /></httpModules>
+      <add name="ClientDependencyModule" type="ClientDependency.Core.Module.ClientDependencyModule, ClientDependency.Core" />
+    </httpModules>
     <httpHandlers>
       <remove verb="*" path="*.asmx" />
       <!-- ASPNETAJAX -->
@@ -116,14 +125,15 @@
       <add verb="*" path="umbraco/channels.aspx" type="umbraco.presentation.channels.api, umbraco" />
       <add verb="*" path="umbraco/channels/word.aspx" type="umbraco.presentation.channels.wordApi, umbraco" />
       <!-- CLIENT DEPENDENCY -->
-      <!-- ** Need to add the dependency handler --><add verb="*" path="DependencyHandler.axd" type="ClientDependency.Core.CompositeFiles.CompositeDependencyHandler, ClientDependency.Core " />
+      <!-- ** Need to add the dependency handler -->
+      <add verb="*" path="DependencyHandler.axd" type="ClientDependency.Core.CompositeFiles.CompositeDependencyHandler, ClientDependency.Core " />
       <!-- SPELL CHECKER -->
       <add verb="GET,HEAD,POST" path="GoogleSpellChecker.ashx" type="umbraco.presentation.umbraco_client.tinymce3.plugins.spellchecker.GoogleSpellChecker,umbraco" />
-
       <!-- Workflow: -->
       <add name="SpringPageHandler" verb="*" path="*.aspx" type="Spring.Web.Support.PageHandlerFactory, Spring.Web" />
-    <add verb="GET" path="DependencyHandler.axd" type="ClientDependency.Core.CompositeFiles.CompositeDependencyHandler, ClientDependency.Core " /></httpHandlers>
-    <compilation defaultLanguage="c#" debug="true" batch="false" targetFramework="4.0">
+      <add verb="GET" path="DependencyHandler.axd" type="ClientDependency.Core.CompositeFiles.CompositeDependencyHandler, ClientDependency.Core " />
+    </httpHandlers>
+    <compilation defaultLanguage="c#" debug="true" batch="false" targetFramework="4.5.1">
       <assemblies>
         <!-- ASP.NET 4.0 Assemblies -->
         <add assembly="System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
@@ -137,6 +147,7 @@
         <add assembly="System.Web.Routing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
         <add assembly="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
         <add assembly="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+        <add assembly="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
       </assemblies>
       <buildProviders>
         <add extension=".cshtml" type="umbraco.MacroEngines.RazorBuildProvider, umbraco.MacroEngines" />
@@ -173,26 +184,25 @@
     </scripting>
   </system.web.extensions>
   <system.webServer>
-    
     <modules runAllManagedModulesForAllRequests="true">
       <remove name="UrlRewriteModule" />
-      <!-- ** Need to add the dependency module --><add name="UrlRewriteModule" type="UrlRewritingNet.Web.UrlRewriteModule, UrlRewritingNet.UrlRewriter" />
+      <!-- ** Need to add the dependency module -->
+      <add name="UrlRewriteModule" type="UrlRewritingNet.Web.UrlRewriteModule, UrlRewritingNet.UrlRewriter" />
       <remove name="UmbracoModule" />
       <add name="UmbracoModule" type="Umbraco.Web.UmbracoModule,umbraco" />
       <remove name="ScriptModule" />
       <add name="ScriptModule" preCondition="managedHandler" type="System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
-      
-      
       <!-- Needed for login/membership to work on homepage (as per http://stackoverflow.com/questions/218057/httpcontext-current-session-is-null-when-routing-requests) -->
       <remove name="FormsAuthentication" />
       <add name="FormsAuthentication" type="System.Web.Security.FormsAuthenticationModule" />
-
       <!-- Workflow: -->
       <add name="Spring" type="Spring.Context.Support.WebSupportModule, Spring.Web" />
-
-    <remove name="ClientDependencyModule" /><add name="ClientDependencyModule" type="ClientDependency.Core.Module.ClientDependencyModule, ClientDependency.Core" /></modules>
+      <remove name="ClientDependencyModule" />
+      <add name="ClientDependencyModule" type="ClientDependency.Core.Module.ClientDependencyModule, ClientDependency.Core" />
+    </modules>
     <handlers accessPolicy="Read, Write, Script, Execute">
-      <!-- ** Need to add the dependency handler --><remove name="WebServiceHandlerFactory-Integrated" />
+      <!-- ** Need to add the dependency handler -->
+      <remove name="WebServiceHandlerFactory-Integrated" />
       <remove name="ScriptHandlerFactory" />
       <remove name="ScriptHandlerFactoryAppServices" />
       <remove name="ScriptResource" />
@@ -207,12 +217,12 @@
       <add verb="*" name="Channels_Word" preCondition="integratedMode" path="umbraco/channels/word.aspx" type="umbraco.presentation.channels.wordApi, umbraco" />
       <add verb="*" name="ClientDependency" preCondition="integratedMode" path="DependencyHandler.axd" type="ClientDependency.Core.CompositeFiles.CompositeDependencyHandler, ClientDependency.Core " />
       <add verb="GET,HEAD,POST" preCondition="integratedMode" name="SpellChecker" path="GoogleSpellChecker.ashx" type="umbraco.presentation.umbraco_client.tinymce3.plugins.spellchecker.GoogleSpellChecker,umbraco" />
-
       <!-- Workflow: -->
       <add name="SpringContextMonitor" verb="*" path="ContextMonitor.ashx" type="Spring.Web.Support.ContextMonitor, Spring.Web" />
       <add name="SpringPageHandler" verb="*" path="*.aspx" type="Spring.Web.Support.PageHandlerFactory, Spring.Web" />
-
-    <remove name="DependencyHandler" /><add name="DependencyHandler" preCondition="integratedMode" verb="GET" path="DependencyHandler.axd" type="ClientDependency.Core.CompositeFiles.CompositeDependencyHandler, ClientDependency.Core " /></handlers>
+      <remove name="DependencyHandler" />
+      <add name="DependencyHandler" preCondition="integratedMode" verb="GET" path="DependencyHandler.axd" type="ClientDependency.Core.CompositeFiles.CompositeDependencyHandler, ClientDependency.Core " />
+    </handlers>
     <!-- Adobe AIR mime type -->
     <staticContent>
       <remove fileExtension=".air" />
@@ -224,15 +234,8 @@
         <remove name="X-Powered-By" />
       </customHeaders>
     </httpProtocol>
-  <validation validateIntegratedModeConfiguration="false" /></system.webServer>
-  <system.codedom>
-    <compilers>
-      <compiler language="c#;cs;csharp" extension=".cs" type="Microsoft.CSharp.CSharpCodeProvider,System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" warningLevel="4">
-        <providerOption name="CompilerVersion" value="v4.0" />
-        <providerOption name="WarnAsError" value="false" />
-      </compiler>
-    </compilers>
-  </system.codedom>
+    <validation validateIntegratedModeConfiguration="false" />
+  </system.webServer>
   <runtime>
     <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
       <!-- Old asp.net ajax assembly bindings -->
@@ -274,6 +277,22 @@
         <assemblyIdentity name="Common.Logging" publicKeyToken="af08829b84f0328e" culture="neutral" />
         <bindingRedirect oldVersion="0.0.0.0-2.2.0.0" newVersion="2.2.0.0" />
       </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-6.0.0.0" newVersion="6.0.0.0" />
+      </dependentAssembly>
+      <!--<dependentAssembly>
+        <assemblyIdentity name="System.Web.Http" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-4.0.0.0" newVersion="5.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Net.Http.Formatting" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.0.0.0" newVersion="5.0.0.0" />
+      </dependentAssembly>-->
+      <!--<dependentAssembly>
+        <assemblyIdentity name="System.Web.Http.WebHost" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.0.0.0" newVersion="5.0.0.0" />
+      </dependentAssembly>-->
     </assemblyBinding>
   </runtime>
   <system.web.webPages.razor>
@@ -286,10 +305,8 @@
       </namespaces>
     </pages>
   </system.web.webPages.razor>
-
   <!-- Workflow: -->
   <spring>
     <context configSource="Workflow\config\workflow.spring.config" />
   </spring>
-
 </configuration>

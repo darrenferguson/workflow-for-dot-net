@@ -14,7 +14,7 @@ using Moriyama.Workflow.Umbraco6.Web.Extensions;
 
 using Moriyama.Workflow.Umbraco6.Application.Interfaces;
 using Moriyama.Workflow.Umbraco6.Domain;
-using Umbraco.Web.UI.Pages;
+using umbraco.BasePages;
 
 [assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Util.js", "text/javascript")]
 [assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Config.js", "text/javascript")]

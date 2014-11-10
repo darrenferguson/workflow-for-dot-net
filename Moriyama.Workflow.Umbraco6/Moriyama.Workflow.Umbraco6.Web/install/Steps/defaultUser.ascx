@@ -1,4 +1,4 @@
-<%@ Control Language="c#" AutoEventWireup="True" Codebehind="DefaultUser.ascx.cs" Inherits="Umbraco.Web.UI.Install.Steps.DefaultUser" TargetSchema="http://schemas.microsoft.com/intellisense/ie5"%>
+<%@ Control Language="c#" AutoEventWireup="True" Codebehind="defaultUser.ascx.cs" Inherits="umbraco.presentation.install.steps.defaultUser" TargetSchema="http://schemas.microsoft.com/intellisense/ie5"%>
 <asp:Placeholder ID="identify" Runat="server" Visible="True">
 
 <!-- create box -->
@@ -33,7 +33,7 @@
 
 											<div class="row">
 												<asp:label AssociatedControlID="tb_email" runat="server">Email:</asp:label>
-												<span><asp:TextBox ID="tb_email" CssClass="text" type="text" Text="admin@example.com" runat="server"  /></span>
+												<span><asp:TextBox ID="tb_email" CssClass="text" type="text" Text="admin@domain.com" runat="server"  /></span>
                                                 <asp:RequiredFieldValidator Display="Dynamic" CssClass="invalidaing" ControlToValidate="tb_email" runat="server" ErrorMessage="Email is a mandatory field" />
 											</div>
 
@@ -64,7 +64,7 @@
 									</div>
 									<footer class="btn-box">
 										<div class="t">&nbsp;</div>
-                                        <asp:LinkButton CssClass="btn-create" runat="server" onclick="ChangePasswordClick"><span>Create user</span></asp:linkbutton>
+                                        <asp:LinkButton CssClass="btn-create" runat="server" onclick="changePassword_Click"><span>Create user</span></asp:linkbutton>
 									</footer>
 								</fieldset>
 							</form>
