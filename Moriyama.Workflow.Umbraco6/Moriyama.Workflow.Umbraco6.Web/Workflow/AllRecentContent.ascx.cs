@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -15,7 +16,7 @@ using Umbraco.Core.Persistence;
 namespace Moriyama.Workflow.Umbraco6.Web.Workflow
 {
 
-    public partial class RecentContent : UserControl
+    public partial class AllRecentContent : UserControl
     {
         private class LogEntry
         {
@@ -42,10 +43,15 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
             var user = User.GetCurrent();
             var sevenDaysAgo = DateTime.Now.AddDays(-7);
 
+            MyRecentContentGridView.DataSource = GetRecentContent(sevenDaysAgo);
+            MyRecentContentGridView.DataBind();
+        }
+
+
+        protected IEnumerable<Document> GetRecentContent(DateTime since)
+        {
             var db = new Database("umbracoDbDSN");
-            var items = user.UserType.Alias == AdminUserTypeAlias
-                ? db.Query<LogEntry>("select * from umbracoLog where logHeader = 'Save' and Datestamp > @0", sevenDaysAgo)
-                : db.Query<LogEntry>("select * from umbracoLog where logHeader = 'Save' and Datestamp > @0 and userId = @1", sevenDaysAgo, user.Id);
+            var items = db.Query<LogEntry>("select * from umbracoLog where logHeader = 'Save' and Datestamp > @0", since);
 
             //var logItems = user.UserType.Alias == AdminUserTypeAlias 
             //    ? Log.Instance.GetLogItems(LogTypes.Save, sevenDaysAgo)
@@ -68,11 +74,8 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
                 .OrderByDescending(d => d.UpdateDate)
                 .ToList();
 
-            if (!recentContent.Any()) return;
-
-            MyRecentContentGridView.DataSource = recentContent;
-            MyRecentContentGridView.DataBind();
-        }
+            return recentContent;
+        } 
 
         protected void RecentContentRowDataBound(Object sender, GridViewRowEventArgs e)
         {
@@ -84,7 +87,21 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
             e.Row.Cells[3].Text = TheGlobalisationService.GetString("send_to_workflow");
         }
 
-        
+        protected void SelectionChange(Object sender, EventArgs e)
+        {
+
+            DateTime d = DateTime.Now;
+
+            foreach (DateTime day in Calendar1.SelectedDates)
+            {
+
+                d = day;
+
+            }
+            MyRecentContentGridView.DataSource = GetRecentContent(d);
+            MyRecentContentGridView.DataBind();
+        }
+
         protected void SendToWorkflowButton_Click(object sender, EventArgs e)
         {
 

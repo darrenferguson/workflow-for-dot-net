@@ -603,6 +603,7 @@
     <Content Include="Workflow\InstantiationCriteria.ascx" />
     <Content Include="packages.config" />
     <Content Include="Workflow\PostInstall.ascx" />
+    <Content Include="Workflow\AllRecentContent.ascx" />
     <Content Include="Workflow\RecentContent.ascx" />
     <Content Include="Workflow\Runtime.aspx" />
     <Content Include="Workflow\SendToWorkflow.aspx" />
@@ -759,6 +760,13 @@
       <DependentUpon>PostInstall.ascx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Workflow\AllRecentContent.ascx.cs">
+      <DependentUpon>AllRecentContent.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\AllRecentContent.ascx.designer.cs">
+      <DependentUpon>AllRecentContent.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Workflow\RecentContent.ascx.cs">
       <DependentUpon>RecentContent.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

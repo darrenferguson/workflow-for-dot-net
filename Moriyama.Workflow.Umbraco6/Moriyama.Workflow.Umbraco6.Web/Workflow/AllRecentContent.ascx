@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RecentContent.ascx.cs" Inherits="Moriyama.Workflow.Umbraco6.Web.Workflow.RecentContent" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AllRecentContent.ascx.cs" Inherits="Moriyama.Workflow.Umbraco6.Web.Workflow.AllRecentContent" %>
 <%@ Import Namespace="umbraco.cms.businesslogic.web" %>
 
 <%@ Register src="TabRefresh.ascx" tagname="TabRefresh" tagprefix="uc1" %>
@@ -41,7 +41,9 @@
 </div>
 
 <div class="workflow">
-
+    <p>Only show content since:</p>
+    <asp:Calendar ID="Calendar1" runat="server" OnSelectionChanged="SelectionChange"></asp:Calendar>
+    <br />
 <asp:GridView ID="MyRecentContentGridView" runat="server" AutoGenerateColumns="false" CssClass="workflow" OnRowDataBound="RecentContentRowDataBound">
 
      <Columns>
