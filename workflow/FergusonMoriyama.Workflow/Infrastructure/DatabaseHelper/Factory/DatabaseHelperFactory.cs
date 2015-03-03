@@ -2,7 +2,8 @@
 using System.Reflection;
 using FergusonMoriyam.Workflow.Interfaces.Infrastructure;
 using FergusonMoriyam.Workflow.Interfaces.Infrastructure.DatabaseHelper.Factory;
-using Common.Logging;
+using log4net;
+
 
 namespace FergusonMoriyam.Workflow.Infrastructure.DatabaseHelper.Factory
 {

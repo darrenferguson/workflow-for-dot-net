@@ -2,7 +2,7 @@
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using FergusonMoriyam.Workflow.Interfaces.Infrastructure;
-using Common.Logging;
+
 
 namespace FergusonMoriyam.Workflow.Infrastructure
 {

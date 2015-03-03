@@ -3,7 +3,8 @@ using System.Data.Common;
 using System.Data.SqlServerCe;
 using System.Reflection;
 using FergusonMoriyam.Workflow.Interfaces.Infrastructure;
-using Common.Logging;
+using log4net;
+
 
 namespace FergusonMoriyam.Workflow.Infrastructure.DatabaseHelper
 {

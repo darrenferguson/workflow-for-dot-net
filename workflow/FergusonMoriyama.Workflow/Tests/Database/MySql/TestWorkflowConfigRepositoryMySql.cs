@@ -20,8 +20,8 @@ namespace FergusonMoriyam.Workflow.Test.Database.MySql
             WorkflowConfigurationRepository.Instance.DatabaseHelper = DatabaseHelperFactory.Instance.CreateDatabaseHelper(
                    "FergusonMoriyam.Workflow.Infrastructure.DatabaseHelper.MySqlDatabaseHelper, FergusonMoriyam.Workflow.Infrastructure");
 
-            ((MySqlDatabaseHelper)WorkflowConfigurationRepository.Instance.DatabaseHelper).ConnectionStringProvider
-                = new MysqlConnectionStringProvider();
+            //((MySqlDatabaseHelper)WorkflowConfigurationRepository.Instance.DatabaseHelper).ConnectionStringProvider
+            //    = new MysqlConnectionStringProvider();
 
         }
 

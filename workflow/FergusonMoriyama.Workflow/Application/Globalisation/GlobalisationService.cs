@@ -2,7 +2,8 @@
 using System.Globalization;
 using System.Reflection;
 using FergusonMoriyam.Workflow.Interfaces.Application;
-using Common.Logging;
+using log4net;
+
 
 namespace FergusonMoriyam.Workflow.Application.Globalisation
 {

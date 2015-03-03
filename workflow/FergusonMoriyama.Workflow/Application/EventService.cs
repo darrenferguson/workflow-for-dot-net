@@ -8,7 +8,7 @@ using FergusonMoriyam.Workflow.Interfaces.Application;
 using FergusonMoriyam.Workflow.Interfaces.Application.Event;
 using FergusonMoriyam.Workflow.Interfaces.Application.Runtime;
 using FergusonMoriyam.Workflow.Interfaces.Domain;
-using Common.Logging;
+using log4net;
 
 namespace FergusonMoriyam.Workflow.Application
 {

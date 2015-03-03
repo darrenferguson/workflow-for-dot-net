@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
-using Common.Logging;
+
 using FergusonMoriyam.Workflow.Interfaces.Application;
+using log4net;
 
 namespace FergusonMoriyam.Workflow.Application
 {
