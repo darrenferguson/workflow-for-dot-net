@@ -31,6 +31,10 @@ namespace FergusonMoriyam.Workflow.Umbraco.Application
         protected override bool ValidateCriteria(IWorkflowInstantiationCriteria criteria)
         {
             var u = User.GetCurrent();
+            
+            if (u == null)
+                return false;
+
             Log.Debug(string.Format("Validating criteria for user '{0}' - '{1}'", u.LoginName, u.Id));
             return TheCriteriaValidationService.IsCriteriaValid((UmbracoWorkflowInstantiationCriteria) criteria, User.GetCurrent());
         }
