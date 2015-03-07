@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using System.Reflection;
-using Common.Logging;
+using log4net;
 using Moriyama.Workflow.Application;
 using Moriyama.Workflow.Interfaces.Application.Event;
 using Moriyama.Workflow.Interfaces.Domain;

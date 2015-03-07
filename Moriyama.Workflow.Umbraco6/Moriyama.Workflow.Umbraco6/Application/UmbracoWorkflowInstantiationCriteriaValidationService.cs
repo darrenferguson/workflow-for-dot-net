@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Reflection;
-using Common.Logging;
+using log4net;
 using Moriyama.Workflow.Umbraco6.Application.Interfaces;
 using Moriyama.Workflow.Umbraco6.Domain;
 using umbraco.BusinessLogic;

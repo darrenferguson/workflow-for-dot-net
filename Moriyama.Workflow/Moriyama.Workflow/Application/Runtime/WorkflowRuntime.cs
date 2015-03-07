@@ -8,7 +8,7 @@ using Moriyama.Workflow.Interfaces.Application;
 using Moriyama.Workflow.Interfaces.Application.Runtime;
 using Moriyama.Workflow.Interfaces.Domain;
 using Moriyama.Workflow.Interfaces.Infrastructure;
-using Common.Logging;
+using log4net;
 
 namespace Moriyama.Workflow.Application.Runtime
 {
@@ -141,7 +141,17 @@ namespace Moriyama.Workflow.Application.Runtime
 
             foreach(var workflowInstance in workflowInstances)
             {
-                var hydratedInstance = TheWorkflowInstanceRepository.RestoreState(workflowInstance);
+                IWorkflowInstance hydratedInstance;
+
+                try
+                {
+                    hydratedInstance = TheWorkflowInstanceRepository.RestoreState(workflowInstance);
+                }
+                catch (System.Exception ex)
+                {
+                    Log.Warn("hyrdating", ex);
+                    continue;
+                }
 
                 if(hydratedInstance.Ended)
                 {

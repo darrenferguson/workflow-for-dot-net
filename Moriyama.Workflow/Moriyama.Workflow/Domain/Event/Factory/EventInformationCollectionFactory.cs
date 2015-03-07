@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Text;
 using Moriyama.Workflow.Interfaces.Domain.Event;
 using Moriyama.Workflow.Interfaces.Domain.Event.Factory;
-using Common.Logging;
+using log4net;
 
 namespace Moriyama.Workflow.Domain.Event.Factory
 {

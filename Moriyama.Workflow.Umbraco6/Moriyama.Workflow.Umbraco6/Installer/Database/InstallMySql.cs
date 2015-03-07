@@ -2,7 +2,7 @@
 using System.Configuration;
 using System.IO;
 using System.Reflection;
-using Common.Logging;
+using log4net;
 using umbraco.DataLayer;
 
 namespace Moriyama.Workflow.Umbraco6.Installer.Database

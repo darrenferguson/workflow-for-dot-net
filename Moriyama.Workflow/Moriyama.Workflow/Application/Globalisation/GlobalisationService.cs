@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Reflection;
 using Moriyama.Workflow.Interfaces.Application;
-using Common.Logging;
+using log4net;
 
 namespace Moriyama.Workflow.Application.Globalisation
 {

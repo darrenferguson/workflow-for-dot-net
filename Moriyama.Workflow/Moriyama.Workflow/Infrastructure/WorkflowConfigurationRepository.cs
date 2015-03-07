@@ -6,7 +6,7 @@ using System.Reflection;
 using Moriyama.Workflow.Domain;
 using Moriyama.Workflow.Interfaces.Domain;
 using Moriyama.Workflow.Interfaces.Infrastructure;
-using Common.Logging;
+using log4net;
 
 namespace Moriyama.Workflow.Infrastructure
 {

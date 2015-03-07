@@ -5,7 +5,7 @@ using Moriyama.Workflow.Infrastructure;
 using Moriyama.Workflow.Interfaces.Application;
 using Moriyama.Workflow.Interfaces.Domain.Designer;
 using Moriyama.Workflow.Interfaces.Infrastructure;
-using Common.Logging;
+using log4net;
 
 namespace Moriyama.Workflow.Application
 {

@@ -5,7 +5,7 @@ using System.Reflection;
 using Moriyama.Workflow.Domain;
 using System.Web.Script.Serialization;
 using Moriyama.Workflow.Interfaces.Application;
-using Common.Logging;
+using log4net;
 
 namespace Moriyama.Workflow.Application.Reflection
 {

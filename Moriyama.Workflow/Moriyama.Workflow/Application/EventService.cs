@@ -8,7 +8,7 @@ using Moriyama.Workflow.Interfaces.Application;
 using Moriyama.Workflow.Interfaces.Application.Event;
 using Moriyama.Workflow.Interfaces.Application.Runtime;
 using Moriyama.Workflow.Interfaces.Domain;
-using Common.Logging;
+using log4net;
 
 namespace Moriyama.Workflow.Application
 {

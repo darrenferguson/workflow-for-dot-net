@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using Common.Logging;
+using log4net;
 using umbraco;
 
 namespace Moriyama.Workflow.Umbraco6.Installer

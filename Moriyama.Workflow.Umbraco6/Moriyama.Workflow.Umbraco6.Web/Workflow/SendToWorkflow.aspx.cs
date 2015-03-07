@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using ClientDependency.Core;
-using Common.Logging;
+using log4net;
 using Moriyama.Workflow.Interfaces.Application;
 using Moriyama.Workflow.Interfaces.Application.Runtime;
 using Moriyama.Workflow.Interfaces.Domain;

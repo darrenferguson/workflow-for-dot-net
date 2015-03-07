@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Reflection;
+using log4net.Repository.Hierarchy;
 using Moriyama.Workflow.Interfaces.Application;
 using Moriyama.Workflow.Interfaces.Application.Runtime;
 using Moriyama.Workflow.Interfaces.Domain;
 using Moriyama.Workflow.Interfaces.Infrastructure;
-using Common.Logging;
+using log4net;
 
 namespace Moriyama.Workflow.Application
 {
@@ -48,7 +49,16 @@ namespace Moriyama.Workflow.Application
             {
                 if(instance.Started && !instance.Ended)
                 {
-                    workflowInstances.Add(TheWorkflowInstanceRepository.RestoreState(instance));
+                    try
+                    {
+                        var i = TheWorkflowInstanceRepository.RestoreState(instance);
+                        workflowInstances.Add(i);
+                    }
+                    catch (System.Exception ex)
+                    {
+                        Log.Warn("Restoring instance", ex);
+                    }
+                   
                 } else
                 {
                     workflowInstances.Add(instance);

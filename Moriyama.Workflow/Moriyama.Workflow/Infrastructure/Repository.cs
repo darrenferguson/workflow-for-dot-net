@@ -2,7 +2,7 @@
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using Moriyama.Workflow.Interfaces.Infrastructure;
-using Common.Logging;
+using log4net;
 
 namespace Moriyama.Workflow.Infrastructure
 {

@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 using System.Xml;
-using Common.Logging;
+using log4net;
 
 namespace Moriyama.Workflow.Umbraco6.Installer.Config
 {

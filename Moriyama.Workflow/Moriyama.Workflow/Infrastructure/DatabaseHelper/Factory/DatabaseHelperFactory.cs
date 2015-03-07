@@ -2,7 +2,7 @@
 using System.Reflection;
 using Moriyama.Workflow.Interfaces.Infrastructure;
 using Moriyama.Workflow.Interfaces.Infrastructure.DatabaseHelper.Factory;
-using Common.Logging;
+using log4net;
 
 namespace Moriyama.Workflow.Infrastructure.DatabaseHelper.Factory
 {

@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Moriyama.Workflow.Interfaces.Application;
 using Moriyama.Workflow.Interfaces.Ui;
-using Common.Logging;
+using log4net;
 
 namespace Moriyama.Workflow.Ui
 {

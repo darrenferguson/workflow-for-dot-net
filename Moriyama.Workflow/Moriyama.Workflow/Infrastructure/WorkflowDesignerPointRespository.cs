@@ -3,7 +3,7 @@ using System.Reflection;
 using Moriyama.Workflow.Domain.Designer;
 using Moriyama.Workflow.Interfaces.Domain.Designer;
 using Moriyama.Workflow.Interfaces.Infrastructure;
-using Common.Logging;
+using log4net;
 
 namespace Moriyama.Workflow.Infrastructure
 {

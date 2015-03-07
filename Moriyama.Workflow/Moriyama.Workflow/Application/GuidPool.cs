@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
-using Common.Logging;
+using log4net;
 using Moriyama.Workflow.Interfaces.Application;
 
 namespace Moriyama.Workflow.Application

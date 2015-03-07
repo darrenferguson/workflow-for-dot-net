@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 using System.Web.UI;
-using Common.Logging;
+using log4net;
 using Moriyama.Workflow.Interfaces.Application.Runtime;
 
 namespace Moriyama.Workflow.Umbraco6.Web.Workflow

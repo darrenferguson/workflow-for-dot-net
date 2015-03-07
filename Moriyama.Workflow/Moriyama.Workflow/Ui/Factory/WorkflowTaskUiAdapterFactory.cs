@@ -6,7 +6,7 @@ using Moriyama.Workflow.Interfaces.Ui;
 using Moriyama.Workflow.Interfaces.Ui.Adapter;
 using Moriyama.Workflow.Interfaces.Ui.Factory;
 using Moriyama.Workflow.Ui.Adapter;
-using Common.Logging;
+using log4net;
 
 namespace Moriyama.Workflow.Ui.Factory
 {

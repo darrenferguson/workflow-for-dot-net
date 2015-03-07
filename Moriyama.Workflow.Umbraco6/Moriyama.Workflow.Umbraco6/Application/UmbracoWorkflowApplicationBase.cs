@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
-using Common.Logging;
+using log4net;
 using Moriyama.Workflow.Umbraco6.Application.Modules;
 using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 using umbraco.BusinessLogic;

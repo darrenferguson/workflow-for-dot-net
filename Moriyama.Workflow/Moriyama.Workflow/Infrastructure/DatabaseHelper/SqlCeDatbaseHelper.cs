@@ -3,7 +3,7 @@
 //using System.Data.SqlServerCe;
 //using System.Reflection;
 //using Moriyama.Workflow.Interfaces.Infrastructure;
-//using Common.Logging;
+//using log4net;
 
 //namespace Moriyama.Workflow.Infrastructure.DatabaseHelper
 //{

@@ -3,7 +3,7 @@
 //using System.Reflection;
 //using Moriyama.Workflow.Interfaces.Infrastructure;
 //using MySql.Data.MySqlClient;
-//using Common.Logging;
+//using log4net;
 
 //namespace Moriyama.Workflow.Infrastructure.DatabaseHelper
 //{
