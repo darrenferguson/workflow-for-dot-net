@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Skin>
+  <Name>Designit Green</Name>
+  <Author>Designit A/S</Author>
+  <Version>1.0</Version>
+  <Description><![CDATA[Designit Green sample skin for umbraco Starter Kit]]></Description>
+
+  <AllowedRootTemplate>umbHomepage</AllowedRootTemplate>
+  
+  <Dependencies>
+    <Dependency type="Text" label="Footer Text">
+      <Properties>
+        <Output></Output>
+      </Properties>
+      <Tasks>
+        <Task type="ModifyTemplate">
+          <TargetFile>umbMaster.master</TargetFile>
+          <TargetID>footer_text</TargetID>
+          <Value>${Output}</Value>
+        </Task>
+      </Tasks>
+    </Dependency>
+    <Dependency type="Image" label="Top Image">
+      <Properties>
+        <Output></Output>
+        <Height>222</Height>
+        <Width>662</Width>
+      </Properties>
+      <Tasks>
+        <Task type="ModifyCss">
+          <TargetFile>Designit_Green.css</TargetFile>
+          <TargetRule>#siteDescription</TargetRule>
+          <TargetParameter>background</TargetParameter>
+          <Value>url( ${Output} ) no-repeat</Value>
+        </Task>
+      </Tasks>
+    </Dependency>
+    <Dependency type="Image" label="Logo">
+      <Properties>
+        <Output></Output>
+        <Height>119</Height>
+        <Width>117</Width>
+      </Properties>
+      <Tasks>
+        <Task type="ModifyCss">
+          <TargetFile>Designit_Green.css</TargetFile>
+          <TargetRule>#siteName a</TargetRule>
+          <TargetParameter>background-image</TargetParameter>
+          <Value>url( ${Output} )</Value>
+        </Task>
+      </Tasks>
+    </Dependency>
+  </Dependencies>
+</Skin>

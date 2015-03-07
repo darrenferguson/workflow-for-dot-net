@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moriyama.Workflow.Tests", "Tests\Moriyama.Workflow.Tests.csproj", "{EBF5E5D0-3C79-4E07-8D6F-0B3A3EF980C6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E46F673F-64DD-428C-A072-52A80AEB1897}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		Moriyama.Workflow.vsmdi = Moriyama.Workflow.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moriyama.Workflow", "Moriyama.Workflow\Moriyama.Workflow.csproj", "{AEC51CBD-73CC-4C21-8AE5-C70138BF5878}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4FA42928-C5DF-4C1F-B0FE-70759A450754}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBF5E5D0-3C79-4E07-8D6F-0B3A3EF980C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBF5E5D0-3C79-4E07-8D6F-0B3A3EF980C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBF5E5D0-3C79-4E07-8D6F-0B3A3EF980C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBF5E5D0-3C79-4E07-8D6F-0B3A3EF980C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEC51CBD-73CC-4C21-8AE5-C70138BF5878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEC51CBD-73CC-4C21-8AE5-C70138BF5878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEC51CBD-73CC-4C21-8AE5-C70138BF5878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEC51CBD-73CC-4C21-8AE5-C70138BF5878}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Moriyama.Workflow.vsmdi
+	EndGlobalSection
+EndGlobal

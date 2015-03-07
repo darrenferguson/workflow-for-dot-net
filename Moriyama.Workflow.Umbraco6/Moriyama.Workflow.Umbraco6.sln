@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3F26556B-81DF-480C-B258-0486721DE335}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+		Workflow.Umbraco4.vsmdi = Workflow.Umbraco4.vsmdi
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{232E0AC0-F940-43D9-9D60-1E08A1F3CCB7}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moriyama.Workflow.Umbraco6", "Moriyama.Workflow.Umbraco6\Moriyama.Workflow.Umbraco6.csproj", "{3EE4D7D1-FFE3-401E-921D-40358DD217EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moriyama.Workflow.Umbraco6.Web", "Moriyama.Workflow.Umbraco6.Web\Moriyama.Workflow.Umbraco6.Web.csproj", "{65D4DF1B-0702-47F5-9600-09491327565B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moriyama.Workflow", "..\Moriyama.Workflow\Moriyama.Workflow\Moriyama.Workflow.csproj", "{AEC51CBD-73CC-4C21-8AE5-C70138BF5878}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EE4D7D1-FFE3-401E-921D-40358DD217EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EE4D7D1-FFE3-401E-921D-40358DD217EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EE4D7D1-FFE3-401E-921D-40358DD217EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EE4D7D1-FFE3-401E-921D-40358DD217EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65D4DF1B-0702-47F5-9600-09491327565B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65D4DF1B-0702-47F5-9600-09491327565B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65D4DF1B-0702-47F5-9600-09491327565B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65D4DF1B-0702-47F5-9600-09491327565B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEC51CBD-73CC-4C21-8AE5-C70138BF5878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEC51CBD-73CC-4C21-8AE5-C70138BF5878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEC51CBD-73CC-4C21-8AE5-C70138BF5878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEC51CBD-73CC-4C21-8AE5-C70138BF5878}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Workflow.Umbraco4.vsmdi
+	EndGlobalSection
+EndGlobal

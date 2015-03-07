@@ -1,0 +1,856 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{65D4DF1B-0702-47F5-9600-09491327565B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Moriyama.Workflow.Umbraco6.Web</RootNamespace>
+    <AssemblyName>Moriyama.Workflow.Umbraco6.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <NuGetPackageImportStamp>b87d0427</NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="businesslogic">
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\businesslogic.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientDependency.Core, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\ClientDependency.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientDependency.Core.Mvc, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\ClientDependency.Core.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="cms">
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\cms.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging">
+      <HintPath>..\packages\Common.Logging.2.2.0\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core">
+      <HintPath>..\packages\Common.Logging.Core.2.2.0\lib\net40\Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="controls">
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\controls.dll</HintPath>
+    </Reference>
+    <Reference Include="CookComputing.XmlRpcV2, Version=2.5.0.0, Culture=neutral, PublicKeyToken=a7d6e17aa302004d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\CookComputing.XmlRpcV2.dll</HintPath>
+    </Reference>
+    <Reference Include="Examine">
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\Examine.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.5.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="interfaces">
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net, Version=2.9.4.1, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data">
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Helpers">
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\Microsoft.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniProfiler, Version=2.1.0.0, Culture=neutral, PublicKeyToken=b44f9351044011a3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MiniProfiler.2.1.0\lib\net40\MiniProfiler.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.6.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Our.Umbraco.uGoLive">
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\Our.Umbraco.uGoLive.dll</HintPath>
+    </Reference>
+    <Reference Include="Our.Umbraco.uGoLive.47x">
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\Our.Umbraco.uGoLive.47x.dll</HintPath>
+    </Reference>
+    <Reference Include="Our.Umbraco.uGoLive.Checks">
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\Our.Umbraco.uGoLive.Checks.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\packages\ServiceStack.Text.3.9.21\lib\net35\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=1.3.2.40943, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Spring.Core.1.3.2\lib\net40\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web">
+      <HintPath>..\packages\Spring.Web.1.3.2\lib\net40\Spring.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLCE4Umbraco">
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\SQLCE4Umbraco.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\System.Data.SqlServerCe.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20505.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20505.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20505.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20505.0\lib\net40\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20505.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="TidyNet">
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\TidyNet.dll</HintPath>
+    </Reference>
+    <Reference Include="umbraco">
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\umbraco.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Core">
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\Umbraco.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="umbraco.DataLayer">
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\umbraco.DataLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="umbraco.editorControls">
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\umbraco.editorControls.dll</HintPath>
+    </Reference>
+    <Reference Include="umbraco.MacroEngines">
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\umbraco.MacroEngines.dll</HintPath>
+    </Reference>
+    <Reference Include="umbraco.macroRenderings">
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\umbraco.macroRenderings.dll</HintPath>
+    </Reference>
+    <Reference Include="umbraco.providers">
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\umbraco.providers.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Web.UI">
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\Umbraco.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="umbraco.webservices">
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\umbraco.webservices.dll</HintPath>
+    </Reference>
+    <Reference Include="umbraco.XmlSerializers">
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\umbraco.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="UmbracoExamine">
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\UmbracoExamine.dll</HintPath>
+    </Reference>
+    <Reference Include="UrlRewritingNet.UrlRewriter">
+      <HintPath>..\packages\UmbracoCms.Core.6.0.2\lib\UrlRewritingNet.UrlRewriter.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\amd64\Microsoft.VC90.CRT\msvcr90.dll" />
+    <Content Include="bin\amd64\Microsoft.VC90.CRT\README_ENU.txt" />
+    <Content Include="bin\amd64\sqlceca40.dll" />
+    <Content Include="bin\amd64\sqlcecompact40.dll" />
+    <Content Include="bin\amd64\sqlceer40EN.dll" />
+    <Content Include="bin\amd64\sqlceme40.dll" />
+    <Content Include="bin\amd64\sqlceqp40.dll" />
+    <Content Include="bin\amd64\sqlcese40.dll" />
+    <Content Include="bin\x86\Microsoft.VC90.CRT\msvcr90.dll" />
+    <Content Include="bin\x86\Microsoft.VC90.CRT\README_ENU.txt" />
+    <Content Include="bin\x86\sqlceca40.dll" />
+    <Content Include="bin\x86\sqlcecompact40.dll" />
+    <Content Include="bin\x86\sqlceer40EN.dll" />
+    <Content Include="bin\x86\sqlceme40.dll" />
+    <Content Include="bin\x86\sqlceqp40.dll" />
+    <Content Include="bin\x86\sqlcese40.dll" />
+    <Content Include="css\Designit_Green.css" />
+    <Content Include="css\Designit_Green\Images\background.jpg" />
+    <Content Include="css\Designit_Green\Images\blog-post-icon.png" />
+    <Content Include="css\Designit_Green\Images\feed-item-icon.png" />
+    <Content Include="css\Designit_Green\Images\footer.png" />
+    <Content Include="css\Designit_Green\Images\header.jpg" />
+    <Content Include="css\Designit_Green\Images\logo.png" />
+    <Content Include="css\Designit_Green\Images\main.png" />
+    <Content Include="css\Designit_Green\Images\nav-item-active.png" />
+    <Content Include="css\Designit_Green\Images\nav-item.png" />
+    <Content Include="css\Designit_Green\Images\nav.png" />
+    <Content Include="css\Designit_Green\Images\news-item-icon.png" />
+    <Content Include="css\Designit_Green\Images\pattern.png" />
+    <Content Include="css\Designit_Green\Images\rgbapng\00000033.png" />
+    <Content Include="css\Designit_Green\Images\rgbapng\00000066.png" />
+    <Content Include="css\Designit_Green\Images\rgbapng\00000099.png" />
+    <Content Include="css\Designit_Green\Images\rgbapng\000000cc.png" />
+    <Content Include="css\Designit_Green\Images\rgbapng\22ea5fcc.png" />
+    <Content Include="css\Designit_Green\Images\rgbapng\33333333.png" />
+    <Content Include="css\Designit_Green\Images\rgbapng\ffffffb3.png" />
+    <Content Include="css\dummy.txt" />
+    <Content Include="css\Starterkit.css" />
+    <Content Include="default.aspx" />
+    <Content Include="macroScripts\dummy.txt" />
+    <Content Include="masterpages\dummy.txt" />
+    <Content Include="media\dummy.txt" />
+    <Content Include="scripts\dummy.txt" />
+    <Content Include="usercontrols\dummy.txt" />
+    <Content Include="Workflow\Approval\css\foundation-icons.css" />
+    <Content Include="Workflow\Approval\css\foundation.css" />
+    <Content Include="Workflow\Approval\css\foundation.min.css" />
+    <Content Include="Workflow\Approval\css\normalize.css" />
+    <Content Include="Workflow\Approval\css\styles.css" />
+    <Content Include="Workflow\Approval\fonts\foundation-icons.svg" />
+    <Content Include="Workflow\Approval\js\approvalFrames.js" />
+    <Content Include="Workflow\Approval\js\decisionBtn.js" />
+    <Content Include="Workflow\Approval\js\foundation.min.js" />
+    <Content Include="Workflow\Approval\js\foundation\foundation.interchange.js" />
+    <Content Include="Workflow\Approval\js\foundation\foundation.js" />
+    <Content Include="Workflow\Approval\js\foundation\foundation.reveal.js" />
+    <Content Include="Workflow\Approval\js\sideBar.js" />
+    <Content Include="Workflow\Approval\js\vendor\fastclick.js" />
+    <Content Include="Workflow\Approval\js\vendor\jquery.cookie.js" />
+    <Content Include="Workflow\Approval\js\vendor\jquery.js" />
+    <Content Include="Workflow\Approval\js\vendor\modernizr.js" />
+    <Content Include="Workflow\Approval\js\vendor\placeholder.js" />
+    <Content Include="Workflow\Approval\svgs\fi-address-book.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-alert.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-align-center.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-align-justify.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-align-left.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-align-right.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-anchor.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-annotate.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-archive.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-arrow-down.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-arrow-left.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-arrow-right.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-arrow-up.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-arrows-compress.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-arrows-expand.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-arrows-in.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-arrows-out.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-asl.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-asterisk.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-at-sign.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-background-color.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-battery-empty.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-battery-full.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-battery-half.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-bitcoin-circle.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-bitcoin.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-blind.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-bluetooth.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-bold.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-book-bookmark.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-book.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-bookmark.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-braille.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-burst-new.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-burst-sale.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-burst.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-calendar.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-camera.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-check.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-checkbox.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-clipboard-notes.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-clipboard-pencil.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-clipboard.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-clock.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-closed-caption.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-cloud.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-comment-minus.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-comment-quotes.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-comment-video.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-comment.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-comments.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-compass.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-contrast.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-credit-card.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-crop.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-crown.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-css3.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-database.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-die-five.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-die-four.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-die-one.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-die-six.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-die-three.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-die-two.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-dislike.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-dollar-bill.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-dollar.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-download.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-eject.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-elevator.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-euro.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-eye.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-fast-forward.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-female-symbol.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-female.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-filter.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-first-aid.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-flag.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-folder-add.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-folder-lock.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-folder.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-foot.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-foundation.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-graph-bar.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-graph-horizontal.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-graph-pie.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-graph-trend.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-guide-dog.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-hearing-aid.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-heart.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-home.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-html5.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-indent-less.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-indent-more.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-info.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-italic.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-key.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-laptop.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-layout.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-lightbulb.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-like.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-link.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-list-bullet.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-list-number.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-list-thumbnails.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-list.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-lock.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-loop.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-magnifying-glass.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-mail.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-male-female.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-male-symbol.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-male.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-map.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-marker.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-megaphone.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-microphone.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-minus-circle.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-minus.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-mobile-signal.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-mobile.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-monitor.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-mountains.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-music.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-next.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-no-dogs.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-no-smoking.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-page-add.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-page-copy.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-page-csv.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-page-delete.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-page-doc.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-page-edit.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-page-export-csv.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-page-export-doc.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-page-export-pdf.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-page-export.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-page-filled.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-page-multiple.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-page-pdf.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-page-remove.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-page-search.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-page.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-paint-bucket.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-paperclip.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-pause.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-paw.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-paypal.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-pencil.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-photo.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-play-circle.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-play-video.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-play.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-plus.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-pound.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-power.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-previous.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-price-tag.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-pricetag-multiple.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-print.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-prohibited.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-projection-screen.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-puzzle.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-quote.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-record.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-refresh.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-results-demographics.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-results.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-rewind-ten.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-rewind.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-rss.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-safety-cone.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-save.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-share.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-sheriff-badge.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-shield.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-shopping-bag.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-shopping-cart.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-shuffle.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-skull.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-500px.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-adobe.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-amazon.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-android.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-apple.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-behance.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-bing.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-blogger.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-delicious.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-designer-news.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-deviant-art.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-digg.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-dribbble.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-drive.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-dropbox.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-evernote.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-facebook.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-flickr.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-forrst.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-foursquare.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-game-center.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-github.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-google-plus.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-hacker-news.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-hi5.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-instagram.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-joomla.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-lastfm.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-linkedin.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-medium.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-myspace.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-orkut.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-path.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-picasa.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-pinterest.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-rdio.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-reddit.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-skillshare.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-skype.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-smashing-mag.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-snapchat.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-spotify.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-squidoo.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-stack-overflow.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-steam.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-stumbleupon.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-treehouse.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-tumblr.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-twitter.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-vimeo.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-windows.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-xbox.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-yahoo.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-yelp.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-youtube.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-zerply.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-social-zurb.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-sound.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-star.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-stop.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-strikethrough.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-subscript.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-superscript.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-tablet-landscape.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-tablet-portrait.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-target-two.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-target.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-telephone-accessible.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-telephone.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-text-color.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-thumbnails.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-ticket.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-torso-business.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-torso-female.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-torso.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-torsos-all-female.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-torsos-all.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-torsos-female-male.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-torsos-male-female.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-torsos.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-trash.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-trees.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-trophy.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-underline.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-universal-access.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-unlink.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-unlock.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-upload-cloud.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-upload.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-usb.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-video.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-volume-none.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-volume-strike.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-volume.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-web.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-wheelchair.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-widget.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-wrench.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-x-circle.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-x.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-yen.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-zoom-in.svg" />
+    <Content Include="Workflow\Approval\svgs\fi-zoom-out.svg" />
+    <Content Include="Workflow\Approval\RestartTask.aspx" />
+    <Content Include="Workflow\Configuration.ascx" />
+    <Content Include="Workflow\Approval\UrlTask.aspx" />
+    <Content Include="Workflow\EditConfigurationProperties.aspx" />
+    <Content Include="Workflow\EditDesign.aspx" />
+    <Content Include="Workflow\EditInstantiationCriteria.aspx" />
+    <Content Include="Workflow\EditTaskProperties.aspx" />
+    <Content Include="Workflow\Instances.ascx" />
+    <Content Include="Workflow\InstantiationCriteria.ascx" />
+    <Content Include="packages.config" />
+    <Content Include="Workflow\PostInstall.ascx" />
+    <Content Include="Workflow\AllRecentContent.ascx" />
+    <Content Include="Workflow\RecentContent.ascx" />
+    <Content Include="Workflow\Runtime.aspx" />
+    <Content Include="Workflow\SendToWorkflow.aspx" />
+    <Content Include="Workflow\TabRefresh.ascx" />
+    <Content Include="Workflow\Transition.aspx" />
+    <Content Include="Views\Web.config" />
+    <Content Include="config\trees.config" />
+    <Content Include="config\Dashboard.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="config\ClientDependency.config" />
+    <Content Include="config\applications.config" />
+    <Content Include="Workflow\config\Log4Net.config" />
+    <Content Include="Workflow\config\workflow.application.spring.config" />
+    <Content Include="Workflow\config\workflow.core.spring.config" />
+    <Content Include="Workflow\config\workflow.domain.spring.config" />
+    <Content Include="Workflow\config\workflow.en-GB.spring.config" />
+    <Content Include="Workflow\config\workflow.globalisation.spring.config" />
+    <Content Include="Workflow\config\workflow.infrastructure.spring.config" />
+    <Content Include="Workflow\config\workflow.spring.config" />
+    <Content Include="Workflow\config\workflow.ui.spring.config" />
+    <Content Include="masterpages\umbHomepage.master" />
+    <Content Include="masterpages\umbMaster.master" />
+    <Content Include="masterpages\umbTextpage.master" />
+    <Content Include="xslt\dummy.txt" />
+    <Content Include="config\xsltExtensions.config" />
+    <Content Include="config\UrlRewriting.config" />
+    <Content Include="config\umbracoSettings.config" />
+    <Content Include="config\tinyMceConfig.config" />
+    <Content Include="config\Skinning.config" />
+    <Content Include="config\scripting.config" />
+    <Content Include="config\restExtensions.config" />
+    <Content Include="config\metablogConfig.config" />
+    <Content Include="config\log4net.config" />
+    <Content Include="config\FileSystemProviders.config" />
+    <Content Include="config\feedProxy.config" />
+    <Content Include="config\ExamineSettings.config" />
+    <Content Include="config\ExamineIndex.config" />
+    <Content Include="config\EmbeddedMedia.config" />
+    <Content Include="config\BaseRestExtensions.config" />
+    <Content Include="config\404handlers.config" />
+    <Content Include="bin\x86\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
+    <Content Include="bin\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
+    <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="Workflow\Approval\fonts\foundation-icons.eot" />
+    <Content Include="Workflow\Approval\fonts\foundation-icons.ttf" />
+    <Content Include="Workflow\Approval\fonts\foundation-icons.woff" />
+    <Content Include="Workflow\Approval\img\.gitkeep" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Workflow\Css\Controls.css" />
+    <EmbeddedResource Include="Workflow\Css\Designer.css" />
+    <EmbeddedResource Include="Workflow\Css\Grid.css" />
+    <Content Include="Workflow\images\arrow_join.png" />
+    <Content Include="Workflow\images\arrow_switch.png" />
+    <Content Include="Workflow\images\cog.png" />
+    <Content Include="Workflow\images\email.png" />
+    <Content Include="Workflow\images\group_go.png" />
+    <Content Include="Workflow\images\images.png" />
+    <Content Include="Workflow\images\page_world.png" />
+    <Content Include="Workflow\images\stop.png" />
+    <Content Include="Workflow\images\time.png" />
+    <Content Include="Workflow\images\user_go.png" />
+    <EmbeddedResource Include="Workflow\Js\Autocomplete.js" />
+    <EmbeddedResource Include="Workflow\Js\Config.js" />
+    <EmbeddedResource Include="Workflow\Js\jquery-1.5.1.min.js" />
+    <EmbeddedResource Include="Workflow\Js\jquery-ui-1.8.12.custom.min.js" />
+    <EmbeddedResource Include="Workflow\Js\jquery.jcarousel.min.js" />
+    <EmbeddedResource Include="Workflow\Js\jquery.jsPlumb-1.3.2-all-min.js" />
+    <EmbeddedResource Include="Workflow\Js\json2.js" />
+    <EmbeddedResource Include="Workflow\Js\speechbubble.js" />
+    <EmbeddedResource Include="Workflow\Js\Util.js" />
+    <EmbeddedResource Include="Workflow\Js\workflow.js" />
+    <Content Include="Workflow\userCss\baseTasks.css" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Workflow\Approval\RestartTask.aspx.cs">
+      <DependentUpon>RestartTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\Approval\RestartTask.aspx.designer.cs">
+      <DependentUpon>RestartTask.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Configuration.ascx.cs">
+      <DependentUpon>Configuration.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\Configuration.ascx.designer.cs">
+      <DependentUpon>Configuration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Approval\UrlTask.aspx.cs">
+      <DependentUpon>UrlTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\Approval\UrlTask.aspx.designer.cs">
+      <DependentUpon>UrlTask.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\EditConfigurationProperties.aspx.cs">
+      <DependentUpon>EditConfigurationProperties.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\EditConfigurationProperties.aspx.designer.cs">
+      <DependentUpon>EditConfigurationProperties.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\EditDesign.aspx.cs">
+      <DependentUpon>EditDesign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\EditDesign.aspx.designer.cs">
+      <DependentUpon>EditDesign.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\EditInstantiationCriteria.aspx.cs">
+      <DependentUpon>EditInstantiationCriteria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\EditInstantiationCriteria.aspx.designer.cs">
+      <DependentUpon>EditInstantiationCriteria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\EditTaskProperties.aspx.cs">
+      <DependentUpon>EditTaskProperties.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\EditTaskProperties.aspx.designer.cs">
+      <DependentUpon>EditTaskProperties.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\ResourceExtensions.cs" />
+    <Compile Include="Infrastructure\Storage\AppDataFileStorage.cs" />
+    <Compile Include="Workflow\Instances.ascx.cs">
+      <DependentUpon>Instances.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\Instances.ascx.designer.cs">
+      <DependentUpon>Instances.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\InstantiationCriteria.ascx.cs">
+      <DependentUpon>InstantiationCriteria.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\InstantiationCriteria.ascx.designer.cs">
+      <DependentUpon>InstantiationCriteria.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\PostInstall.ascx.cs">
+      <DependentUpon>PostInstall.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\PostInstall.ascx.designer.cs">
+      <DependentUpon>PostInstall.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Workflow\AllRecentContent.ascx.cs">
+      <DependentUpon>AllRecentContent.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\AllRecentContent.ascx.designer.cs">
+      <DependentUpon>AllRecentContent.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\RecentContent.ascx.cs">
+      <DependentUpon>RecentContent.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\RecentContent.ascx.designer.cs">
+      <DependentUpon>RecentContent.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Runtime.aspx.cs">
+      <DependentUpon>Runtime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\Runtime.aspx.designer.cs">
+      <DependentUpon>Runtime.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\SendToWorkflow.aspx.cs">
+      <DependentUpon>SendToWorkflow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\SendToWorkflow.aspx.designer.cs">
+      <DependentUpon>SendToWorkflow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\TabRefresh.ascx.cs">
+      <DependentUpon>TabRefresh.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\TabRefresh.ascx.designer.cs">
+      <DependentUpon>TabRefresh.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Transition.aspx.cs">
+      <DependentUpon>Transition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\Transition.aspx.designer.cs">
+      <DependentUpon>Transition.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\Moriyama.Workflow\Moriyama.Workflow\Moriyama.Workflow.csproj">
+      <Project>{aec51cbd-73cc-4c21-8ae5-c70138bf5878}</Project>
+      <Name>Moriyama.Workflow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Moriyama.Workflow.Umbraco6\Moriyama.Workflow.Umbraco6.csproj">
+      <Project>{3ee4d7d1-ffe3-401e-921d-40358dd217ee}</Project>
+      <Name>Moriyama.Workflow.Umbraco6</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>28214</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:28214/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

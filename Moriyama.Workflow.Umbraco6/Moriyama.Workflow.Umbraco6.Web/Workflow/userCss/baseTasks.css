@@ -1,0 +1,54 @@
+﻿.filterDocumentsTask {
+     background-image:url('/Workflow/images/arrow_join.png');
+}
+
+.filterMediaTask {
+     background-image:url('/Workflow/images/images.png');
+}
+
+.endTask  
+{
+    background-color: #eeeeee;
+    border-style: dotted;
+    background-image:url('/Workflow/images/stop.png');   
+}
+
+.dummyTask  
+{
+    border-style: dotted;
+    background-image:url('/Workflow/images/cog.png');
+}     
+ 
+.runnableTask  
+{
+    border-style: dotted;
+    background-image:url('/Workflow/images/cog.png');
+}   
+
+.delayTask {
+    border-style: dotted;
+    background-image:url('/Workflow/images/time.png');
+}
+
+.decisionTask {
+    border-style: dotted;
+    background-image:url('/Workflow/images/arrow_switch.png');
+}
+
+.groupDecisionTask {
+    border-style: dotted;
+    background-image:url('/Workflow/images/group_go.png');
+}
+
+.userDecisionTask {
+    border-style: dotted;
+    background-image:url('/Workflow/images/user_go.png');
+}
+
+.basicEmailTask {
+    background-image:url('/Workflow/images/email.png');
+}
+
+.publishDocumentsTask {
+    background-image:url('/Workflow/images/page_world.png');
+}
