@@ -1,0 +1,10 @@
+
+3. Previewing of modules doesn’t seem to be working (point 6.6 of the spec). We expected that the preview would have a set of pages the module appears on.
+
+8. If the comments appear in the workflow table that would be a great help to whoever is approving/rejecting.
+
+9. The ability to view done/completed workflows for auditing purposes is key. Preferably with some filtering options to future-proof it.
+
+10. E-mails are sent to users with disabled Umbraco accounts. If we could disable that, that would be great. This can be worked around so not a big issue.
+
+
