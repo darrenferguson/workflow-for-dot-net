@@ -106,23 +106,26 @@ namespace Moriyama.Workflow.Umbraco6.Domain.Task
             return s.ToString();
         }
 
-        protected string GetUserEmail(int id)
-        {
-            return User.GetUser(id).Email;
-        }
+        
 
         protected IEnumerable<string> GetRecipients()
         {
             var recipients = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
 
-            if(MailInstantiator) recipients.Add(GetUserEmail(Instantiator));
+            var i = User.GetUser(Instantiator);
+            
+            if(MailInstantiator && !i.Disabled) recipients.Add(i.Email);
 
             if(MailNodeOwners)
             {
                 foreach(var nodeId in CmsNodes)
                 {
-                    var e = new CMSNode(nodeId).User.Email;
-                    recipients.Add(e);
+                    var e = new CMSNode(nodeId);
+                    
+                    var u = e.User;
+
+                    if(!u.Disabled)
+                        recipients.Add(u.Email);
                 }
             }
 
@@ -130,7 +133,10 @@ namespace Moriyama.Workflow.Umbraco6.Domain.Task
             {
                 foreach (var user in Users)
                 {
-                    recipients.Add(GetUserEmail(user));
+                    var u = User.GetUser(user);
+
+                    if(!u.Disabled)
+                        recipients.Add(u.Email);
                 }
             }
 
@@ -140,13 +146,12 @@ namespace Moriyama.Workflow.Umbraco6.Domain.Task
                 {
                     foreach (var user in User.getAll().Where(u => u.UserType.Id == userTypeId))
                     {
-                        recipients.Add(user.Email);
+                        if(!user.Disabled)
+                            recipients.Add(user.Email);
                     }
                 }
             }
             return recipients;
         }
-
-       
     }
 }
