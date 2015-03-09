@@ -1,13 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+using Lucene.Net.Documents;
 using Moriyama.Workflow.Interfaces.Application;
 using Moriyama.Workflow.Interfaces.Application.Runtime;
 using Moriyama.Workflow.Interfaces.Domain;
 using Moriyama.Workflow.Umbraco6.Domain;
+using Moriyama.Workflow.Umbraco6.Domain.Task;
 using Newtonsoft.Json;
 using umbraco.BasePages;
-using umbraco.cms.businesslogic;
 using Umbraco.Core.Logging;
+using Umbraco.Core.Models;
+using Umbraco.Web;
+using Content = umbraco.cms.businesslogic.Content;
 
 namespace Moriyama.Workflow.Umbraco6.Web.Workflow.Approval
 {
@@ -36,15 +42,37 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow.Approval
 
                 foreach (var nodeId in nodes)
                 {
-                    var node = new CMSNode(nodeId);
-                    nodeDetails.Add(new NodeInfo
+                    var node = new Content(nodeId);
+
+                    if (node.ContentType.Alias.ToLower() != "module")
                     {
-                        Id = nodeId,
-                        Name = node.Text,
-                        Url = umbraco.library.NiceUrl(nodeId),
-                        Approved = true,
-                        Comment = string.Empty
-                    });
+                        var url = umbraco.library.NiceUrl(nodeId);
+
+                        nodeDetails.Add(new NodeInfo
+                        {
+                            Id = nodeId,
+                            Name = node.Text,
+                            Url = umbraco.library.NiceUrl(nodeId),
+                            Approved = true,
+                            Comment = string.Empty
+                        });
+                    }
+                    else
+                    {
+                        var ids = FindReferencesToModule(nodeId, 1050).Distinct();
+
+                        var url = ids.Any() ? umbraco.library.NiceUrl(ids.First()) : "#";
+
+                        nodeDetails.Add(new NodeInfo
+                        {
+                            Id = ids.Any() ? ids.First() : nodeId,
+                            Name = "** " + node.Text,
+                            Url = url,
+                            Approved = true,
+                            Comment = string.Empty,
+                            References = string.Join(",", ids)
+                        });
+                    }
                 }
 
                 var json = JsonConvert.SerializeObject(nodeDetails, Formatting.Indented);
@@ -53,6 +81,45 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow.Approval
                 NodeRepeater.DataSource = nodeDetails;
                 NodeRepeater.DataBind();
             }
+        }
+
+        private List<int> FindReferencesToModule(int moduleId, int parentId)
+        {
+            var h = new UmbracoHelper(UmbracoContext.Current);
+
+            var root = h.TypedContent(parentId);
+
+            var ids = new List<int>();
+
+                foreach (var child in root.Children)
+                {
+
+                    foreach (var property in child.Properties)
+                    {
+                        var v = property.Value.ToString();
+                        if (IsCommaDelimitedIntString(v))
+                        {
+                            var referenced = v.Split(',').Select(int.Parse);
+                            if (referenced.Contains(moduleId))
+                            {
+                                ids.Add(child.Id);
+                            }
+                        }
+                    }
+
+                    var childIds = FindReferencesToModule(moduleId, child.Id);
+                    ids = ids.Concat(childIds).ToList();
+                }
+            
+
+            return ids;
+        }
+
+
+        private bool IsCommaDelimitedIntString(string value)
+        {
+            var rgx = new Regex(@"^[\d\,]+$");
+            return rgx.IsMatch(value);
         }
 
         public void BtnClick(Object sender,EventArgs e)
@@ -105,6 +172,8 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow.Approval
             public string Url { get; set; }
             public bool Approved { get; set; }
             public string Comment { get; set; }
+
+            public string References { get; set; } 
         }
     }
 }

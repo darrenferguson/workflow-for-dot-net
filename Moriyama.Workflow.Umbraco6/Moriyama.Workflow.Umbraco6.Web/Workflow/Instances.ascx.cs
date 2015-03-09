@@ -16,7 +16,6 @@ using umbraco.BusinessLogic;
 using umbraco.cms.businesslogic;
 using umbraco.cms.businesslogic.web;
 using Moriyama.Workflow.Umbraco6.Domain;
-using umbraco.cms.helpers;
 
 [assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Css.Grid.css", "text/css")]
 [assembly: WebResource("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Util.js", "text/javascript")]
@@ -38,6 +37,7 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
         private User _currentUser;
         private bool _isAdmin;
         private bool _displayeEnded;
+        private DateTime? _filterDate = null;
 
         protected override void OnInit(EventArgs e)
         {
@@ -101,8 +101,13 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
             {
                 var i = (UmbracoWorkflowInstance) TheWorkflowInstanceService.GetInstance(instance.Id);
 
-                if(!i.Ended || (i.Ended && _displayeEnded))
-                    _hydratedInstances.Add(i);
+                if (!i.Ended || (i.Ended && _displayeEnded))
+                {
+                    if (_filterDate != null && i.InstantiationTime < _filterDate)
+                        _hydratedInstances.Add(i);
+                    else
+                        _hydratedInstances.Add(i);
+                }
             }
             
             if (_isAdmin)
@@ -194,14 +199,11 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
         {
 
             DateTime d = DateTime.Now;
-
-            foreach (DateTime day in Calendar1.SelectedDates)
+            _displayeEnded = ShowArchivedCheckbox.Checked;
+            foreach (DateTime date in Calendar1.SelectedDates)
             {
-                d = day;
+                _filterDate = date;
             }
-
-            //MyRecentContentGridView.DataSource = GetRecentContent(d);
-            //MyRecentContentGridView.DataBind();
         }
     }
 }

@@ -157,7 +157,13 @@ namespace Moriyama.Workflow.Application.Runtime
                 if(hydratedInstance.Ended)
                 {
                     Log.Debug(string.Format("Ending workflow '{0}' and removing from runtime.", hydratedInstance.Id.ToString(CultureInfo.InvariantCulture)));
-                    TheWorkflowInstanceRepository.Delete(hydratedInstance);
+
+                    hydratedInstance.Ended = true;
+                    
+
+                    // TODO: Should be a config option.
+                    TheWorkflowInstanceRepository.Update(hydratedInstance);
+                    //TheWorkflowInstanceRepository.Delete(hydratedInstance);
                 }
                 
                 var task = hydratedInstance.CurrentTask;
