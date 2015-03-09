@@ -57,7 +57,10 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
             var transiton = TransitionDropDownList.SelectedValue;
             var comment = string.IsNullOrEmpty(TransitionCommentTextBox.Text) ? TheGlobalisationService.GetString("no_comment_supplied") : TransitionCommentTextBox.Text;
 
-            Log.Info(string.Format("Workflow '{0}' '{1}' was transitioned: '{2}'", _workflowInstance.Name, _workflowInstance.Id, comment));
+            var u = umbraco.BusinessLogic.User.GetCurrent();
+            comment = u.Name + ": " + comment;
+
+            Log.Info(string.Format("Workflow '{0}' '{1}' comment: '{2}'", _workflowInstance.Name, _workflowInstance.Id, comment));
 
             TheTransitionService.Transition(_workflowInstance, transiton, comment);
             SavedLiteral.Visible = true;

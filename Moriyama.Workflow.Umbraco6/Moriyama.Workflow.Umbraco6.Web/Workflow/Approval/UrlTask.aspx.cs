@@ -89,6 +89,10 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow.Approval
             }
 
             var transition = proceed ? "approve" : "reject";
+
+            var u = umbraco.BusinessLogic.User.GetCurrent();
+            transitionComment = "transitioned by <b>" +u.Name + "</b> " + transitionComment;
+
             TheWorkflowRuntime.Transition(_workflowInstance, _workflowInstance.CurrentTask, transition, transitionComment);
 
             ClosePanel.Visible = true;
