@@ -1,0 +1,2 @@
+﻿ALTER TABLE workflowinstance
+ADD Ended bit default 0

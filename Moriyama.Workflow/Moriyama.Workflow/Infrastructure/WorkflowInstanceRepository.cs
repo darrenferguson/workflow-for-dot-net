@@ -43,7 +43,8 @@ namespace Moriyama.Workflow.Infrastructure
                         Name = (string)records["Name"],
                         InstantiationTime = Convert.ToDateTime(records["InstantiationTime"]),
                         TypeName = (string)records["TypeName"],
-                        Started = Convert.ToBoolean(records["Running"])
+                        Started = Convert.ToBoolean(records["Running"]),
+                        Ended = Convert.ToBoolean(records["Ended"])
                     }
                 );
             }
@@ -66,7 +67,8 @@ namespace Moriyama.Workflow.Infrastructure
                 Name = (string)records["Name"],
                 InstantiationTime = Convert.ToDateTime(records["InstantiationTime"]),
                 TypeName = (string)records["TypeName"],
-                Started = Convert.ToBoolean(records["Running"])
+                Started = Convert.ToBoolean(records["Running"]),
+                Ended = Convert.ToBoolean(records["Ended"])
             };
             DatabaseHelper.CloseConnection();
             return i;
@@ -92,6 +94,7 @@ namespace Moriyama.Workflow.Infrastructure
                 cmd.Parameters.Add(DatabaseHelper.CreateParameter("TypeName", saveObj.GetType().FullName));
                 cmd.Parameters.Add(DatabaseHelper.CreateParameter("InstantiationTime", saveObj.InstantiationTime));
                 cmd.Parameters.Add(DatabaseHelper.CreateParameter("Running", saveObj.Started));
+                cmd.Parameters.Add(DatabaseHelper.CreateParameter("Ended", saveObj.Ended));
                 cmd.Parameters.Add(DatabaseHelper.CreateParameter("CurrentTask", saveObj.CurrentTask == null ? "" : saveObj.CurrentTask.Name));
                 cmd.Transaction = transaction;
 
@@ -112,12 +115,13 @@ namespace Moriyama.Workflow.Infrastructure
 
         public void Update(IWorkflowInstance saveObj)
         {
-            var cmd = DatabaseHelper.CreateCommand("update workflowinstance set name = @Name, typename = @TypeName, instantiationtime = @InstantiationTime, running = @Running, currenttask = @CurrentTask where id = @Id");
+            var cmd = DatabaseHelper.CreateCommand("update workflowinstance set name = @Name, typename = @TypeName, instantiationtime = @InstantiationTime, running = @Running, currenttask = @CurrentTask, ended = @Ended where id = @Id");
 
             cmd.Parameters.Add(DatabaseHelper.CreateParameter("Name", saveObj.Name));
             cmd.Parameters.Add(DatabaseHelper.CreateParameter("TypeName", saveObj.GetType().FullName));
             cmd.Parameters.Add(DatabaseHelper.CreateParameter("InstantiationTime", saveObj.InstantiationTime));
             cmd.Parameters.Add(DatabaseHelper.CreateParameter("Running", saveObj.Started));
+            cmd.Parameters.Add(DatabaseHelper.CreateParameter("Ended", saveObj.Ended));
             cmd.Parameters.Add(DatabaseHelper.CreateParameter("CurrentTask", saveObj.CurrentTask == null ? "" : saveObj.CurrentTask.Name));
             cmd.Parameters.Add(DatabaseHelper.CreateParameter("Id", saveObj.Id));
 

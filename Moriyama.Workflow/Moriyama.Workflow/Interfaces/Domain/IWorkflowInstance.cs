@@ -17,7 +17,6 @@ namespace Moriyama.Workflow.Interfaces.Domain
 
         bool Started { get; set;  }
         bool Ended { get; set;  }
-
         
         IWorkflowTask CurrentTask { get; set; }
         IList<IWorkflowTask> Tasks { get; }

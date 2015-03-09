@@ -37,16 +37,11 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
         private IList<UmbracoWorkflowInstance> _hydratedInstances;
         private User _currentUser;
         private bool _isAdmin;
+        private bool _displayeEnded;
 
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-
-            //if (Validator.IsTrial() || Validator.IsInvalid())
-            //{
-            //    TrialLiteral.Visible = true;
-            //    TrialLiteral.Text = string.Format("<p class='trialMode'>{0}</p>", TheGlobalisationService.GetString("trial_mode"));
-            //}
 
             TheWorkflowRuntime.RunWorkflows();
 
@@ -97,12 +92,15 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
             base.OnPreRender(e);
             
             _hydratedInstances = new List<UmbracoWorkflowInstance>();
+
             foreach (var instance in TheWorkflowInstanceService.ListInstances())
             {
-                _hydratedInstances.Add((UmbracoWorkflowInstance)TheWorkflowInstanceService.GetInstance(instance.Id));
-            }
+                var i = (UmbracoWorkflowInstance) TheWorkflowInstanceService.GetInstance(instance.Id);
 
-           
+                if(!i.Ended || (i.Ended && _displayeEnded))
+                    _hydratedInstances.Add(i);
+            }
+            
             if (_isAdmin)
             {
                 WorkflowInstancesGridView.DataSource = _hydratedInstances;
@@ -180,6 +178,13 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
                 }
             }
             return result;
+        }
+
+      
+
+        protected void FilterButton_Click(object sender, EventArgs e)
+        {
+            _displayeEnded = ShowArchivedCheckbox.Checked;
         }
     }
 }

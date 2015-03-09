@@ -31,6 +31,24 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow {
         protected global::System.Web.UI.WebControls.GridView WorkflowInstancesGridView;
         
         /// <summary>
+        /// ShowArchivedCheckbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox ShowArchivedCheckbox;
+        
+        /// <summary>
+        /// FilterButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button FilterButton;
+        
+        /// <summary>
         /// TabRefresh1 control.
         /// </summary>
         /// <remarks>

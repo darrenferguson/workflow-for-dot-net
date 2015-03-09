@@ -31,7 +31,6 @@
         OnRowCommand="WorklowInstanceRowCommand" OnRowDeleting="WorklowInstanceRowDeleting"
         DataKeyNames="Id" OnRowDataBound="WorklowInstanceRowDataBound" CssClass="workflow">
         <Columns>
-           
              <asp:TemplateField HeaderText="Name">
                 <ItemTemplate>
                     <%# ((IWorkflowInstance)Container.DataItem).Name %> (<%# ((IWorkflowInstance)Container.DataItem).Id %>)
@@ -65,6 +64,10 @@
             
         </Columns>
     </asp:GridView>
+</div>
+
+<div>
+    <asp:CheckBox ID="ShowArchivedCheckbox" runat="server" /> Display completed workflows. <asp:Button ID="FilterButton" runat="server" Text="Filter" OnClick="FilterButton_Click" />
 </div>
 
 <uc1:TabRefresh ID="TabRefresh1" runat="server" />

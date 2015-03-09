@@ -28,6 +28,7 @@ CREATE TABLE dbo.workflowinstance(
     typename nvarchar(255) NOT NULL,
     instantiationtime datetime,
     running BIT NOT NULL DEFAULT 0,
+	ended BIT NOT NULL DEFAULT 0,
     currenttask nvarchar(255));
 
 IF NOT EXISTS (SELECT *
