@@ -79,6 +79,7 @@ namespace Moriyama.Workflow.Application
         {
             var workflowInstance = Instantiate(workflowConfigurationId);
             workflowInstance.Comment = comment;
+
             Log.Info(string.Format("Instantiation comment for '{0}' '{1}' -> '{2}'", workflowInstance.Name, workflowInstance.Id, comment));
 
             TheWorkflowInstanceRepository.Update(workflowInstance);

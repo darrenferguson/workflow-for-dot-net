@@ -48,11 +48,14 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
             _currentUser = User.GetCurrent();
             _isAdmin = _currentUser.UserType.Alias.ToLower() == "admin";
 
+            if (!_isAdmin)
+                FilterPanel.Visible = false;
+
             this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Css.Grid.css", ClientDependencyType.Css);
             this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Util.js", ClientDependencyType.Javascript);
             this.AddResourceToClientDependency("Moriyama.Workflow.Umbraco6.Web.Workflow.Js.Config.js", ClientDependencyType.Javascript);
 
-            ((ButtonField)WorkflowInstancesGridView.Columns[7]).Text = TheGlobalisationService.GetString("delete");
+            ((ButtonField)WorkflowInstancesGridView.Columns[9]).Text = TheGlobalisationService.GetString("delete");
         }
 
         protected void WorklowInstanceRowDataBound(Object sender, GridViewRowEventArgs e)
@@ -63,9 +66,10 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
             e.Row.Cells[1].Text = TheGlobalisationService.GetString("instantiation_time");
             e.Row.Cells[2].Text = TheGlobalisationService.GetString("instantiator"); 
             e.Row.Cells[3].Text = TheGlobalisationService.GetString("running");
-            e.Row.Cells[4].Text = TheGlobalisationService.GetString("current_task");
-            e.Row.Cells[5].Text = TheGlobalisationService.GetString("transition");
-            e.Row.Cells[6].Text = TheGlobalisationService.GetString("attachments");
+            e.Row.Cells[4].Text = TheGlobalisationService.GetString("ended");
+            e.Row.Cells[5].Text = TheGlobalisationService.GetString("current_task");
+            e.Row.Cells[6].Text = TheGlobalisationService.GetString("transition");
+            e.Row.Cells[7].Text = TheGlobalisationService.GetString("attachments");
         }
 
         protected void WorklowInstanceRowDeleting(object sender, GridViewDeleteEventArgs eventArgs)
@@ -184,6 +188,20 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
         protected void FilterButton_Click(object sender, EventArgs e)
         {
             _displayeEnded = ShowArchivedCheckbox.Checked;
+        }
+
+        protected void SelectionChange(Object sender, EventArgs e)
+        {
+
+            DateTime d = DateTime.Now;
+
+            foreach (DateTime day in Calendar1.SelectedDates)
+            {
+                d = day;
+            }
+
+            //MyRecentContentGridView.DataSource = GetRecentContent(d);
+            //MyRecentContentGridView.DataBind();
         }
     }
 }

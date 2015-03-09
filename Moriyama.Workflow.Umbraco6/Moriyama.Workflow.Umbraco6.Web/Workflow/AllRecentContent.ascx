@@ -41,9 +41,7 @@
 </div>
 
 <div class="workflow">
-    <p>Only show content since:</p>
-    <asp:Calendar ID="Calendar1" runat="server" OnSelectionChanged="SelectionChange"></asp:Calendar>
-    <br />
+    
 <asp:GridView ID="MyRecentContentGridView" runat="server" AutoGenerateColumns="false" CssClass="workflow" OnRowDataBound="RecentContentRowDataBound">
 
      <Columns>
@@ -72,6 +70,10 @@
     </Columns>
 
 </asp:GridView>
+    <br />
+    <p>Only show content since:</p>
+    <asp:Calendar ID="Calendar1" runat="server" OnSelectionChanged="SelectionChange"></asp:Calendar>
+   
 </div>
 
 <uc1:TabRefresh ID="TabRefresh1" runat="server" />

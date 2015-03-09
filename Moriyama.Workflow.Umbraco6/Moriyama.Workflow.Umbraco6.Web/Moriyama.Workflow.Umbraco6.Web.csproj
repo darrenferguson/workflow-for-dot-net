@@ -594,6 +594,7 @@
     <Content Include="Workflow\Approval\svgs\fi-zoom-in.svg" />
     <Content Include="Workflow\Approval\svgs\fi-zoom-out.svg" />
     <Content Include="Workflow\Approval\RestartTask.aspx" />
+    <Content Include="Workflow\Comments.aspx" />
     <Content Include="Workflow\Configuration.ascx" />
     <Content Include="Workflow\Approval\UrlTask.aspx" />
     <Content Include="Workflow\EditConfigurationProperties.aspx" />
@@ -694,6 +695,13 @@
     </Compile>
     <Compile Include="Workflow\Approval\RestartTask.aspx.designer.cs">
       <DependentUpon>RestartTask.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\Comments.aspx.cs">
+      <DependentUpon>Comments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workflow\Comments.aspx.designer.cs">
+      <DependentUpon>Comments.aspx</DependentUpon>
     </Compile>
     <Compile Include="Workflow\Configuration.ascx.cs">
       <DependentUpon>Configuration.ascx</DependentUpon>

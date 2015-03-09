@@ -83,6 +83,7 @@ namespace Moriyama.Workflow.Application.Runtime
 
         public void Transition(IWorkflowInstance workflowInstance, IWorkflowTask workflowTask, string transitionName)
         {
+            Log.Info(string.Format("The workflow runtime is transitioning {0} - {1} '{2}' - '{3}'", workflowTask.Name, transitionName, workflowInstance.Id, workflowInstance.Name));
             Transition(workflowInstance, workflowTask, transitionName, "");
         }
 
