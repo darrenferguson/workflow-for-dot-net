@@ -117,7 +117,6 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow
                     WorkflowInstancesGridView.Columns[7].Visible = false;
                 }
             }
-            
         }
 
         protected bool CanTransition(IWorkflowTask t, int instantiator)
