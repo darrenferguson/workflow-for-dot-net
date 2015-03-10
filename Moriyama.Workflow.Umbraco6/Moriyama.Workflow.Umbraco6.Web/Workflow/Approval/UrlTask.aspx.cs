@@ -51,6 +51,7 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow.Approval
                         nodeDetails.Add(new NodeInfo
                         {
                             Id = nodeId,
+                            PreviewNodeId = nodeId,
                             Name = node.Text,
                             Url = umbraco.library.NiceUrl(nodeId),
                             Approved = true,
@@ -65,8 +66,9 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow.Approval
 
                         nodeDetails.Add(new NodeInfo
                         {
-                            Id = ids.Any() ? ids.First() : nodeId,
-                            Name = "** " + node.Text,
+                            Id = nodeId,
+                            PreviewNodeId = ids.Any() ? ids.First() : nodeId,
+                            Name = "Module " + node.Text,
                             Url = url,
                             Approved = true,
                             Comment = string.Empty,
@@ -168,6 +170,7 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow.Approval
         public class NodeInfo
         {
             public int Id { get; set; }
+            public int PreviewNodeId { get; set; }
             public string Name { get; set; }
             public string Url { get; set; }
             public bool Approved { get; set; }

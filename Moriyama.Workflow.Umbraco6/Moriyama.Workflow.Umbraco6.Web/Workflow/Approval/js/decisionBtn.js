@@ -7,7 +7,6 @@ $("#rejectWorkflow").click(function () {
   $('ul.side-nav li.active i').addClass('fi-x');
 
   $("#rejectionReason").removeClass("hide");
-
 });
 
 $('.rejectArea').change(function() {
@@ -16,7 +15,6 @@ $('.rejectArea').change(function() {
 });
 
 $("#acceptWorkflow").click(function () {
-
   wf.Approve(wf.activeItem, true);
   $('.rejectUi').hide();
 
@@ -26,7 +24,6 @@ $("#acceptWorkflow").click(function () {
 });
 
 $('.accept-btn a').click(function() {
-
     $(wf.fieldId).val(JSON.stringify(wf.nodeDetails));
     $(wf.buttonId).trigger('click');
 });
@@ -57,7 +54,6 @@ wf.setComment = function(id, comment) {
 
 
 wf.Approve = function (id, status) {
-
     $(wf.nodeDetails).each(function() {
         if (id == this.Id) {
             this.Approved = status;

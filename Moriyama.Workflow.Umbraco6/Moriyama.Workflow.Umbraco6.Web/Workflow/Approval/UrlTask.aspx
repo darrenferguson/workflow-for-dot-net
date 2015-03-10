@@ -59,7 +59,7 @@
           <asp:Repeater id="NodeRepeater" runat="server">
             <ItemTemplate>
                 <div class="page" data-name="<%# Eval("Name")%>" data-id="<%# Eval("Id")%>" data-url="<%# Eval("Url")%>" data-refer="<%# Eval("References")%>">
-                    <iframe src="/umbraco/dialogs/preview.aspx?id=<%# Eval("Id")%>"></iframe>
+                    <iframe src="/umbraco/dialogs/preview.aspx?id=<%# Eval("PreviewNodeId")%>"></iframe>
                 </div>
             </ItemTemplate>
           </asp:Repeater>

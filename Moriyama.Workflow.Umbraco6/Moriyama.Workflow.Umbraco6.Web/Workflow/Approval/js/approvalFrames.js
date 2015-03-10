@@ -4,10 +4,24 @@ $(document).ready(function(){
     var iframeHeight = $(document).height();
     $(".approval-section").css("height", iframeHeight+"px");
 
+
+    $(document.body).on('click', 'a.moduleReference', function () {
+
+        var href = $(this).attr('href');
+        var position = $(this).attr('data-position');
+
+        var a = $("#pages-for-approval div.page:nth-child(" + position + ") iframe");
+        $(a).attr('src', href);
+
+        return false;
+    });
+
     // on click of side nav item 
     $("ul.side-nav li").click(function() {
+
         
         wf.activeItem = $(this).attr('data-id');
+        
         wf.setArea(wf.activeItem);
 
         //count side nav this will be used with :nth-child to go through the  correct tabs
@@ -26,6 +40,8 @@ $(document).ready(function(){
         $("#pages-for-approval div.page:nth-child(" + nthChild + ")").addClass("active");
 
         var a = $("#pages-for-approval div.page:nth-child(" + nthChild + ") iframe");
+
+        
         $(a).attr('src', $(a).attr('src'));
 
         var iframeWidth = $(".approval-section").width();
