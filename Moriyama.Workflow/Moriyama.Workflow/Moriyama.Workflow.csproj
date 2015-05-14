@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="log4net">
-      <HintPath>..\..\Moriyama.Workflow.Umbraco6\packages\log4net-mediumtrust.2.0.0\lib\log4net.dll</HintPath>
+      <HintPath>..\..\Moriyama.Workflow.Umbraco6\packages\UmbracoCms.Core.6.0.2\lib\log4net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

@@ -67,7 +67,6 @@
         </div>
 
         </div>        
-
     </div>
     
     <form runat="server" class="hiddenForm" style="display: none;">

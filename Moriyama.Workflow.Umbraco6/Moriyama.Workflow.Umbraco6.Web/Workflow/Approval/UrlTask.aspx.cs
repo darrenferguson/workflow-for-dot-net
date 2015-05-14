@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Lucene.Net.Documents;
@@ -31,6 +32,12 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow.Approval
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            var moduleNodeTypeAliases =
+                ConfigurationManager.AppSettings["ModuleNodeTypeAliases"].Split(',')
+                    .ToList()
+                    .ConvertAll(x => x.ToLower());
+
+
             var id = Convert.ToInt32(Request["id"]);
             _workflowInstance = TheWorkflowInstanceService.GetInstance(id);
 
@@ -44,7 +51,7 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow.Approval
                 {
                     var node = new Content(nodeId);
 
-                    if (node.ContentType.Alias.ToLower() != "module")
+                    if (!moduleNodeTypeAliases.Contains(node.ContentType.Alias.ToLower()))
                     {
                         var url = umbraco.library.NiceUrl(nodeId);
 
@@ -113,7 +120,6 @@ namespace Moriyama.Workflow.Umbraco6.Web.Workflow.Approval
                     ids = ids.Concat(childIds).ToList();
                 }
             
-
             return ids;
         }
 
